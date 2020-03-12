@@ -3,22 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A3A0774659C6111AC7D21ADD /* Pods_Covid19Doctor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70721B7AF2FA21EF18A675D5 /* Pods_Covid19Doctor.framework */; };
+		FD1720612419B33E003EEBD5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1720602419B33E003EEBD5 /* Utils.swift */; };
 		FDEB441724197D67000B5320 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB441624197D67000B5320 /* AppDelegate.swift */; };
 		FDEB441924197D67000B5320 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB441824197D67000B5320 /* SceneDelegate.swift */; };
 		FDEB441B24197D67000B5320 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB441A24197D67000B5320 /* ViewController.swift */; };
 		FDEB441E24197D67000B5320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEB441C24197D67000B5320 /* Main.storyboard */; };
 		FDEB442024197D69000B5320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDEB441F24197D69000B5320 /* Assets.xcassets */; };
 		FDEB442324197D69000B5320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEB442124197D69000B5320 /* LaunchScreen.storyboard */; };
+		FDEB442C2419813E000B5320 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB442B2419813E000B5320 /* IntroductionViewController.swift */; };
+		FDEB442E241984B9000B5320 /* ActivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB442D241984B9000B5320 /* ActivationViewController.swift */; };
+		FDEB44312419862C000B5320 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB44302419862C000B5320 /* NetworkAPI.swift */; };
+		FDEB443324198875000B5320 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB443224198875000B5320 /* Errors.swift */; };
+		FDEB44352419977F000B5320 /* ActivatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB44342419977F000B5320 /* ActivatedViewController.swift */; };
+		FDEB443724199830000B5320 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB443624199830000B5320 /* ActivityViewController.swift */; };
+		FDEB44392419AFD1000B5320 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB44382419AFD1000B5320 /* PatientViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		70721B7AF2FA21EF18A675D5 /* Pods_Covid19Doctor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid19Doctor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		944F8CA61AEBDB6D90A806E6 /* Pods-Covid19Doctor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19Doctor.release.xcconfig"; path = "Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor.release.xcconfig"; sourceTree = "<group>"; };
+		FD1720602419B33E003EEBD5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		FDEB441324197D67000B5320 /* Covid19Doctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covid19Doctor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEB441624197D67000B5320 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDEB441824197D67000B5320 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +36,13 @@
 		FDEB441F24197D69000B5320 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDEB442224197D69000B5320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDEB442424197D69000B5320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDEB442B2419813E000B5320 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		FDEB442D241984B9000B5320 /* ActivationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationViewController.swift; sourceTree = "<group>"; };
+		FDEB44302419862C000B5320 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		FDEB443224198875000B5320 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		FDEB44342419977F000B5320 /* ActivatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivatedViewController.swift; sourceTree = "<group>"; };
+		FDEB443624199830000B5320 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		FDEB44382419AFD1000B5320 /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		FF258396ACD6B5EFBD76D693 /* Pods-Covid19Doctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19Doctor.debug.xcconfig"; path = "Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +64,14 @@
 				70721B7AF2FA21EF18A675D5 /* Pods_Covid19Doctor.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD17205F2419B326003EEBD5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FD1720602419B33E003EEBD5 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		FDEB440A24197D67000B5320 = {
@@ -74,12 +98,36 @@
 				FDEB441624197D67000B5320 /* AppDelegate.swift */,
 				FDEB441824197D67000B5320 /* SceneDelegate.swift */,
 				FDEB441A24197D67000B5320 /* ViewController.swift */,
+				FDEB443224198875000B5320 /* Errors.swift */,
+				FD17205F2419B326003EEBD5 /* Utils */,
+				FDEB442F241985EF000B5320 /* API */,
+				FDEB442A241980DF000B5320 /* View Controllers */,
 				FDEB441C24197D67000B5320 /* Main.storyboard */,
 				FDEB441F24197D69000B5320 /* Assets.xcassets */,
 				FDEB442124197D69000B5320 /* LaunchScreen.storyboard */,
 				FDEB442424197D69000B5320 /* Info.plist */,
 			);
 			path = Covid19Doctor;
+			sourceTree = "<group>";
+		};
+		FDEB442A241980DF000B5320 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FDEB442B2419813E000B5320 /* IntroductionViewController.swift */,
+				FDEB442D241984B9000B5320 /* ActivationViewController.swift */,
+				FDEB44342419977F000B5320 /* ActivatedViewController.swift */,
+				FDEB443624199830000B5320 /* ActivityViewController.swift */,
+				FDEB44382419AFD1000B5320 /* PatientViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FDEB442F241985EF000B5320 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FDEB44302419862C000B5320 /* NetworkAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		FE2219AEA767609DA34553A6 /* Pods */ = {
@@ -102,6 +150,7 @@
 				FDEB440F24197D67000B5320 /* Sources */,
 				FDEB441024197D67000B5320 /* Frameworks */,
 				FDEB441124197D67000B5320 /* Resources */,
+				412CFA0C767920BD307C7992 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +208,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		412CFA0C767920BD307C7992 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BBBF5DCE467951E067B01030 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,9 +254,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEB442C2419813E000B5320 /* IntroductionViewController.swift in Sources */,
 				FDEB441B24197D67000B5320 /* ViewController.swift in Sources */,
 				FDEB441724197D67000B5320 /* AppDelegate.swift in Sources */,
 				FDEB441924197D67000B5320 /* SceneDelegate.swift in Sources */,
+				FDEB44392419AFD1000B5320 /* PatientViewController.swift in Sources */,
+				FDEB443724199830000B5320 /* ActivityViewController.swift in Sources */,
+				FDEB44352419977F000B5320 /* ActivatedViewController.swift in Sources */,
+				FD1720612419B33E003EEBD5 /* Utils.swift in Sources */,
+				FDEB442E241984B9000B5320 /* ActivationViewController.swift in Sources */,
+				FDEB44312419862C000B5320 /* NetworkAPI.swift in Sources */,
+				FDEB443324198875000B5320 /* Errors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
