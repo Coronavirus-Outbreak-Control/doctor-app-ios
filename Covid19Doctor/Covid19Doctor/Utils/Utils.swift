@@ -8,6 +8,13 @@
 
 import UIKit
 
+extension DispatchQueue {
+    func delay(_ delay: Double, closure: @escaping () -> ()) {
+        let when = DispatchTime.now() + delay
+        self.asyncAfter(deadline: when, execute: closure)
+    }
+}
+
 extension UIStoryboard {
     static func getViewController(id: String) -> UIViewController {
         let s = UIStoryboard(name: "Main", bundle: nil)

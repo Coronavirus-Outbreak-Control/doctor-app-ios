@@ -8,4 +8,5 @@
 
 enum Errors: Error {
     case unknown
+    case phoneNotTrusted
 }

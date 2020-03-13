@@ -22,6 +22,9 @@
 		FDEB44352419977F000B5320 /* ActivatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB44342419977F000B5320 /* ActivatedViewController.swift */; };
 		FDEB443724199830000B5320 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB443624199830000B5320 /* ActivityViewController.swift */; };
 		FDEB44392419AFD1000B5320 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB44382419AFD1000B5320 /* PatientViewController.swift */; };
+		FDEEF199241C42C70010E368 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF198241C42C70010E368 /* MockAPI.swift */; };
+		FDEEF19B241C42F30010E368 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF19A241C42F30010E368 /* API.swift */; };
+		FDEEF19E241C45E90010E368 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF19D241C45E90010E368 /* Patient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		FDEB44342419977F000B5320 /* ActivatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivatedViewController.swift; sourceTree = "<group>"; };
 		FDEB443624199830000B5320 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		FDEB44382419AFD1000B5320 /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		FDEEF198241C42C70010E368 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
+		FDEEF19A241C42F30010E368 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		FDEEF19D241C45E90010E368 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		FF258396ACD6B5EFBD76D693 /* Pods-Covid19Doctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19Doctor.debug.xcconfig"; path = "Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +105,7 @@
 				FDEB441824197D67000B5320 /* SceneDelegate.swift */,
 				FDEB441A24197D67000B5320 /* ViewController.swift */,
 				FDEB443224198875000B5320 /* Errors.swift */,
+				FDEEF19C241C45D40010E368 /* Objects */,
 				FD17205F2419B326003EEBD5 /* Utils */,
 				FDEB442F241985EF000B5320 /* API */,
 				FDEB442A241980DF000B5320 /* View Controllers */,
@@ -126,8 +133,18 @@
 			isa = PBXGroup;
 			children = (
 				FDEB44302419862C000B5320 /* NetworkAPI.swift */,
+				FDEEF198241C42C70010E368 /* MockAPI.swift */,
+				FDEEF19A241C42F30010E368 /* API.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		FDEEF19C241C45D40010E368 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				FDEEF19D241C45E90010E368 /* Patient.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		FE2219AEA767609DA34553A6 /* Pods */ = {
@@ -258,11 +275,14 @@
 				FDEB441B24197D67000B5320 /* ViewController.swift in Sources */,
 				FDEB441724197D67000B5320 /* AppDelegate.swift in Sources */,
 				FDEB441924197D67000B5320 /* SceneDelegate.swift in Sources */,
+				FDEEF199241C42C70010E368 /* MockAPI.swift in Sources */,
 				FDEB44392419AFD1000B5320 /* PatientViewController.swift in Sources */,
 				FDEB443724199830000B5320 /* ActivityViewController.swift in Sources */,
 				FDEB44352419977F000B5320 /* ActivatedViewController.swift in Sources */,
+				FDEEF19B241C42F30010E368 /* API.swift in Sources */,
 				FD1720612419B33E003EEBD5 /* Utils.swift in Sources */,
 				FDEB442E241984B9000B5320 /* ActivationViewController.swift in Sources */,
+				FDEEF19E241C45E90010E368 /* Patient.swift in Sources */,
 				FDEB44312419862C000B5320 /* NetworkAPI.swift in Sources */,
 				FDEB443324198875000B5320 /* Errors.swift in Sources */,
 			);

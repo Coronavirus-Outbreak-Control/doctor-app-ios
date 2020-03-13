@@ -8,14 +8,18 @@
 
 import RxSwift
 
-protocol API {
-    func checkPhoneNumber(_ number: String) -> Single<Bool>
-}
-
+// TODO
 class NetworkAPI: API {
     
-    func checkPhoneNumber(_ number: String) -> Single<Bool> {
-        return .just(true)
-        //return .error(Errors.unknown)
+    func sendPhoneVerificationCode(_ number: String) -> Single<Void> {
+        fatalError("not implemented")
+    }
+    
+    func verifyPhoneCode(_ code: String, number: String) -> Single<Void> {
+        fatalError("not implemented")
+    }
+    
+    func setPatientStatus(patientId: String, status: Covid19Status) -> Single<Void> {
+        fatalError()
     }
 }
