@@ -27,6 +27,7 @@ PODS:
   - RxSwiftExt/RxCocoa (5.2.0):
     - RxCocoa (~> 5.0)
     - RxSwiftExt/Core
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - KWVerificationCodeView
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - RxRelay
   - RxSwift
   - RxSwiftExt
+  - Toast-Swift
 
 SPEC REPOS:
   trunk:
@@ -50,6 +52,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxSwiftExt
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   KWVerificationCodeView: 92cca6ad028546d3232fa75cda3a40d00109a1a2
@@ -61,7 +64,8 @@ SPEC CHECKSUMS:
   RxRelay: a168bd6caf712d00c676ac344e9295afc93b418e
   RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 6c64b2daccec1e69e6ad3096db0a35c35d1b00d6
+PODFILE CHECKSUM: 223676391df355687151351e0d670b8a258ac429
 
 COCOAPODS: 1.8.4

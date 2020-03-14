@@ -21,3 +21,10 @@ extension UIStoryboard {
         return s.instantiateViewController(withIdentifier: id)
     }
 }
+
+extension String {
+    var digits: String {
+        return components(separatedBy: CharacterSet.decimalDigits.inverted)
+            .joined()
+    }
+}

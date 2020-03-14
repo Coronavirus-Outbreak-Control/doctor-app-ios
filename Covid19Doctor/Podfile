@@ -15,5 +15,6 @@ target 'Covid19Doctor' do
   pod 'PMSuperButton'
   pod 'KWVerificationCodeView'
   pod 'PhoneNumberKit'
+  pod 'Toast-Swift'
 
 end

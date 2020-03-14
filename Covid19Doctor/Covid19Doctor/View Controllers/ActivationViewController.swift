@@ -13,6 +13,7 @@ import RxGesture
 import PhoneNumberKit
 import PMSuperButton
 import KWVerificationCodeView
+import Toast_Swift
 
 class ActivationViewController: UIViewController {
     
@@ -23,6 +24,7 @@ class ActivationViewController: UIViewController {
     
     private let bag = DisposeBag()
     private let viewVisibleCommand = PublishRelay<Bool>()
+    private let verificationCode = PublishRelay<String>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +51,11 @@ class ActivationViewController: UIViewController {
                 }
             }).disposed(by: bag)
         
-        // subscribe to send verification code button
+        // action when send verification code button is tapped
         handleSendVerificationCode()
+        
+        // action when verfication code button is tapped
+        handleCodeVerification()
     }
     
     private func handleSendVerificationCode() {
@@ -76,15 +81,31 @@ class ActivationViewController: UIViewController {
             .bind(to: viewVisibleCommand)
             .disposed(by: bag)
     }
+    
+    private func handleCodeVerification() {
+        verificationCode
+            .skip(1)    // skip on subscription
+            .map({ $0.digits })
+            .filter({ $0.count == self.digitsField.digits })
+            .throttle(.seconds(1), scheduler: MainScheduler.instance)
+            .flatMapLatest({
+                APIManager.api.verifyPhoneCode($0, number: "")
+            })
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] _ in
+                DispatchQueue.main.delay(1) {
+                    self?.performSegue(withIdentifier: "activate-accepted", sender: self)
+                }
+            }, onError: { [weak self] _ in
+                self?.view.makeToast("Invalid code", duration: 3.0, position: .top)
+                self?.handleCodeVerification()
+            })
+            .disposed(by: bag)
+    }
 }
 
 extension ActivationViewController: KWVerificationCodeViewDelegate {
     func didChangeVerificationCode() {
-        //TEMP
-        if digitsField.getVerificationCode().count == 4 {
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-                self.performSegue(withIdentifier: "activate-accepted", sender: self)
-            }
-        }
+        verificationCode.accept(digitsField.getVerificationCode())
     }
 }
