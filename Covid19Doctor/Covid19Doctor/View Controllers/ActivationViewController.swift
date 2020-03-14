@@ -60,7 +60,6 @@ class ActivationViewController: UIViewController {
     
     private func handleSendVerificationCode() {
         sendPhoneButton.rx.tap
-            .debug()
             .flatMap({ [weak self] _ -> Observable<Void> in
                 guard let `self` = self, let number = self.phoneField.text
                     else { return .error(Errors.unknown) }

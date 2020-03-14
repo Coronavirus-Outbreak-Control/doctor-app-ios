@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="haD-86-c3b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="khr-2k-CAE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -252,7 +252,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="K7m-p2-FTG" kind="show" id="U2K-hY-cdW"/>
+                                    <segue destination="SPD-WG-CZq" kind="presentation" id="Etg-OC-uov"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="meH-uZ-bOT">
@@ -408,7 +408,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKD-0x-5Gk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850.72463768115949" y="1036.6071428571429"/>
+            <point key="canvasLocation" x="841" y="1158"/>
         </scene>
         <!--Activated View Controller-->
         <scene sceneID="OvM-8A-dnU">
@@ -457,6 +457,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUn-Kt-eiX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="601" y="359"/>
+        </scene>
+        <!--Scanner View Controller-->
+        <scene sceneID="0h6-bH-Y5O">
+            <objects>
+                <viewController id="SPD-WG-CZq" customClass="ScannerViewController" customModule="Covid19Doctor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p3V-nm-tas"/>
+                        <viewControllerLayoutGuide type="bottom" id="CPV-JZ-ZK8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ovS-75-gsN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gP2-xo-j5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-568" y="1927"/>
         </scene>
     </scenes>
     <resources>

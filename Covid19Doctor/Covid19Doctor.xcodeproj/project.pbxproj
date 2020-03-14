@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		A3A0774659C6111AC7D21ADD /* Pods_Covid19Doctor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70721B7AF2FA21EF18A675D5 /* Pods_Covid19Doctor.framework */; };
 		FD1720612419B33E003EEBD5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1720602419B33E003EEBD5 /* Utils.swift */; };
+		FD27564F241D6016009FB650 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27564E241D6016009FB650 /* ScannerViewController.swift */; };
+		FD275651241D6097009FB650 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD275650241D6097009FB650 /* InviteViewController.swift */; };
+		FD275653241D7969009FB650 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD275652241D7969009FB650 /* Contact.swift */; };
 		FDEB441724197D67000B5320 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB441624197D67000B5320 /* AppDelegate.swift */; };
 		FDEB441924197D67000B5320 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB441824197D67000B5320 /* SceneDelegate.swift */; };
 		FDEB441B24197D67000B5320 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB441A24197D67000B5320 /* ViewController.swift */; };
@@ -32,6 +35,9 @@
 		70721B7AF2FA21EF18A675D5 /* Pods_Covid19Doctor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid19Doctor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		944F8CA61AEBDB6D90A806E6 /* Pods-Covid19Doctor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19Doctor.release.xcconfig"; path = "Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor.release.xcconfig"; sourceTree = "<group>"; };
 		FD1720602419B33E003EEBD5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		FD27564E241D6016009FB650 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		FD275650241D6097009FB650 /* InviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
+		FD275652241D7969009FB650 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		FDEB441324197D67000B5320 /* Covid19Doctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covid19Doctor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEB441624197D67000B5320 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDEB441824197D67000B5320 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +133,8 @@
 				FDEB44342419977F000B5320 /* ActivatedViewController.swift */,
 				FDEB443624199830000B5320 /* ActivityViewController.swift */,
 				FDEB44382419AFD1000B5320 /* PatientViewController.swift */,
+				FD27564E241D6016009FB650 /* ScannerViewController.swift */,
+				FD275650241D6097009FB650 /* InviteViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -146,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				FDEEF19D241C45E90010E368 /* Patient.swift */,
+				FD275652241D7969009FB650 /* Contact.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -274,7 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD275653241D7969009FB650 /* Contact.swift in Sources */,
 				FDEB442C2419813E000B5320 /* IntroductionViewController.swift in Sources */,
+				FD275651241D6097009FB650 /* InviteViewController.swift in Sources */,
 				FDEB441B24197D67000B5320 /* ViewController.swift in Sources */,
 				FDEB441724197D67000B5320 /* AppDelegate.swift in Sources */,
 				FDEB441924197D67000B5320 /* SceneDelegate.swift in Sources */,
@@ -289,6 +300,7 @@
 				FDEEF1A0241C53D20010E368 /* APIManager.swift in Sources */,
 				FDEB44312419862C000B5320 /* NetworkAPI.swift in Sources */,
 				FDEB443324198875000B5320 /* Errors.swift in Sources */,
+				FD27564F241D6016009FB650 /* ScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KA2S2D97SB;
 				INFOPLIST_FILE = Covid19Doctor/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KA2S2D97SB;
 				INFOPLIST_FILE = Covid19Doctor/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

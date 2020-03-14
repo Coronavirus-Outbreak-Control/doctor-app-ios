@@ -20,6 +20,10 @@ class NetworkAPI: API {
     }
     
     func setPatientStatus(patientId: String, status: Covid19Status) -> Single<Void> {
-        fatalError()
+        fatalError("not implemented")
+    }
+    
+    func sendInvitation(toNumber number: String) -> Single<Void> {
+        fatalError("not implemented")
     }
 }

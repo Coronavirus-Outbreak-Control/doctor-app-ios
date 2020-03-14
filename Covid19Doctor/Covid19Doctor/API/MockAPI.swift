@@ -41,4 +41,13 @@ class MockAPI: API {
             return Disposables.create()
         }
     }
+    
+    func sendInvitation(toNumber number: String) -> Single<Void> {
+        return Single.create { observer in
+            DispatchQueue.main.delay(1) {
+                observer(.success(Void()))
+            }
+            return Disposables.create()
+        }
+    }
 }
