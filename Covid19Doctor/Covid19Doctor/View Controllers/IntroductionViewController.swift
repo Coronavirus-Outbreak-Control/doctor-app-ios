@@ -15,7 +15,7 @@ class IntroductionViewController: UIViewController {
 
     @IBOutlet weak var continueButton: PMSuperButton!
     
-    let bag = DisposeBag()
+    private let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,6 +9,7 @@ target 'Covid19Doctor' do
   pod 'RxSwift'
   pod 'RxRelay'
   pod 'RxCocoa'
+  pod 'RxSwiftExt'
   pod 'RxGesture'
   pod 'RxAppState'
   pod 'PMSuperButton'

@@ -13,7 +13,7 @@ class MockAPI: API {
     func sendPhoneVerificationCode(_ number: String) -> Single<Void> {
         // ok if italian number
         return Single.create { observer in
-            DispatchQueue.main.delay(3) {
+            DispatchQueue.main.delay(1) {
                 if !(number.hasPrefix("+39") || number.hasPrefix("0039")) {
                     observer(.error(Errors.phoneNotTrusted))
                 } else {

@@ -19,6 +19,14 @@ PODS:
   - RxRelay (5.1.0):
     - RxSwift (~> 5)
   - RxSwift (5.1.0)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
 
 DEPENDENCIES:
   - KWVerificationCodeView
@@ -29,6 +37,7 @@ DEPENDENCIES:
   - RxGesture
   - RxRelay
   - RxSwift
+  - RxSwiftExt
 
 SPEC REPOS:
   trunk:
@@ -40,6 +49,7 @@ SPEC REPOS:
     - RxGesture
     - RxRelay
     - RxSwift
+    - RxSwiftExt
 
 SPEC CHECKSUMS:
   KWVerificationCodeView: 92cca6ad028546d3232fa75cda3a40d00109a1a2
@@ -50,7 +60,8 @@ SPEC CHECKSUMS:
   RxGesture: a3f8dd6adf078110ed5e1c9c30d09d705a09852e
   RxRelay: a168bd6caf712d00c676ac344e9295afc93b418e
   RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
 
-PODFILE CHECKSUM: f0af76fd5e0e25d52693a0bd9e728e7cabc59ef8
+PODFILE CHECKSUM: 6c64b2daccec1e69e6ad3096db0a35c35d1b00d6
 
 COCOAPODS: 1.8.4

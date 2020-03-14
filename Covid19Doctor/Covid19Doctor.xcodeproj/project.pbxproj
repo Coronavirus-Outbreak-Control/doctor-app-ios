@@ -25,6 +25,7 @@
 		FDEEF199241C42C70010E368 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF198241C42C70010E368 /* MockAPI.swift */; };
 		FDEEF19B241C42F30010E368 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF19A241C42F30010E368 /* API.swift */; };
 		FDEEF19E241C45E90010E368 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF19D241C45E90010E368 /* Patient.swift */; };
+		FDEEF1A0241C53D20010E368 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF19F241C53D20010E368 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		FDEEF198241C42C70010E368 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
 		FDEEF19A241C42F30010E368 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		FDEEF19D241C45E90010E368 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		FDEEF19F241C53D20010E368 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		FF258396ACD6B5EFBD76D693 /* Pods-Covid19Doctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19Doctor.debug.xcconfig"; path = "Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 				FDEB44302419862C000B5320 /* NetworkAPI.swift */,
 				FDEEF198241C42C70010E368 /* MockAPI.swift */,
 				FDEEF19A241C42F30010E368 /* API.swift */,
+				FDEEF19F241C53D20010E368 /* APIManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				FD1720612419B33E003EEBD5 /* Utils.swift in Sources */,
 				FDEB442E241984B9000B5320 /* ActivationViewController.swift in Sources */,
 				FDEEF19E241C45E90010E368 /* Patient.swift in Sources */,
+				FDEEF1A0241C53D20010E368 /* APIManager.swift in Sources */,
 				FDEB44312419862C000B5320 /* NetworkAPI.swift in Sources */,
 				FDEB443324198875000B5320 /* Errors.swift in Sources */,
 			);
