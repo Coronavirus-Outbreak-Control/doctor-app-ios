@@ -12,6 +12,9 @@ target 'Covid19Doctor' do
   pod 'RxSwiftExt'
   pod 'RxGesture'
   pod 'RxAppState'
+  
+  pod 'RealmSwift', '4.3.2'
+  
   pod 'PMSuperButton'
   pod 'KWVerificationCodeView'
   pod 'PhoneNumberKit'

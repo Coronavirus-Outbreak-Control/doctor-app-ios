@@ -14,7 +14,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //runUI()
         return true
+    }
+    
+    func runUI() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+
+        let id = Database.shared.isAccountActivated() ? "Activity" : "Introduction"
+        let initialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: id)
+
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
     }
 }
