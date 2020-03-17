@@ -60,5 +60,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    
+    <key>NSCameraUsageDescription</key>
+    <string>This app requires to access the camera to scan patient's QR codes</string>
 </dict>
 </plist>
