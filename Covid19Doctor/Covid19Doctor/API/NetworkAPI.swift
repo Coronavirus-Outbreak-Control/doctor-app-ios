@@ -8,10 +8,13 @@
 
 import RxSwift
 
-// TODO
 class NetworkAPI: API {
     
+    let client = NetworkClient(baseURL: URL(string: "http://doctors.api.coronaviruscheck.org/v1/")!)
+    
     func sendPhoneVerificationCode(_ number: String) -> Single<Void> {
+//        let req = SendPhoneVerificationCodeRequest(phoneNumber: number)
+//        return client.send(apiRequest: req)
         fatalError("not implemented")
     }
     
@@ -25,5 +28,18 @@ class NetworkAPI: API {
     
     func sendInvitation(toNumber number: String) -> Single<Void> {
         fatalError("not implemented")
+    }
+    
+    
+    class SendPhoneVerificationCodeRequest: NetworkRequest {
+        let method = RequestType.GET
+        let path = "/activation/request"
+        let parameters = [String : String]()
+        let body: Data?
+        
+        init(phoneNumber: String) {
+            let dict = ["phone_number" : phoneNumber]
+            self.body = try! JSONSerialization.data(withJSONObject: dict)
+        }
     }
 }
