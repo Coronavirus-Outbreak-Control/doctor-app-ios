@@ -7,9 +7,11 @@
 //
 
 enum Covid19Status {
-    case negative
-    case positive
-    case recovered
+    case normal
+    case infected
+    case quarantine
+    case healed
+    case exposed
 }
 
 struct Patient {

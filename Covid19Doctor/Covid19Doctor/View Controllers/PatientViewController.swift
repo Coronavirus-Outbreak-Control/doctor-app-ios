@@ -15,6 +15,8 @@ class PatientViewController: UIViewController {
     @IBOutlet weak var recoveredButton: PMSuperButton!
     @IBOutlet weak var moreButton: PMSuperButton!
     
+    var patientId: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

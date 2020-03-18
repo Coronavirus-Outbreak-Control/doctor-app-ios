@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="khr-2k-CAE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="haD-86-c3b">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -251,9 +251,6 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="SPD-WG-CZq" kind="presentation" id="Etg-OC-uov"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="meH-uZ-bOT">
                                 <rect key="frame" x="0.0" y="446" width="414" height="4"/>
@@ -317,7 +314,7 @@
         <!--Patient View Controller-->
         <scene sceneID="8Uc-B5-IJW">
             <objects>
-                <viewController id="K7m-p2-FTG" customClass="PatientViewController" customModule="Covid19Doctor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PatientViewController" id="K7m-p2-FTG" customClass="PatientViewController" customModule="Covid19Doctor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NXA-fJ-La8"/>
                         <viewControllerLayoutGuide type="bottom" id="dPp-xr-Mef"/>
@@ -461,13 +458,13 @@
         <!--Scanner View Controller-->
         <scene sceneID="0h6-bH-Y5O">
             <objects>
-                <viewController id="SPD-WG-CZq" customClass="ScannerViewController" customModule="Covid19Doctor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScannerViewController" id="SPD-WG-CZq" customClass="ScannerViewController" customModule="Covid19Doctor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p3V-nm-tas"/>
                         <viewControllerLayoutGuide type="bottom" id="CPV-JZ-ZK8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ovS-75-gsN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>

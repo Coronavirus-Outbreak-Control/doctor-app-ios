@@ -8,10 +8,13 @@
 
 import AVFoundation
 import UIKit
+import RxSwift
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-    var captureSession: AVCaptureSession!
-    var previewLayer: AVCaptureVideoPreviewLayer!
+    private var captureSession: AVCaptureSession!
+    private var previewLayer: AVCaptureVideoPreviewLayer!
+    
+    let output = PublishSubject<String>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,8 +94,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         dismiss(animated: true)
     }
 
-    func found(code: String) {
-        print(code)
+    private func found(code: String) {
+        output.onNext(code)
+        output.onCompleted()
     }
 
     override var prefersStatusBarHidden: Bool {
