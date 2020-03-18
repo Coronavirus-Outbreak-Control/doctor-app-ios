@@ -8,24 +8,30 @@
 
 import RxSwift
 
+struct Empty: Codable {}
+
 protocol API {
     
     /// Verify if phone number is trusted and, if yes, send the verification code to the phone
     /// - Parameter number: the phone number
-    func sendPhoneVerificationCode(_ number: String) -> Single<Void>
+    func sendPhoneVerificationCode(_ number: String) -> Single<Empty>
     
     /// Verify the code received via SMS
     /// - Parameters:
     ///   - code: the code received via SMS
     ///   - number: the phone number
-    func verifyPhoneCode(_ code: String, number: String) -> Single<Void>
+    func verifyPhoneCode(_ code: String, number: String) -> Single<VerifyPhoneCodeResponse>
+    
+    /// Get patient data from server
+    /// - Parameter id: the patient's id
+    //func getPatient(id: String) -> Single<Patient>
     
     /// Change patient's covid19 status
     /// - Parameter patientId: the id of the patient
     /// - Parameter status: the status to set
-    func setPatientStatus(patientId: String, status: Covid19Status) -> Single<Void>
+    func setPatientStatus(patientId: String, status: Covid19Status) -> Single<Empty>
     
     /// Invite a doctor to the app via phone number
     /// - Parameter number: the phone number 
-    func sendInvitation(toNumber number: String) -> Single<Void>
+    func sendInvitation(toNumber number: String) -> Single<Empty>
 }

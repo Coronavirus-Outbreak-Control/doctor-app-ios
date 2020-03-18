@@ -32,6 +32,8 @@
 		FDEEF1A0241C53D20010E368 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF19F241C53D20010E368 /* APIManager.swift */; };
 		FDFA1A7324203F8F00FB5B9F /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA1A7224203F8F00FB5B9F /* NetworkRequest.swift */; };
 		FDFA1A7524203FBF00FB5B9F /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA1A7424203FBF00FB5B9F /* NetworkClient.swift */; };
+		FDFA1A782420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA1A772420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift */; };
+		FDFA1A7A2420D90D00FB5B9F /* VerifyPhoneCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA1A792420D90D00FB5B9F /* VerifyPhoneCodeRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		FDEEF19F241C53D20010E368 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		FDFA1A7224203F8F00FB5B9F /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		FDFA1A7424203FBF00FB5B9F /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		FDFA1A772420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPhoneVerificationCodeRequest.swift; sourceTree = "<group>"; };
+		FDFA1A792420D90D00FB5B9F /* VerifyPhoneCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneCodeRequest.swift; sourceTree = "<group>"; };
 		FF258396ACD6B5EFBD76D693 /* Pods-Covid19Doctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19Doctor.debug.xcconfig"; path = "Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,10 +182,20 @@
 		FDFA1A6D24203F0800FB5B9F /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				FDFA1A762420D7FF00FB5B9F /* Requests */,
 				FDFA1A7224203F8F00FB5B9F /* NetworkRequest.swift */,
 				FDFA1A7424203FBF00FB5B9F /* NetworkClient.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		FDFA1A762420D7FF00FB5B9F /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				FDFA1A772420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift */,
+				FDFA1A792420D90D00FB5B9F /* VerifyPhoneCodeRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		FE2219AEA767609DA34553A6 /* Pods */ = {
@@ -314,6 +328,7 @@
 				FDEE0B29241E395B00541DDC /* AccountObject.swift in Sources */,
 				FDEB441724197D67000B5320 /* AppDelegate.swift in Sources */,
 				FDEB441924197D67000B5320 /* SceneDelegate.swift in Sources */,
+				FDFA1A782420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift in Sources */,
 				FDEEF199241C42C70010E368 /* MockAPI.swift in Sources */,
 				FD275659241D9A1D009FB650 /* Database.swift in Sources */,
 				FDEB44392419AFD1000B5320 /* PatientViewController.swift in Sources */,
@@ -327,6 +342,7 @@
 				FDEEF19E241C45E90010E368 /* Patient.swift in Sources */,
 				FDEEF1A0241C53D20010E368 /* APIManager.swift in Sources */,
 				FDEB44312419862C000B5320 /* NetworkAPI.swift in Sources */,
+				FDFA1A7A2420D90D00FB5B9F /* VerifyPhoneCodeRequest.swift in Sources */,
 				FDEB443324198875000B5320 /* Errors.swift in Sources */,
 				FD27564F241D6016009FB650 /* ScannerViewController.swift in Sources */,
 			);
