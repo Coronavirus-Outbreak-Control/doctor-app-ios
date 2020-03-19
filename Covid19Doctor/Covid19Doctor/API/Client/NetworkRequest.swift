@@ -17,6 +17,7 @@ protocol NetworkRequest {
     var path: String { get }
     var parameters: [String : String] { get }
     var body: Data? { get }
+    var authToken: String? { get }
 }
 
 extension NetworkRequest {
@@ -35,8 +36,11 @@ extension NetworkRequest {
 
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = body
+        if let authToken = authToken {
+            request.setValue("Basic \(authToken)", forHTTPHeaderField: "Authorization")
+        }
         return request
     }
 }

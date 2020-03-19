@@ -82,7 +82,7 @@ class ActivityViewController: UIViewController {
     private func inviteContact(_ contact: Contact, phoneNumber: String) {
         view.makeToastActivity(.center)
         
-        APIManager.api.sendInvitation(toNumber: phoneNumber)
+        APIManager.api.inviteDoctor(number: phoneNumber)
         .do(onDispose: { [weak self] in
             self?.view.hideToastActivity()
         })

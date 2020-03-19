@@ -13,6 +13,7 @@ struct VerifyPhoneCodeRequest: NetworkRequest {
     let path: String
     let parameters = [String : String]()
     let body: Data? = nil
+    let authToken: String? = nil
     
     init(code: String, token: String) {
         self.path = "/activation/confirm/\(code)/\(token)"

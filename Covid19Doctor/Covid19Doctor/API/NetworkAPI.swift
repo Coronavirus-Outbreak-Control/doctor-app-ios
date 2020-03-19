@@ -30,7 +30,11 @@ class NetworkAPI: API {
         fatalError("not implemented")
     }
     
-    func sendInvitation(toNumber number: String) -> Single<Empty> {
-        fatalError("not implemented")
+    func inviteDoctor(number: String) -> Single<Empty> {
+        guard let authToken: String = Database.shared.getAccountValue(key: .authToken) else {
+            return .error(Errors.userNotLoggedIn)
+        }
+        let req = InviteDoctorRequest(authToken: authToken, phoneNumber: number)
+        return client.send(apiRequest: req)
     }
 }

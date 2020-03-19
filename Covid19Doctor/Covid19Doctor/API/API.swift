@@ -33,5 +33,5 @@ protocol API {
     
     /// Invite a doctor to the app via phone number
     /// - Parameter number: the phone number 
-    func sendInvitation(toNumber number: String) -> Single<Empty>
+    func inviteDoctor(number: String) -> Single<Empty>
 }

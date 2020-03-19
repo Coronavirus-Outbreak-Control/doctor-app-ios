@@ -11,4 +11,5 @@ enum Errors: Error {
     case phoneNotTrusted
     case patientNotRecognized
     case missingActivationToken
+    case userNotLoggedIn
 }

@@ -13,6 +13,7 @@ struct SendPhoneVerificationCodeRequest: NetworkRequest {
     let path = "/activation/request"
     let parameters = [String : String]()
     let body: Data?
+    let authToken: String? = nil
     
     init(phoneNumber: String) {
         let dict = ["phone_number" : phoneNumber]

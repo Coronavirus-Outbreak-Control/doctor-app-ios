@@ -54,7 +54,7 @@ class MockAPI: API {
         }
     }
     
-    func sendInvitation(toNumber number: String) -> Single<Empty> {
+    func inviteDoctor(number: String) -> Single<Empty> {
         .create { observer in
             DispatchQueue.main.delay(1) {
                 observer(.success(Empty()))

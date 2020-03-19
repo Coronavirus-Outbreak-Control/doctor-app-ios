@@ -25,6 +25,7 @@
 		FDEB443724199830000B5320 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB443624199830000B5320 /* ActivityViewController.swift */; };
 		FDEB44392419AFD1000B5320 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB44382419AFD1000B5320 /* PatientViewController.swift */; };
 		FDEE0B29241E395B00541DDC /* AccountObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE0B28241E395B00541DDC /* AccountObject.swift */; };
+		FDEE4CFC2423F86A0022E32C /* InviteDoctorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE4CFB2423F86A0022E32C /* InviteDoctorRequest.swift */; };
 		FDEEF199241C42C70010E368 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF198241C42C70010E368 /* MockAPI.swift */; };
 		FDEEF19B241C42F30010E368 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF19A241C42F30010E368 /* API.swift */; };
 		FDEEF19E241C45E90010E368 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF19D241C45E90010E368 /* Patient.swift */; };
@@ -57,6 +58,7 @@
 		FDEB443624199830000B5320 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		FDEB44382419AFD1000B5320 /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		FDEE0B28241E395B00541DDC /* AccountObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountObject.swift; sourceTree = "<group>"; };
+		FDEE4CFB2423F86A0022E32C /* InviteDoctorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteDoctorRequest.swift; sourceTree = "<group>"; };
 		FDEEF198241C42C70010E368 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
 		FDEEF19A241C42F30010E368 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		FDEEF19D241C45E90010E368 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				FDFA1A772420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift */,
 				FDFA1A792420D90D00FB5B9F /* VerifyPhoneCodeRequest.swift */,
+				FDEE4CFB2423F86A0022E32C /* InviteDoctorRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				FD1720612419B33E003EEBD5 /* Utils.swift in Sources */,
 				FDEB442E241984B9000B5320 /* ActivationViewController.swift in Sources */,
 				FDFA1A7324203F8F00FB5B9F /* NetworkRequest.swift in Sources */,
+				FDEE4CFC2423F86A0022E32C /* InviteDoctorRequest.swift in Sources */,
 				FDEEF19E241C45E90010E368 /* Patient.swift in Sources */,
 				FDEEF1A0241C53D20010E368 /* APIManager.swift in Sources */,
 				FDEB44312419862C000B5320 /* NetworkAPI.swift in Sources */,
