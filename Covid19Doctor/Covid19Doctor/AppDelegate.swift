@@ -14,17 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        //runUI()
+        runUI()
         return true
     }
     
     func runUI() {
         self.window = UIWindow(frame: UIScreen.main.bounds)
 
-        let id = Database.shared.isAccountActivated() ? "Activity" : "Introduction"
-        let initialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: id)
+        let root: UIViewController
+        if Database.shared.isActivated() {
+            let vc = UIStoryboard.getViewController(id: "Activity") as! ActivityViewController
+            root = UINavigationController(rootViewController: vc)
+        } else {
+            root = UIStoryboard.getViewController(id: "Introduction")
+        }
 
-        self.window?.rootViewController = initialViewController
+        self.window?.rootViewController = root
         self.window?.makeKeyAndVisible()
     }
 }

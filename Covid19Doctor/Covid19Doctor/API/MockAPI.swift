@@ -28,7 +28,7 @@ class MockAPI: API {
     func verifyPhoneCode(_ code: String, token: String) -> Single<VerifyPhoneCodeResponse> {
         .create { observer in
             DispatchQueue.main.delay(1) {
-                let response = VerifyPhoneCodeResponse(id: 1, token: "12345")
+                let response = VerifyPhoneCodeResponse(id: 1, authToken: "12345")
                 observer(.success(response))
             }
             return Disposables.create()

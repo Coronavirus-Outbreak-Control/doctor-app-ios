@@ -61,6 +61,7 @@ class ActivationViewController: UIViewController {
     // MARK: -
     
     private var jwtToken: String?
+    private var phoneNumber: String?
     
     private func handleSendVerificationCode() {
         sendPhoneButton.rx.tap
@@ -69,6 +70,7 @@ class ActivationViewController: UIViewController {
                     else { return .error(Errors.unknown) }
                 self.phoneField.resignFirstResponder()
                 self.sendPhoneButton.isEnabled = false
+                self.phoneNumber = number
                 return APIManager.api.sendPhoneVerificationCode(number).asObservable()
             })
             .flatMapLatest({ [weak self] response -> Observable<Bool> in
@@ -99,7 +101,8 @@ class ActivationViewController: UIViewController {
                 return APIManager.api.verifyPhoneCode(code, token: token)
             })
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] _ in
+            .subscribe(onNext: { [weak self] response in
+                self?.didActivate(response: response)
                 DispatchQueue.main.delay(1) {
                     self?.performSegue(withIdentifier: "activate-accepted", sender: self)
                 }
@@ -108,6 +111,17 @@ class ActivationViewController: UIViewController {
                 self?.handleCodeVerification()
             })
             .disposed(by: bag)
+    }
+    
+    private func didActivate(response: VerifyPhoneCodeResponse) {
+        if let phoneNumber = phoneNumber {
+            Database.shared.setAccountValue(response.id, key: .userId)
+            Database.shared.setAccountValue(response.authToken, key: .authToken)
+            Database.shared.setAccountValue(phoneNumber, key: .phoneNumber)
+        }
+        
+        jwtToken = nil
+        phoneNumber = nil
     }
 }
 

@@ -13,7 +13,9 @@ class Database {
     static let shared = Database()
     
     private init() {
-        
+        #if DEBUG
+        print("\n\n\n-> database <-\n\(String(describing: configuration.fileURL!.path))\n\n\n")
+        #endif
     }
     
     let configuration = Realm.Configuration()
@@ -21,13 +23,20 @@ class Database {
     func realm() -> Realm {
         return try! Realm(configuration: configuration)
     }
+    
+    func isActivated() -> Bool {
+        let userId: String? = getAccountValue(key: .userId)
+        let authToken: String? = getAccountValue(key: .authToken)
+        return userId != nil && authToken != nil
+    }
 }
 
 // MARK: - Account
 extension Database {
     enum AccountKey: String {
+        case userId
+        case authToken
         case phoneNumber
-        case activated
     }
     
     private func write(_ val: String?, forKey key: AccountKey) {
@@ -51,29 +60,5 @@ extension Database {
     
     func getAccountValue<T: CustomStringConvertible>(key: AccountKey) -> T? {
         return read(key)?.val as? T
-    }
-    
-    
-    
-    
-    
-    func setAccountPhoneNumber(_ val: String) {
-        write(val, forKey: .phoneNumber)
-    }
-    
-    func getAccountPhoneNumber() -> String? {
-        return read(.phoneNumber)?.val
-    }
-    
-    func setAccountActivated(_ val: Bool) {
-        write("\(val)", forKey: .activated)
-    }
-    
-    func isAccountActivated() -> Bool {
-        let o = read(.activated)
-        if let val = o?.val {
-            return Bool(val) ?? false
-        }
-        return false
     }
 }
