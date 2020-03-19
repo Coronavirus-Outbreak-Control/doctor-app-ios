@@ -45,6 +45,18 @@ extension Database {
         return realm.object(ofType: AccountObject.self, forPrimaryKey: key.rawValue)
     }
     
+    func setAccountValue<T: CustomStringConvertible>(_ val: T, key: AccountKey) {
+        write("\(val)", forKey: key)
+    }
+    
+    func getAccountValue<T: CustomStringConvertible>(key: AccountKey) -> T? {
+        return read(key)?.val as? T
+    }
+    
+    
+    
+    
+    
     func setAccountPhoneNumber(_ val: String) {
         write(val, forKey: .phoneNumber)
     }

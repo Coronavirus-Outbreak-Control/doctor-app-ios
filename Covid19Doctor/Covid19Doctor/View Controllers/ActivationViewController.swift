@@ -58,16 +58,21 @@ class ActivationViewController: UIViewController {
         handleCodeVerification()
     }
     
+    // MARK: -
+    
+    private var jwtToken: String?
+    
     private func handleSendVerificationCode() {
         sendPhoneButton.rx.tap
-            .flatMap({ [weak self] _ -> Observable<Empty> in
+            .flatMap({ [weak self] _ -> Observable<SendPhoneVerificationCodeResponse> in
                 guard let `self` = self, let number = self.phoneField.text
                     else { return .error(Errors.unknown) }
                 self.phoneField.resignFirstResponder()
                 self.sendPhoneButton.isEnabled = false
                 return APIManager.api.sendPhoneVerificationCode(number).asObservable()
             })
-            .flatMapLatest({ _ in
+            .flatMapLatest({ [weak self] response -> Observable<Bool> in
+                self?.jwtToken = response.data
                 return Observable.just(true)
             })
             .catchError({ [weak self] _ in
@@ -87,8 +92,11 @@ class ActivationViewController: UIViewController {
             .map({ $0.digits })
             .filter({ $0.count == self.digitsField.digits })
             .throttle(.seconds(1), scheduler: MainScheduler.instance)
-            .flatMapLatest({
-                APIManager.api.verifyPhoneCode($0, number: "")
+            .flatMapLatest({ [weak self] code -> Single<VerifyPhoneCodeResponse> in
+                guard let `self` = self,
+                    let token = self.jwtToken
+                    else { return .error(Errors.missingActivationToken) }
+                return APIManager.api.verifyPhoneCode(code, token: token)
             })
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] _ in

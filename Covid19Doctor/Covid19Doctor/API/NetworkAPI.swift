@@ -12,14 +12,18 @@ class NetworkAPI: API {
     
     let client = NetworkClient(baseURL: URL(string: "http://doctors.api.coronaviruscheck.org/v1/")!)
     
-    func sendPhoneVerificationCode(_ number: String) -> Single<Empty> {
+    func sendPhoneVerificationCode(_ number: String) -> Single<SendPhoneVerificationCodeResponse> {
         let req = SendPhoneVerificationCodeRequest(phoneNumber: number)
         return client.send(apiRequest: req)
     }
     
-    func verifyPhoneCode(_ code: String, number: String) -> Single<VerifyPhoneCodeResponse> {
-        let req = VerifyPhoneCodeRequest(code: code)
+    func verifyPhoneCode(_ code: String, token: String) -> Single<VerifyPhoneCodeResponse> {
+        let req = VerifyPhoneCodeRequest(code: code, token: token)
         return client.send(apiRequest: req)
+    }
+    
+    func getPatient(id: String) -> Single<Patient> {
+        fatalError("not implemented")
     }
     
     func setPatientStatus(patientId: String, status: Covid19Status) -> Single<Empty> {
