@@ -87,11 +87,22 @@ class ActivityViewController: UIViewController {
             self?.view.hideToastActivity()
         })
         .subscribe(onSuccess: { [weak self] _ in
+            self?.storeInvitation(name: contact.fullName, phoneNumber: phoneNumber)
             self?.view.makeToast("Invitation sent to \(contact.fullName)", duration: 3.0, position: .center)
         }, onError: { [weak self] _ in
             self?.view.makeToast("Error inviting \(contact.fullName)", duration: 3.0, position: .center)
         })
         .disposed(by: bag)
+    }
+    
+    private func storeInvitation(name: String, phoneNumber: String) {
+        let realm = Database.shared.realm()
+        let invitation = InvitationObject()
+        invitation.phoneNumber = phoneNumber
+        invitation.contactName = name
+        try! realm.write {
+            realm.add(invitation)
+        }
     }
 }
 
