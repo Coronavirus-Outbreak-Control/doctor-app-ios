@@ -29,7 +29,7 @@ protocol API {
     /// Change patient's covid19 status
     /// - Parameter patientId: the id of the patient
     /// - Parameter status: the status to set
-    func setPatientStatus(patientId: String, status: Covid19Status) -> Single<Empty>
+    func setPatientStatus(patientId: String, status: PatientStatus) -> Single<Empty>
     
     /// Invite a doctor to the app via phone number
     /// - Parameter number: the phone number 

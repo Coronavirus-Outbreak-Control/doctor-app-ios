@@ -38,14 +38,14 @@ class MockAPI: API {
     func getPatient(id: String) -> Single<Patient> {
         .create { observer in
             DispatchQueue.main.delay(1) {
-                let patient = Patient(id: "1", covid19Status: .normal)
+                let patient = Patient(id: "1", status: .normal)
                 observer(.success(patient))
             }
             return Disposables.create()
         }
     }
     
-    func setPatientStatus(patientId: String, status: Covid19Status) -> Single<Empty> {
+    func setPatientStatus(patientId: String, status: PatientStatus) -> Single<Empty> {
         .create { observer in
             DispatchQueue.main.delay(1) {
                 observer(.success(Empty()))

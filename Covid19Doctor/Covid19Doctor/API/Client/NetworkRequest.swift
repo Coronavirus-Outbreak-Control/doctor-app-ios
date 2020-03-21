@@ -39,7 +39,7 @@ extension NetworkRequest {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = body
         if let authToken = authToken {
-            request.setValue("Basic \(authToken)", forHTTPHeaderField: "Authorization")
+            request.setValue("Bearer \(authToken)", forHTTPHeaderField: "Authorization")
         }
         return request
     }

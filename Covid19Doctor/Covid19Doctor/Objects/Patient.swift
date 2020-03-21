@@ -6,7 +6,7 @@
 //  Copyright © 2020 Francesco Cosentino. All rights reserved.
 //
 
-enum Covid19Status {
+enum PatientStatus {
     case normal
     case infected
     case quarantine
@@ -16,6 +16,6 @@ enum Covid19Status {
 
 struct Patient {
     let id: String
-    let covid19Status: Covid19Status
+    let status: PatientStatus
     // ...
 }

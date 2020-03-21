@@ -30,6 +30,7 @@
 		FDEEF19B241C42F30010E368 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF19A241C42F30010E368 /* API.swift */; };
 		FDEEF19E241C45E90010E368 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF19D241C45E90010E368 /* Patient.swift */; };
 		FDEEF1A0241C53D20010E368 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF19F241C53D20010E368 /* APIManager.swift */; };
+		FDEEFD4B24266B3200D1DF15 /* SetPatientStatusRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEFD4A24266B3200D1DF15 /* SetPatientStatusRequest.swift */; };
 		FDFA1A7324203F8F00FB5B9F /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA1A7224203F8F00FB5B9F /* NetworkRequest.swift */; };
 		FDFA1A7524203FBF00FB5B9F /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA1A7424203FBF00FB5B9F /* NetworkClient.swift */; };
 		FDFA1A782420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA1A772420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift */; };
@@ -63,6 +64,7 @@
 		FDEEF19A241C42F30010E368 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		FDEEF19D241C45E90010E368 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		FDEEF19F241C53D20010E368 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		FDEEFD4A24266B3200D1DF15 /* SetPatientStatusRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPatientStatusRequest.swift; sourceTree = "<group>"; };
 		FDFA1A7224203F8F00FB5B9F /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		FDFA1A7424203FBF00FB5B9F /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		FDFA1A772420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPhoneVerificationCodeRequest.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				FDFA1A772420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift */,
 				FDFA1A792420D90D00FB5B9F /* VerifyPhoneCodeRequest.swift */,
 				FDEE4CFB2423F86A0022E32C /* InviteDoctorRequest.swift */,
+				FDEEFD4A24266B3200D1DF15 /* SetPatientStatusRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				FDEB44312419862C000B5320 /* NetworkAPI.swift in Sources */,
 				FDFA1A7A2420D90D00FB5B9F /* VerifyPhoneCodeRequest.swift in Sources */,
 				FDEB443324198875000B5320 /* Errors.swift in Sources */,
+				FDEEFD4B24266B3200D1DF15 /* SetPatientStatusRequest.swift in Sources */,
 				FD27564F241D6016009FB650 /* ScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

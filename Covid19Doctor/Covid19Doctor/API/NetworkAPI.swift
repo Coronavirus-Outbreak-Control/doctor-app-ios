@@ -26,8 +26,12 @@ class NetworkAPI: API {
         fatalError("not implemented")
     }
     
-    func setPatientStatus(patientId: String, status: Covid19Status) -> Single<Empty> {
-        fatalError("not implemented")
+    func setPatientStatus(patientId: String, status: PatientStatus) -> Single<Empty> {
+        guard let authToken: String = Database.shared.getAccountValue(key: .authToken) else {
+            return .error(Errors.userNotLoggedIn)
+        }
+        let req = SetPatientStatusRequest(authToken: authToken, patientId: patientId, newStatus: status)
+        return client.send(apiRequest: req)
     }
     
     func inviteDoctor(number: String) -> Single<Empty> {
