@@ -17,6 +17,7 @@ class ActivityViewController: UIViewController {
 
     @IBOutlet weak var scanButton: PMSuperButton!
     @IBOutlet weak var inviteButton: PMSuperButton!
+    @IBOutlet weak var invitationsButton: PMSuperButton!
     
     private let bag = DisposeBag()
     
@@ -32,6 +33,12 @@ class ActivityViewController: UIViewController {
         inviteButton.rx.tap
         .subscribe(onNext: { [weak self] _ in
             self?.launchContactPicker()
+        })
+        .disposed(by: bag)
+        
+        invitationsButton.rx.tap
+        .subscribe(onNext: { [weak self] _ in
+            self?.launchInvitations()
         })
         .disposed(by: bag)
     }
@@ -103,6 +110,13 @@ class ActivityViewController: UIViewController {
         try! realm.write {
             realm.add(invitation)
         }
+    }
+    
+    // MARK: - Invitations
+    
+    private func launchInvitations() {
+        let vc = UIStoryboard.getViewController(id: "InvitationsViewController") as! InvitationsViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

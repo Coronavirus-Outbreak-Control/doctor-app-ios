@@ -10,7 +10,6 @@
 		A3A0774659C6111AC7D21ADD /* Pods_Covid19Doctor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70721B7AF2FA21EF18A675D5 /* Pods_Covid19Doctor.framework */; };
 		FD1720612419B33E003EEBD5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1720602419B33E003EEBD5 /* Utils.swift */; };
 		FD27564F241D6016009FB650 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27564E241D6016009FB650 /* ScannerViewController.swift */; };
-		FD275651241D6097009FB650 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD275650241D6097009FB650 /* InviteViewController.swift */; };
 		FD275653241D7969009FB650 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD275652241D7969009FB650 /* Contact.swift */; };
 		FD275659241D9A1D009FB650 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD275658241D9A1D009FB650 /* Database.swift */; };
 		FDEB441724197D67000B5320 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB441624197D67000B5320 /* AppDelegate.swift */; };
@@ -24,6 +23,8 @@
 		FDEB44352419977F000B5320 /* ActivatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB44342419977F000B5320 /* ActivatedViewController.swift */; };
 		FDEB443724199830000B5320 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB443624199830000B5320 /* ActivityViewController.swift */; };
 		FDEB44392419AFD1000B5320 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB44382419AFD1000B5320 /* PatientViewController.swift */; };
+		FDEDB1212426C76D0042B8D0 /* InvitationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEDB1202426C76D0042B8D0 /* InvitationsViewController.swift */; };
+		FDEDB1242426D0AD0042B8D0 /* InvitationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEDB1232426D0AD0042B8D0 /* InvitationCell.swift */; };
 		FDEE0B29241E395B00541DDC /* AccountObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE0B28241E395B00541DDC /* AccountObject.swift */; };
 		FDEE4CFC2423F86A0022E32C /* InviteDoctorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE4CFB2423F86A0022E32C /* InviteDoctorRequest.swift */; };
 		FDEEF199241C42C70010E368 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEF198241C42C70010E368 /* MockAPI.swift */; };
@@ -43,7 +44,6 @@
 		944F8CA61AEBDB6D90A806E6 /* Pods-Covid19Doctor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19Doctor.release.xcconfig"; path = "Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor.release.xcconfig"; sourceTree = "<group>"; };
 		FD1720602419B33E003EEBD5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		FD27564E241D6016009FB650 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
-		FD275650241D6097009FB650 /* InviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
 		FD275652241D7969009FB650 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		FD275658241D9A1D009FB650 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		FDEB441324197D67000B5320 /* Covid19Doctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covid19Doctor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +59,8 @@
 		FDEB44342419977F000B5320 /* ActivatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivatedViewController.swift; sourceTree = "<group>"; };
 		FDEB443624199830000B5320 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		FDEB44382419AFD1000B5320 /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		FDEDB1202426C76D0042B8D0 /* InvitationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationsViewController.swift; sourceTree = "<group>"; };
+		FDEDB1232426D0AD0042B8D0 /* InvitationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationCell.swift; sourceTree = "<group>"; };
 		FDEE0B28241E395B00541DDC /* AccountObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountObject.swift; sourceTree = "<group>"; };
 		FDEE4CFB2423F86A0022E32C /* InviteDoctorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteDoctorRequest.swift; sourceTree = "<group>"; };
 		FDEEF198241C42C70010E368 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				FD17205F2419B326003EEBD5 /* Utils */,
 				FDEB442F241985EF000B5320 /* API */,
 				FDEB442A241980DF000B5320 /* View Controllers */,
+				FDEDB1222426D08C0042B8D0 /* Views */,
 				FDEB441C24197D67000B5320 /* Main.storyboard */,
 				FDEB441F24197D69000B5320 /* Assets.xcassets */,
 				FDEB442124197D69000B5320 /* LaunchScreen.storyboard */,
@@ -157,7 +160,7 @@
 				FDEB443624199830000B5320 /* ActivityViewController.swift */,
 				FDEB44382419AFD1000B5320 /* PatientViewController.swift */,
 				FD27564E241D6016009FB650 /* ScannerViewController.swift */,
-				FD275650241D6097009FB650 /* InviteViewController.swift */,
+				FDEDB1202426C76D0042B8D0 /* InvitationsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -172,6 +175,14 @@
 				FDFA1A6D24203F0800FB5B9F /* Client */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		FDEDB1222426D08C0042B8D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDEDB1232426D0AD0042B8D0 /* InvitationCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FDEEF19C241C45D40010E368 /* Objects */ = {
@@ -330,7 +341,6 @@
 			files = (
 				FD275653241D7969009FB650 /* Contact.swift in Sources */,
 				FDEB442C2419813E000B5320 /* IntroductionViewController.swift in Sources */,
-				FD275651241D6097009FB650 /* InviteViewController.swift in Sources */,
 				FDEE0B29241E395B00541DDC /* AccountObject.swift in Sources */,
 				FDEB441724197D67000B5320 /* AppDelegate.swift in Sources */,
 				FDFA1A782420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift in Sources */,
@@ -345,12 +355,14 @@
 				FD1720612419B33E003EEBD5 /* Utils.swift in Sources */,
 				FDEB442E241984B9000B5320 /* ActivationViewController.swift in Sources */,
 				FDFA1A7324203F8F00FB5B9F /* NetworkRequest.swift in Sources */,
+				FDEDB1242426D0AD0042B8D0 /* InvitationCell.swift in Sources */,
 				FDEE4CFC2423F86A0022E32C /* InviteDoctorRequest.swift in Sources */,
 				FDEEF19E241C45E90010E368 /* Patient.swift in Sources */,
 				FDEEF1A0241C53D20010E368 /* APIManager.swift in Sources */,
 				FDEB44312419862C000B5320 /* NetworkAPI.swift in Sources */,
 				FDFA1A7A2420D90D00FB5B9F /* VerifyPhoneCodeRequest.swift in Sources */,
 				FDEB443324198875000B5320 /* Errors.swift in Sources */,
+				FDEDB1212426C76D0042B8D0 /* InvitationsViewController.swift in Sources */,
 				FDEEFD4B24266B3200D1DF15 /* SetPatientStatusRequest.swift in Sources */,
 				FD27564F241D6016009FB650 /* ScannerViewController.swift in Sources */,
 			);

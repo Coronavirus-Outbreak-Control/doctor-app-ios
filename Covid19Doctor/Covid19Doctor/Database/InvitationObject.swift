@@ -12,7 +12,7 @@ class InvitationObject: Object {
     @objc dynamic var id: String = UUID().uuidString
     @objc dynamic var phoneNumber: String = ""
     @objc dynamic var contactName: String = ""
-    @objc dynamic var invitationDate: Date = Date()
+    @objc dynamic var date: Date = Date()
     
     override static func primaryKey() -> String? {
         return "id"
