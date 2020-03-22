@@ -31,6 +31,13 @@ class ActivationViewController: UIViewController {
         
         digitsField.delegate = self
         codeView.isHidden = true
+        phoneField.map {
+            $0.withFlag = true
+            $0.withPrefix = true
+            if #available(iOS 11.0, *) {
+                $0.withDefaultPickerUI = true
+            }
+        }
 
         // dismiss keyboard on tap
         view.rx.tapGesture().subscribe(onNext: { [weak self] _ in
@@ -65,12 +72,12 @@ class ActivationViewController: UIViewController {
     
     private func handleSendVerificationCode() {
         sendPhoneButton.rx.tap
-            .flatMap({ [weak self] _ -> Observable<SendPhoneVerificationCodeResponse> in
-                guard let `self` = self, let number = self.phoneField.text
-                    else { return .error(Errors.unknown) }
-                self.phoneField.resignFirstResponder()
-                self.sendPhoneButton.isEnabled = false
-                self.phoneNumber = number
+            .flatMap({ [weak self] _ -> Single<String> in
+                guard let `self` = self else { return .error(Errors.unknown) }
+                return self.phoneField.getPhoneNumber()
+            })
+            .flatMap({ [weak self] number -> Observable<SendPhoneVerificationCodeResponse> in
+                self?.didGetPhoneNumber(number)
                 return APIManager.api.sendPhoneVerificationCode(number).asObservable()
             })
             .flatMapLatest({ [weak self] response -> Observable<Bool> in
@@ -122,6 +129,14 @@ class ActivationViewController: UIViewController {
         
         jwtToken = nil
         phoneNumber = nil
+    }
+    
+    // MARK: -
+    
+    private func didGetPhoneNumber(_ number: String) {
+        self.phoneField.resignFirstResponder()
+        self.sendPhoneButton.isEnabled = false
+        self.phoneNumber = number
     }
 }
 

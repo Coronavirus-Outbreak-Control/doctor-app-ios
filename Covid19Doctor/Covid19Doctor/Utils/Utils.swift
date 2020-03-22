@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import PhoneNumberKit
+import RxSwift
 
 extension DispatchQueue {
     func delay(_ delay: Double, closure: @escaping () -> ()) {
@@ -26,5 +28,23 @@ extension String {
     var digits: String {
         return components(separatedBy: CharacterSet.decimalDigits.inverted)
             .joined()
+    }
+}
+
+extension PhoneNumberTextField {
+    func getPhoneNumber() -> Single<String> {
+        guard let text = text else {
+            return .error(Errors.invalidPhoneNumber)
+        }
+        
+        let kit = self.phoneNumberKit
+        do {
+            let phoneNumber = try kit.parse(text, withRegion: currentRegion, ignoreType: false)
+            let string = "+\(phoneNumber.countryCode)\(phoneNumber.nationalNumber)"
+            return .just(string)
+        }
+        catch {
+            return .error(Errors.invalidPhoneNumber)
+        }
     }
 }
