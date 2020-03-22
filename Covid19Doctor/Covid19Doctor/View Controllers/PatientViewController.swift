@@ -8,6 +8,8 @@
 
 import UIKit
 import PMSuperButton
+import RxSwift
+import RxCocoa
 
 class PatientViewController: UIViewController {
 
@@ -17,10 +19,31 @@ class PatientViewController: UIViewController {
     
     var patientId: String!
     
+    private let bag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        confirmButton.rx.tap
+        .subscribe(onNext: { [weak self] _ in
+            self?.setStatus(.infected)
+        })
+        .disposed(by: bag)
+        
+        recoveredButton.rx.tap
+        .subscribe(onNext: { [weak self] _ in
+            self?.setStatus(.healed)
+        })
+        .disposed(by: bag)
     }
 
+    func setStatus(_ status: PatientStatus) {
+        APIManager.api.setPatientStatus(patientId: patientId, status: status)
+        .subscribe(onSuccess: { _ in
+            // TODO
+        }, onError: { error in
+            // TODO
+        })
+        .disposed(by: bag)
+    }
 }
