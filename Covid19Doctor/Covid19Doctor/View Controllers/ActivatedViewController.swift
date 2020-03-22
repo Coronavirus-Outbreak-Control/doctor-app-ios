@@ -14,7 +14,9 @@ class ActivatedViewController: UIViewController {
         super.viewDidLoad()
 
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
-            UIApplication.shared.keyWindow?.rootViewController = UIStoryboard.getViewController(id: "Activity")
+            let vc = UIStoryboard.getViewController(id: "Activity")
+            let nc = UINavigationController(rootViewController: vc)
+            UIApplication.shared.keyWindow?.rootViewController = nc
         }
     }
 }
