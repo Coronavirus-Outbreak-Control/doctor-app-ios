@@ -46,9 +46,8 @@ class ActivityViewController: UIViewController {
     // MARK: - Scanner
     
     private func extractPatientData(string: String) -> Single<String> {
-        if true {
-            // TODO: extract real data
-            return .just(string)
+        if let id = string.deletingPrefix("covid-outbreak-control:") {
+            return .just(id)
         } else {
             return .error(Errors.patientNotRecognized)
         }
