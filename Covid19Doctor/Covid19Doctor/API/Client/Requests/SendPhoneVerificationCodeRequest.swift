@@ -10,7 +10,7 @@ import Foundation
 
 struct SendPhoneVerificationCodeRequest: NetworkRequest {
     let method = RequestType.POST
-    let path = "/activation/request"
+    let path = "activation/request"
     let parameters = [String : String]()
     let body: Data?
     let authToken: String? = nil

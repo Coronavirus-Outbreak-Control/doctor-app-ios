@@ -26,8 +26,10 @@ extension NetworkRequest {
             fatalError("Unable to create URL components")
         }
 
-        components.queryItems = parameters.map {
-            URLQueryItem(name: String($0), value: String($1))
+        if parameters.count > 0 {
+            components.queryItems = parameters.map {
+                URLQueryItem(name: String($0), value: String($1))
+            }
         }
 
         guard let url = components.url else {

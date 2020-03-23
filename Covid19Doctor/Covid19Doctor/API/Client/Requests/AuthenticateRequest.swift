@@ -10,7 +10,7 @@ import Foundation
 
 struct AuthenticateRequest: NetworkRequest {
     let method = RequestType.POST
-    let path: String = "/authenticate"
+    let path: String = "authenticate"
     let parameters = [String : String]()
     let body: Data? = nil
     let authToken: String?

@@ -17,6 +17,6 @@ struct SetPatientStatusRequest: NetworkRequest {
     
     init(authToken: String, patientId: String, newStatus: PatientStatus) {
         self.authToken = authToken
-        self.path = "/mark/\(patientId)/\(newStatus)"
+        self.path = "mark/\(patientId)/\(newStatus)"
     }
 }

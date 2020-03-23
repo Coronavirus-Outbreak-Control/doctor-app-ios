@@ -158,8 +158,10 @@ class ActivationViewController: UIViewController {
     }
     
     private func setPhoneButtonEnabled(_ val: Bool) {
-        sendPhoneButton.isEnabled = val
-        sendPhoneButton.alpha = val ? 1 : 0.4
+        DispatchQueue.main.async {
+            self.sendPhoneButton.isEnabled = val
+            self.sendPhoneButton.alpha = val ? 1 : 0.4
+        }
     }
 }
 

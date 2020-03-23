@@ -10,7 +10,7 @@ import Foundation
 
 struct InviteDoctorRequest: NetworkRequest {
     let method = RequestType.POST
-    let path: String = "/activation/invite"
+    let path: String = "activation/invite"
     let parameters = [String : String]()
     let body: Data?
     let authToken: String?
