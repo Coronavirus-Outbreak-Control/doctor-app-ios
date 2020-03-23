@@ -14,19 +14,41 @@ import RxCocoa
 class PatientViewController: UIViewController {
 
     @IBOutlet weak var confirmButton: PMSuperButton!
+    @IBOutlet weak var suspectedButton: PMSuperButton!
     @IBOutlet weak var recoveredButton: PMSuperButton!
-    @IBOutlet weak var moreButton: PMSuperButton!
+    
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var textLabel: UILabel!
     
     var patientId: String!
     
     private let bag = DisposeBag()
     
+    private func configureUI() {
+        confirmButton.backgroundColor = UIColor(red:0.85, green:0.00, blue:0.11, alpha:1.00)
+        
+        suspectedButton.backgroundColor = UIColor(red:0.96, green:0.60, blue:0.14, alpha:1.00)
+        
+        recoveredButton.backgroundColor = UIColor(red:1.00, green:0.82, blue:0.15, alpha:1.00)
+        
+        textLabel.font = UIFont.title
+        textLabel.text = "What's the patient status?"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureUI()
 
         confirmButton.rx.tap
         .subscribe(onNext: { [weak self] _ in
             self?.setStatus(.infected)
+        })
+        .disposed(by: bag)
+        
+        suspectedButton.rx.tap
+        .subscribe(onNext: { [weak self] _ in
+            self?.setStatus(.suspected)
         })
         .disposed(by: bag)
         

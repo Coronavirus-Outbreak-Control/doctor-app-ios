@@ -104,25 +104,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number verification" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvv-9e-9gp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number verification" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Uvv-9e-9gp">
                                 <rect key="frame" x="40" y="98" width="334" height="126.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126.5" id="OBT-VX-dne"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="53"/>
                                 <color key="textColor" red="0.2244822819" green="0.248710183" blue="0.27032059590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A message will be sent..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TN-yo-rPR">
-                                <rect key="frame" x="40" y="292.5" width="334" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A message will be sent..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TN-yo-rPR">
+                                <rect key="frame" x="40" y="259.5" width="334" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.2244822819" green="0.248710183" blue="0.27032059590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jTT-0N-l6Y" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
-                                <rect key="frame" x="40" y="348.5" width="334" height="32"/>
+                                <rect key="frame" x="40" y="315.5" width="334" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmX-fU-UxG">
-                                <rect key="frame" x="30" y="496.5" width="354" height="365.5"/>
+                                <rect key="frame" x="30" y="463.5" width="354" height="398.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert the verification code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMf-x2-RpM">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="20"/>
@@ -154,14 +157,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaZ-Hn-g0v">
-                                <rect key="frame" x="40" y="388.5" width="334" height="1"/>
+                                <rect key="frame" x="40" y="355.5" width="334" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="FoJ-NN-A41"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqZ-fg-BCc" customClass="PMSuperButton" customModule="PMSuperButton">
-                                <rect key="frame" x="59.5" y="410.5" width="295" height="56"/>
+                                <rect key="frame" x="59.5" y="377.5" width="295" height="56"/>
                                 <color key="backgroundColor" red="0.53825595540000004" green="0.86038698189999996" blue="0.60722287519999996" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Itw-Rv-jE9"/>
@@ -183,7 +186,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="2TN-yo-rPR" firstAttribute="top" secondItem="Uvv-9e-9gp" secondAttribute="bottom" constant="68" id="9m6-hb-iPK"/>
+                            <constraint firstItem="2TN-yo-rPR" firstAttribute="top" secondItem="Uvv-9e-9gp" secondAttribute="bottom" constant="35" id="9m6-hb-iPK"/>
                             <constraint firstAttribute="trailing" secondItem="nmX-fU-UxG" secondAttribute="trailing" constant="30" id="Ax8-1G-BzW"/>
                             <constraint firstItem="ccy-9Z-O4n" firstAttribute="top" secondItem="nmX-fU-UxG" secondAttribute="bottom" id="CNT-Vg-yr0"/>
                             <constraint firstItem="2TN-yo-rPR" firstAttribute="trailing" secondItem="Uvv-9e-9gp" secondAttribute="trailing" id="FpJ-jE-Tf1"/>
@@ -192,12 +195,13 @@
                             <constraint firstItem="jTT-0N-l6Y" firstAttribute="trailing" secondItem="2TN-yo-rPR" secondAttribute="trailing" id="N4V-vu-zYN"/>
                             <constraint firstAttribute="trailing" secondItem="Uvv-9e-9gp" secondAttribute="trailing" constant="40" id="Pd2-jp-zdL"/>
                             <constraint firstItem="Uvv-9e-9gp" firstAttribute="leading" secondItem="fCJ-lh-01c" secondAttribute="leading" constant="40" id="Qe2-vB-M3U"/>
+                            <constraint firstItem="Uvv-9e-9gp" firstAttribute="top" secondItem="7lY-1r-X9B" secondAttribute="bottom" priority="999" constant="54" id="U2O-ON-4qx"/>
                             <constraint firstItem="jTT-0N-l6Y" firstAttribute="centerX" secondItem="fCJ-lh-01c" secondAttribute="centerX" id="VJg-SS-5eR"/>
                             <constraint firstItem="qaZ-Hn-g0v" firstAttribute="top" secondItem="jTT-0N-l6Y" secondAttribute="bottom" constant="8" id="WQd-oe-zg3"/>
                             <constraint firstItem="jTT-0N-l6Y" firstAttribute="top" secondItem="2TN-yo-rPR" secondAttribute="bottom" constant="26" id="WhV-qi-zYF"/>
                             <constraint firstItem="jTT-0N-l6Y" firstAttribute="leading" secondItem="2TN-yo-rPR" secondAttribute="leading" id="YYY-5w-MfI"/>
                             <constraint firstItem="2TN-yo-rPR" firstAttribute="leading" secondItem="Uvv-9e-9gp" secondAttribute="leading" id="dWy-kM-vhK"/>
-                            <constraint firstItem="Uvv-9e-9gp" firstAttribute="top" secondItem="7lY-1r-X9B" secondAttribute="bottom" constant="54" id="eb8-Yy-piR"/>
+                            <constraint firstItem="Uvv-9e-9gp" firstAttribute="top" relation="lessThanOrEqual" secondItem="7lY-1r-X9B" secondAttribute="bottom" constant="54" id="eb8-Yy-piR"/>
                             <constraint firstItem="cqZ-fg-BCc" firstAttribute="top" secondItem="jTT-0N-l6Y" secondAttribute="bottom" constant="30" id="gWb-P6-PTx"/>
                             <constraint firstItem="qaZ-Hn-g0v" firstAttribute="leading" secondItem="jTT-0N-l6Y" secondAttribute="leading" id="i2Z-G1-UhF"/>
                             <constraint firstItem="cqZ-fg-BCc" firstAttribute="centerX" secondItem="fCJ-lh-01c" secondAttribute="centerX" id="pM1-3B-cTl"/>
@@ -346,89 +350,138 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbJ-AE-BZM" customClass="PMSuperButton" customModule="PMSuperButton">
-                                <rect key="frame" x="57" y="120" width="300" height="150"/>
-                                <color key="backgroundColor" red="0.89932804404145084" green="0.44758780620793248" blue="0.49332087369590494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoS-Cy-Evd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BACK TO HOMEPAGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyL-4b-L43">
+                                        <rect key="frame" x="74" y="46" width="167" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yb5-DX-ufW">
+                                        <rect key="frame" x="14" y="46" width="52" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="44t-MV-pCt"/>
+                                            <constraint firstAttribute="height" constant="52" id="mGj-jH-azq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heX-El-P12">
+                                        <rect key="frame" x="14" y="46" width="227" height="52"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="5E0-hT-tOW"/>
-                                    <constraint firstAttribute="width" constant="300" id="APb-KQ-QOc"/>
+                                    <constraint firstItem="heX-El-P12" firstAttribute="leading" secondItem="Yb5-DX-ufW" secondAttribute="leading" id="626-qv-R93"/>
+                                    <constraint firstItem="NyL-4b-L43" firstAttribute="bottom" secondItem="Yb5-DX-ufW" secondAttribute="bottom" id="C4i-pV-lPg"/>
+                                    <constraint firstItem="NyL-4b-L43" firstAttribute="top" secondItem="Yb5-DX-ufW" secondAttribute="top" id="CNO-u3-BkE"/>
+                                    <constraint firstItem="NyL-4b-L43" firstAttribute="trailing" secondItem="heX-El-P12" secondAttribute="trailing" id="Vwl-UQ-kNh"/>
+                                    <constraint firstItem="heX-El-P12" firstAttribute="bottom" secondItem="Yb5-DX-ufW" secondAttribute="bottom" id="Wgg-08-eHR"/>
+                                    <constraint firstItem="NyL-4b-L43" firstAttribute="leading" secondItem="Yb5-DX-ufW" secondAttribute="trailing" constant="8" id="e7y-He-mBW"/>
+                                    <constraint firstItem="Yb5-DX-ufW" firstAttribute="leading" secondItem="OoS-Cy-Evd" secondAttribute="leading" constant="14" id="jSO-BE-2hd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yb5-DX-ufW" secondAttribute="bottom" constant="8" id="oBS-hj-etc"/>
+                                    <constraint firstAttribute="height" constant="106" id="sUU-pZ-YjS"/>
+                                    <constraint firstItem="heX-El-P12" firstAttribute="top" secondItem="Yb5-DX-ufW" secondAttribute="top" id="xUv-oP-Mld"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                                <state key="normal" title="Confirm coronavirus">
-                                    <color key="titleColor" red="0.2244822819" green="0.248710183" blue="0.27032059590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxe-UF-U9P" customClass="PMSuperButton" customModule="PMSuperButton">
-                                <rect key="frame" x="57" y="334" width="300" height="150"/>
-                                <color key="backgroundColor" red="0.53465739235088816" green="0.85722959844559588" blue="0.52476742466321025" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the patient status?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="A2L-Gz-dT4">
+                                <rect key="frame" x="50" y="114" width="314" height="82"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Gku-nN-PMh"/>
-                                    <constraint firstAttribute="height" constant="150" id="xhA-fY-ZnF"/>
+                                    <constraint firstAttribute="height" constant="82" id="szS-2b-zVx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                                <state key="normal" title="Recovered">
-                                    <color key="titleColor" red="0.2244822819" green="0.248710183" blue="0.27032059590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4n-hL-Tav" customClass="PMSuperButton" customModule="PMSuperButton">
-                                <rect key="frame" x="57" y="548" width="300" height="74"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="110" translatesAutoresizingMaskIntoConstraints="NO" id="ru8-uL-fMI">
+                                <rect key="frame" x="57" y="228" width="300" height="520"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbJ-AE-BZM" customClass="PMSuperButton" customModule="PMSuperButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                                        <color key="backgroundColor" red="0.89932804404145084" green="0.44758780620793248" blue="0.49332087369590494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="5E0-hT-tOW"/>
+                                            <constraint firstAttribute="width" constant="300" id="APb-KQ-QOc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                        <state key="normal" title="Confirm coronavirus">
+                                            <color key="titleColor" red="0.2244822819" green="0.248710183" blue="0.27032059590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qX-Ou-Sbb" customClass="PMSuperButton" customModule="PMSuperButton">
+                                        <rect key="frame" x="0.0" y="210" width="300" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                        <state key="normal" title="Suspected">
+                                            <color key="titleColor" red="0.2244822819" green="0.248710183" blue="0.27032059590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxe-UF-U9P" customClass="PMSuperButton" customModule="PMSuperButton">
+                                        <rect key="frame" x="0.0" y="420" width="300" height="100"/>
+                                        <color key="backgroundColor" red="0.53465739235088816" green="0.85722959844559588" blue="0.52476742466321025" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                        <state key="normal" title="Recovered">
+                                            <color key="titleColor" red="0.2244822819" green="0.248710183" blue="0.27032059590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="RWo-HD-Opr"/>
-                                    <constraint firstAttribute="width" constant="300" id="hWu-yv-3eA"/>
+                                    <constraint firstItem="6qX-Ou-Sbb" firstAttribute="height" secondItem="GbJ-AE-BZM" secondAttribute="height" id="49u-hB-vSH"/>
+                                    <constraint firstItem="yxe-UF-U9P" firstAttribute="width" secondItem="GbJ-AE-BZM" secondAttribute="width" id="7CH-Dg-P6b"/>
+                                    <constraint firstItem="yxe-UF-U9P" firstAttribute="height" secondItem="GbJ-AE-BZM" secondAttribute="height" id="RDS-WM-ZCL"/>
+                                    <constraint firstItem="6qX-Ou-Sbb" firstAttribute="width" secondItem="GbJ-AE-BZM" secondAttribute="width" id="mRl-I6-KTn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                                <state key="normal" title="More">
-                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="GbJ-AE-BZM" firstAttribute="top" secondItem="NXA-fJ-La8" secondAttribute="bottom" constant="76" id="Cmd-B7-kNZ"/>
-                            <constraint firstItem="GbJ-AE-BZM" firstAttribute="centerX" secondItem="wjA-eO-R22" secondAttribute="centerX" id="SSi-vQ-VyY"/>
-                            <constraint firstItem="yxe-UF-U9P" firstAttribute="top" secondItem="GbJ-AE-BZM" secondAttribute="bottom" constant="64" id="X7J-GU-qDp"/>
-                            <constraint firstItem="yxe-UF-U9P" firstAttribute="centerX" secondItem="wjA-eO-R22" secondAttribute="centerX" id="Xiq-1K-kND"/>
-                            <constraint firstItem="e4n-hL-Tav" firstAttribute="centerX" secondItem="wjA-eO-R22" secondAttribute="centerX" id="knU-DX-O8g"/>
-                            <constraint firstItem="e4n-hL-Tav" firstAttribute="top" secondItem="yxe-UF-U9P" secondAttribute="bottom" constant="64" id="plR-vy-VFX"/>
+                            <constraint firstAttribute="trailing" secondItem="OoS-Cy-Evd" secondAttribute="trailing" id="GrT-Up-4br"/>
+                            <constraint firstItem="ru8-uL-fMI" firstAttribute="top" secondItem="A2L-Gz-dT4" secondAttribute="bottom" constant="32" id="Kxp-E6-p2O"/>
+                            <constraint firstItem="A2L-Gz-dT4" firstAttribute="leading" secondItem="wjA-eO-R22" secondAttribute="leadingMargin" constant="30" id="QPD-Et-bhQ"/>
+                            <constraint firstItem="dPp-xr-Mef" firstAttribute="top" secondItem="ru8-uL-fMI" secondAttribute="bottom" priority="999" constant="66" id="U00-PZ-XYt"/>
+                            <constraint firstItem="OoS-Cy-Evd" firstAttribute="leading" secondItem="wjA-eO-R22" secondAttribute="leading" id="aKh-v4-3fh"/>
+                            <constraint firstItem="OoS-Cy-Evd" firstAttribute="top" secondItem="wjA-eO-R22" secondAttribute="top" id="bw6-wZ-IpV"/>
+                            <constraint firstItem="A2L-Gz-dT4" firstAttribute="top" secondItem="OoS-Cy-Evd" secondAttribute="bottom" constant="8" id="cQk-Fl-WeS"/>
+                            <constraint firstItem="ru8-uL-fMI" firstAttribute="centerX" secondItem="wjA-eO-R22" secondAttribute="centerX" id="wYF-Gd-0Du"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A2L-Gz-dT4" secondAttribute="trailing" constant="30" id="zxb-Ca-aT6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dYr-A5-brE"/>
                     <connections>
+                        <outlet property="backButton" destination="heX-El-P12" id="xY6-nD-OWf"/>
                         <outlet property="confirmButton" destination="GbJ-AE-BZM" id="n6D-Ub-dyj"/>
-                        <outlet property="moreButton" destination="e4n-hL-Tav" id="UCb-TG-0Tn"/>
                         <outlet property="recoveredButton" destination="yxe-UF-U9P" id="TEe-54-D6R"/>
+                        <outlet property="suspectedButton" destination="6qX-Ou-Sbb" id="G8L-PO-e2R"/>
+                        <outlet property="textLabel" destination="A2L-Gz-dT4" id="6KR-IT-bkR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKD-0x-5Gk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="1158"/>
+            <point key="canvasLocation" x="840.57971014492762" y="1157.8125"/>
         </scene>
         <!--Activated View Controller-->
         <scene sceneID="OvM-8A-dnU">

@@ -6,12 +6,15 @@
 //  Copyright © 2020 Francesco Cosentino. All rights reserved.
 //
 
-enum PatientStatus {
-    case normal
-    case infected
-    case quarantine
-    case healed
-    case exposed
+enum PatientStatus: Int {
+    case normal =       0
+    case infected =     1
+    case suspected =    2
+    case healed =       3
+    case quarantineLight =      4
+    case quarantineWarning =    5
+    case quarantineAlert =      6
+    
 }
 
 struct Patient {
