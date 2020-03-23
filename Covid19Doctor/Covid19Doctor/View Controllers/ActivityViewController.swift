@@ -88,7 +88,14 @@ class ActivityViewController: UIViewController {
     private func inviteContact(_ contact: Contact, phoneNumber: String) {
         view.makeToastActivity(.center)
         
-        APIManager.api.inviteDoctor(number: phoneNumber)
+        guard let reAuthToken: String = Database.shared.getAccountValue(key: .reAuthToken) else {
+            //TODO: handle error
+            return
+        }
+        
+        APIManager.api.runAuthenticated(reAuthToken: reAuthToken, apiBuilder: {
+            APIManager.api.inviteDoctor(number: phoneNumber)
+        })
         .do(onDispose: { [weak self] in
             self?.view.hideToastActivity()
         })

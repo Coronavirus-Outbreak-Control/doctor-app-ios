@@ -35,4 +35,8 @@ protocol API {
     /// Invite a doctor to the app via phone number
     /// - Parameter number: the phone number 
     func inviteDoctor(number: String) -> Single<Empty>
+    
+    
+    
+    func runAuthenticated<T>(reAuthToken: String, apiBuilder: @escaping () -> Single<T>) -> Single<T>
 }

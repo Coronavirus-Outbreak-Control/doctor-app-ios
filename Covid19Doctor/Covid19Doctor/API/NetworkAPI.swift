@@ -47,3 +47,13 @@ class NetworkAPI: API {
         return client.send(apiRequest: req)
     }
 }
+
+extension NetworkAPI {
+    func runAuthenticated<T>(reAuthToken: String, apiBuilder: @escaping () -> Single<T>) -> Single<T> {
+        authenticate(reAuthToken: reAuthToken)
+            .flatMap { res in
+                Database.shared.setAccountValue(res.jwt, key: .jwt)
+                return apiBuilder()
+            }
+    }
+}
