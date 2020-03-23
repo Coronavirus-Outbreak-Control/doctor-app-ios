@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		A3A0774659C6111AC7D21ADD /* Pods_Covid19Doctor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70721B7AF2FA21EF18A675D5 /* Pods_Covid19Doctor.framework */; };
+		FD086D782428350B00368BDF /* SF-Compact-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD086D6F2428350A00368BDF /* SF-Compact-Display-Regular.otf */; };
+		FD086D792428350B00368BDF /* SF-Compact-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD086D702428350A00368BDF /* SF-Compact-Display-Light.otf */; };
+		FD086D7A2428350B00368BDF /* SF-Compact-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD086D712428350A00368BDF /* SF-Compact-Display-Thin.otf */; };
+		FD086D7B2428350B00368BDF /* SF-Compact-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD086D722428350A00368BDF /* SF-Compact-Display-Ultralight.otf */; };
+		FD086D7C2428350B00368BDF /* SF-Compact-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD086D732428350A00368BDF /* SF-Compact-Display-Medium.otf */; };
+		FD086D7D2428350B00368BDF /* SF-Compact-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD086D742428350A00368BDF /* SF-Compact-Display-Heavy.otf */; };
+		FD086D7E2428350B00368BDF /* SF-Compact-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD086D752428350A00368BDF /* SF-Compact-Display-Bold.otf */; };
+		FD086D7F2428350B00368BDF /* SF-Compact-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD086D762428350B00368BDF /* SF-Compact-Display-Black.otf */; };
+		FD086D802428350B00368BDF /* SF-Compact-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD086D772428350B00368BDF /* SF-Compact-Display-Semibold.otf */; };
+		FD086D82242838D300368BDF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD086D81242838D300368BDF /* Colors.swift */; };
+		FD086D8424283B6D00368BDF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD086D8324283B6D00368BDF /* Fonts.swift */; };
 		FD1720612419B33E003EEBD5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1720602419B33E003EEBD5 /* Utils.swift */; };
 		FD27564F241D6016009FB650 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27564E241D6016009FB650 /* ScannerViewController.swift */; };
 		FD275653241D7969009FB650 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD275652241D7969009FB650 /* Contact.swift */; };
@@ -42,6 +53,17 @@
 /* Begin PBXFileReference section */
 		70721B7AF2FA21EF18A675D5 /* Pods_Covid19Doctor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid19Doctor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		944F8CA61AEBDB6D90A806E6 /* Pods-Covid19Doctor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19Doctor.release.xcconfig"; path = "Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor.release.xcconfig"; sourceTree = "<group>"; };
+		FD086D6F2428350A00368BDF /* SF-Compact-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Regular.otf"; sourceTree = "<group>"; };
+		FD086D702428350A00368BDF /* SF-Compact-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Light.otf"; sourceTree = "<group>"; };
+		FD086D712428350A00368BDF /* SF-Compact-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Thin.otf"; sourceTree = "<group>"; };
+		FD086D722428350A00368BDF /* SF-Compact-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Ultralight.otf"; sourceTree = "<group>"; };
+		FD086D732428350A00368BDF /* SF-Compact-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Medium.otf"; sourceTree = "<group>"; };
+		FD086D742428350A00368BDF /* SF-Compact-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Heavy.otf"; sourceTree = "<group>"; };
+		FD086D752428350A00368BDF /* SF-Compact-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Bold.otf"; sourceTree = "<group>"; };
+		FD086D762428350B00368BDF /* SF-Compact-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Black.otf"; sourceTree = "<group>"; };
+		FD086D772428350B00368BDF /* SF-Compact-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Semibold.otf"; sourceTree = "<group>"; };
+		FD086D81242838D300368BDF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		FD086D8324283B6D00368BDF /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		FD1720602419B33E003EEBD5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		FD27564E241D6016009FB650 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		FD275652241D7969009FB650 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -96,6 +118,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FD086D6D242834DA00368BDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FD086D6E242834F500368BDF /* Font */,
+				FD086D81242838D300368BDF /* Colors.swift */,
+				FD086D8324283B6D00368BDF /* Fonts.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FD086D6E242834F500368BDF /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				FD086D762428350B00368BDF /* SF-Compact-Display-Black.otf */,
+				FD086D752428350A00368BDF /* SF-Compact-Display-Bold.otf */,
+				FD086D742428350A00368BDF /* SF-Compact-Display-Heavy.otf */,
+				FD086D702428350A00368BDF /* SF-Compact-Display-Light.otf */,
+				FD086D732428350A00368BDF /* SF-Compact-Display-Medium.otf */,
+				FD086D6F2428350A00368BDF /* SF-Compact-Display-Regular.otf */,
+				FD086D772428350B00368BDF /* SF-Compact-Display-Semibold.otf */,
+				FD086D712428350A00368BDF /* SF-Compact-Display-Thin.otf */,
+				FD086D722428350A00368BDF /* SF-Compact-Display-Ultralight.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		FD17205F2419B326003EEBD5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				FDEB441624197D67000B5320 /* AppDelegate.swift */,
+				FD086D6D242834DA00368BDF /* Resources */,
 				FDEB443224198875000B5320 /* Errors.swift */,
 				FD275657241D9A0A009FB650 /* Database */,
 				FDEEF19C241C45D40010E368 /* Objects */,
@@ -284,8 +333,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD086D782428350B00368BDF /* SF-Compact-Display-Regular.otf in Resources */,
 				FDEB442324197D69000B5320 /* LaunchScreen.storyboard in Resources */,
+				FD086D7F2428350B00368BDF /* SF-Compact-Display-Black.otf in Resources */,
+				FD086D7C2428350B00368BDF /* SF-Compact-Display-Medium.otf in Resources */,
+				FD086D7B2428350B00368BDF /* SF-Compact-Display-Ultralight.otf in Resources */,
+				FD086D7D2428350B00368BDF /* SF-Compact-Display-Heavy.otf in Resources */,
+				FD086D7A2428350B00368BDF /* SF-Compact-Display-Thin.otf in Resources */,
+				FD086D792428350B00368BDF /* SF-Compact-Display-Light.otf in Resources */,
 				FDEB442024197D69000B5320 /* Assets.xcassets in Resources */,
+				FD086D7E2428350B00368BDF /* SF-Compact-Display-Bold.otf in Resources */,
+				FD086D802428350B00368BDF /* SF-Compact-Display-Semibold.otf in Resources */,
 				FDEB441E24197D67000B5320 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD086D8424283B6D00368BDF /* Fonts.swift in Sources */,
 				FD275653241D7969009FB650 /* Contact.swift in Sources */,
 				FDEB442C2419813E000B5320 /* IntroductionViewController.swift in Sources */,
 				FDEE0B29241E395B00541DDC /* AccountObject.swift in Sources */,
@@ -349,6 +408,7 @@
 				FDEB44392419AFD1000B5320 /* PatientViewController.swift in Sources */,
 				FDEB443724199830000B5320 /* ActivityViewController.swift in Sources */,
 				FDEB44352419977F000B5320 /* ActivatedViewController.swift in Sources */,
+				FD086D82242838D300368BDF /* Colors.swift in Sources */,
 				FDEEFD4D2426719F00D1DF15 /* InvitationObject.swift in Sources */,
 				FDFA1A7524203FBF00FB5B9F /* NetworkClient.swift in Sources */,
 				FDEEF19B241C42F30010E368 /* API.swift in Sources */,

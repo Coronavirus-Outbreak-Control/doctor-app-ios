@@ -13,28 +13,36 @@ import RxCocoa
 
 class IntroductionViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var continueButton: PMSuperButton!
     
     private let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        titleLabel.map {
+            $0.font = UIFont.title
+            $0.textColor = UIColor.titleBlack
+            $0.text = "Welcome to\nanonymous\nCoronavirus\ncheck"
+        }
+        
+        subtitleLabel.map {
+            $0.font = UIFont.subtitle
+            $0.textColor = UIColor.textGray
+        }
+        
+        continueButton.map {
+            $0.titleLabel?.font = UIFont.button
+            $0.setTitleColor(UIColor.titleBlack, for: .normal)
+            $0.backgroundColor = UIColor.mainTheme
+            $0.setTitle("CONTINUE", for: .normal)
+        }
 
         continueButton.rx.tap.bind {
             let vc = UIStoryboard.getViewController(id: "Activation")
             UIApplication.shared.keyWindow?.rootViewController = vc
         }.disposed(by: bag)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
