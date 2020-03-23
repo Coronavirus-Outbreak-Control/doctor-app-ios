@@ -14,19 +14,20 @@ protocol API {
     
     /// Verify if phone number is trusted and, if yes, send the verification code to the phone
     /// - Parameter number: the phone number
-    func sendPhoneVerificationCode(_ number: String) -> Single<SendPhoneVerificationCodeResponse>
+    func sendPhoneVerificationCode(_ number: String) -> Single<Empty>
     
     /// Verify the code received via SMS
     /// - Parameters:
     ///   - code: the code received via SMS
-    ///   - token: the jwt returned by sendPhoneVerificationCode
-    func verifyPhoneCode(_ code: String, token: String) -> Single<VerifyPhoneCodeResponse>
+    func verifyPhoneCode(_ code: String) -> Single<VerifyPhoneCodeResponse>
+    
+    func authenticate(reAuthToken: String) -> Single<AuthenticateResponse>
     
     /// Get patient data from server
     /// - Parameter id: the patient's id
     func getPatient(id: String) -> Single<Patient>
     
-    /// Change patient's covid19 status
+    /// Change patient's status
     /// - Parameter patientId: the id of the patient
     /// - Parameter status: the status to set
     func setPatientStatus(patientId: String, status: PatientStatus) -> Single<Empty>

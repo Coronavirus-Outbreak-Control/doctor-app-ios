@@ -15,12 +15,12 @@ struct VerifyPhoneCodeRequest: NetworkRequest {
     let body: Data? = nil
     let authToken: String? = nil
     
-    init(code: String, token: String) {
-        self.path = "/activation/confirm/\(code)/\(token)"
+    init(code: String) {
+        self.path = "/activation/confirm/\(code)"
     }
 }
 
 struct VerifyPhoneCodeResponse: Codable {
     let id: Int
-    let authToken: String
+    let reAuthToken: String
 }

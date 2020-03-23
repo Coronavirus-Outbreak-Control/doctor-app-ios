@@ -20,7 +20,3 @@ struct SendPhoneVerificationCodeRequest: NetworkRequest {
         self.body = try! JSONSerialization.data(withJSONObject: dict)
     }
 }
-
-struct SendPhoneVerificationCodeResponse: Codable {
-    let data: String
-}

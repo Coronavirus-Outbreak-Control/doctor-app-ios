@@ -19,6 +19,7 @@
 		FD086D802428350B00368BDF /* SF-Compact-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD086D772428350B00368BDF /* SF-Compact-Display-Semibold.otf */; };
 		FD086D82242838D300368BDF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD086D81242838D300368BDF /* Colors.swift */; };
 		FD086D8424283B6D00368BDF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD086D8324283B6D00368BDF /* Fonts.swift */; };
+		FD086D8624295F6A00368BDF /* AuthenticateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD086D8524295F6A00368BDF /* AuthenticateRequest.swift */; };
 		FD1720612419B33E003EEBD5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1720602419B33E003EEBD5 /* Utils.swift */; };
 		FD27564F241D6016009FB650 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27564E241D6016009FB650 /* ScannerViewController.swift */; };
 		FD275653241D7969009FB650 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD275652241D7969009FB650 /* Contact.swift */; };
@@ -64,6 +65,7 @@
 		FD086D772428350B00368BDF /* SF-Compact-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Semibold.otf"; sourceTree = "<group>"; };
 		FD086D81242838D300368BDF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		FD086D8324283B6D00368BDF /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		FD086D8524295F6A00368BDF /* AuthenticateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateRequest.swift; sourceTree = "<group>"; };
 		FD1720602419B33E003EEBD5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		FD27564E241D6016009FB650 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		FD275652241D7969009FB650 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 			children = (
 				FDFA1A772420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift */,
 				FDFA1A792420D90D00FB5B9F /* VerifyPhoneCodeRequest.swift */,
+				FD086D8524295F6A00368BDF /* AuthenticateRequest.swift */,
 				FDEE4CFB2423F86A0022E32C /* InviteDoctorRequest.swift */,
 				FDEEFD4A24266B3200D1DF15 /* SetPatientStatusRequest.swift */,
 			);
@@ -421,6 +424,7 @@
 				FDEEF1A0241C53D20010E368 /* APIManager.swift in Sources */,
 				FDEB44312419862C000B5320 /* NetworkAPI.swift in Sources */,
 				FDFA1A7A2420D90D00FB5B9F /* VerifyPhoneCodeRequest.swift in Sources */,
+				FD086D8624295F6A00368BDF /* AuthenticateRequest.swift in Sources */,
 				FDEB443324198875000B5320 /* Errors.swift in Sources */,
 				FDEDB1212426C76D0042B8D0 /* InvitationsViewController.swift in Sources */,
 				FDEEFD4B24266B3200D1DF15 /* SetPatientStatusRequest.swift in Sources */,

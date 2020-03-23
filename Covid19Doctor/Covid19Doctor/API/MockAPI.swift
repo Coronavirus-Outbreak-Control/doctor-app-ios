@@ -10,25 +10,34 @@ import RxSwift
 
 class MockAPI: API {
     
-    func sendPhoneVerificationCode(_ number: String) -> Single<SendPhoneVerificationCodeResponse> {
+    func sendPhoneVerificationCode(_ number: String) -> Single<Empty> {
         // ok if italian number
         .create { observer in
             DispatchQueue.main.delay(1) {
                 if !(number.hasPrefix("+39") || number.hasPrefix("0039")) {
                     observer(.error(Errors.phoneNotTrusted))
                 } else {
-                    let response = SendPhoneVerificationCodeResponse(data: "jwt123")
-                    observer(.success(response))
+                    observer(.success(Empty()))
                 }
             }
             return Disposables.create()
         }
     }
     
-    func verifyPhoneCode(_ code: String, token: String) -> Single<VerifyPhoneCodeResponse> {
+    func verifyPhoneCode(_ code: String) -> Single<VerifyPhoneCodeResponse> {
         .create { observer in
             DispatchQueue.main.delay(1) {
-                let response = VerifyPhoneCodeResponse(id: 1, authToken: "12345")
+                let response = VerifyPhoneCodeResponse(id: 1, reAuthToken: "re12345")
+                observer(.success(response))
+            }
+            return Disposables.create()
+        }
+    }
+    
+    func authenticate(reAuthToken: String) -> Single<AuthenticateResponse> {
+        .create { observer in
+            DispatchQueue.main.delay(1) {
+                let response = AuthenticateResponse(jwt: "jwt123")
                 observer(.success(response))
             }
             return Disposables.create()

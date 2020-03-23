@@ -12,13 +12,18 @@ class NetworkAPI: API {
     
     let client = NetworkClient(baseURL: URL(string: "http://doctors.api.coronaviruscheck.org/v1/")!)
     
-    func sendPhoneVerificationCode(_ number: String) -> Single<SendPhoneVerificationCodeResponse> {
+    func sendPhoneVerificationCode(_ number: String) -> Single<Empty> {
         let req = SendPhoneVerificationCodeRequest(phoneNumber: number)
         return client.send(apiRequest: req)
     }
     
-    func verifyPhoneCode(_ code: String, token: String) -> Single<VerifyPhoneCodeResponse> {
-        let req = VerifyPhoneCodeRequest(code: code, token: token)
+    func verifyPhoneCode(_ code: String) -> Single<VerifyPhoneCodeResponse> {
+        let req = VerifyPhoneCodeRequest(code: code)
+        return client.send(apiRequest: req)
+    }
+    
+    func authenticate(reAuthToken: String) -> Single<AuthenticateResponse> {
+        let req = AuthenticateRequest(reAuthToken: reAuthToken)
         return client.send(apiRequest: req)
     }
     
@@ -27,18 +32,18 @@ class NetworkAPI: API {
     }
     
     func setPatientStatus(patientId: String, status: PatientStatus) -> Single<Empty> {
-        guard let authToken: String = Database.shared.getAccountValue(key: .authToken) else {
+        guard let jwt: String = Database.shared.getAccountValue(key: .jwt) else {
             return .error(Errors.userNotLoggedIn)
         }
-        let req = SetPatientStatusRequest(authToken: authToken, patientId: patientId, newStatus: status)
+        let req = SetPatientStatusRequest(authToken: jwt, patientId: patientId, newStatus: status)
         return client.send(apiRequest: req)
     }
     
     func inviteDoctor(number: String) -> Single<Empty> {
-        guard let authToken: String = Database.shared.getAccountValue(key: .authToken) else {
+        guard let jwt: String = Database.shared.getAccountValue(key: .jwt) else {
             return .error(Errors.userNotLoggedIn)
         }
-        let req = InviteDoctorRequest(authToken: authToken, phoneNumber: number)
+        let req = InviteDoctorRequest(authToken: jwt, phoneNumber: number)
         return client.send(apiRequest: req)
     }
 }

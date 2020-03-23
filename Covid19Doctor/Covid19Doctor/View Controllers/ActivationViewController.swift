@@ -91,7 +91,6 @@ class ActivationViewController: UIViewController {
     
     // MARK: -
     
-    private var jwtToken: String?
     private var phoneNumber: String?
     
     private func handleSendVerificationCode() {
@@ -100,12 +99,11 @@ class ActivationViewController: UIViewController {
                 guard let `self` = self else { return .error(Errors.unknown) }
                 return self.phoneField.getPhoneNumber()
             })
-            .flatMap({ [weak self] number -> Observable<SendPhoneVerificationCodeResponse> in
+            .flatMap({ [weak self] number -> Observable<Empty> in
                 self?.didGetPhoneNumber(number)
                 return APIManager.api.sendPhoneVerificationCode(number).asObservable()
             })
-            .flatMapLatest({ [weak self] response -> Observable<Bool> in
-                self?.jwtToken = response.data
+            .flatMap({ [weak self] response -> Observable<Bool> in
                 return Observable.just(true)
             })
             .catchError({ [weak self] _ in
@@ -125,11 +123,8 @@ class ActivationViewController: UIViewController {
             .map({ $0.digits })
             .filter({ $0.count == self.digitsField.digits })
             .throttle(.seconds(1), scheduler: MainScheduler.instance)
-            .flatMapLatest({ [weak self] code -> Single<VerifyPhoneCodeResponse> in
-                guard let `self` = self,
-                    let token = self.jwtToken
-                    else { return .error(Errors.missingActivationToken) }
-                return APIManager.api.verifyPhoneCode(code, token: token)
+            .flatMapLatest({ code -> Single<VerifyPhoneCodeResponse> in
+                return APIManager.api.verifyPhoneCode(code)
             })
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] response in
@@ -147,11 +142,10 @@ class ActivationViewController: UIViewController {
     private func didActivate(response: VerifyPhoneCodeResponse) {
         if let phoneNumber = phoneNumber {
             Database.shared.setAccountValue(response.id, key: .userId)
-            Database.shared.setAccountValue(response.authToken, key: .authToken)
+            Database.shared.setAccountValue(response.reAuthToken, key: .reAuthToken)
             Database.shared.setAccountValue(phoneNumber, key: .phoneNumber)
         }
         
-        jwtToken = nil
         phoneNumber = nil
     }
     

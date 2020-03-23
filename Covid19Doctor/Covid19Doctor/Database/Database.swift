@@ -26,7 +26,7 @@ class Database {
     
     func isActivated() -> Bool {
         let userId: String? = getAccountValue(key: .userId)
-        let authToken: String? = getAccountValue(key: .authToken)
+        let authToken: String? = getAccountValue(key: .reAuthToken)
         return userId != nil && authToken != nil
     }
 }
@@ -35,8 +35,9 @@ class Database {
 extension Database {
     enum AccountKey: String {
         case userId
-        case authToken
+        case reAuthToken
         case phoneNumber
+        case jwt
     }
     
     private func write(_ val: String?, forKey key: AccountKey) {
