@@ -39,6 +39,12 @@ class PatientViewController: UIViewController {
         super.viewDidLoad()
         
         configureUI()
+        
+        backButton.rx.tap
+        .subscribe(onNext: { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        })
+        .disposed(by: bag)
 
         confirmButton.rx.tap
         .subscribe(onNext: { [weak self] _ in

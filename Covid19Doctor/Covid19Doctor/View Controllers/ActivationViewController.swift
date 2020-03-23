@@ -59,6 +59,7 @@ class ActivationViewController: UIViewController {
         
         configureUI()
         
+        navigationController?.setNavigationBarHidden(true, animated: false)
         digitsField.delegate = self
         codeView.isHidden = true
         textLabel.text = "A message with a verification code will be sent to your phone"
