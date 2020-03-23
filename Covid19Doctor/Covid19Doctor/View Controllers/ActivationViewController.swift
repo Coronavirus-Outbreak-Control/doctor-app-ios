@@ -17,6 +17,9 @@ import Toast_Swift
 
 class ActivationViewController: UIViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var lineView: UIView!
     @IBOutlet weak var phoneField: PhoneNumberTextField!
     @IBOutlet weak var sendPhoneButton: PMSuperButton!
     @IBOutlet weak var codeView: UIView!
@@ -25,19 +28,40 @@ class ActivationViewController: UIViewController {
     private let bag = DisposeBag()
     private let viewVisibleCommand = PublishRelay<Bool>()
     private let verificationCode = PublishRelay<String>()
+    
+    private func configureUI() {
+        phoneField.placeholder = "Phone number"
+        phoneField.withFlag = true
+        phoneField.withPrefix = true
+        if #available(iOS 11.0, *) {
+            phoneField.withDefaultPickerUI = true
+        }
+        
+        titleLabel.font = UIFont.title
+        titleLabel.textColor = UIColor.titleBlack
+        titleLabel.text = "Phone number verification"
+        
+        textLabel.font = UIFont.caption
+        textLabel.textColor = UIColor.textGray
+        
+        lineView.backgroundColor = UIColor.mainTheme
+        
+        phoneField.tintColor = UIColor.mainTheme
+        
+        sendPhoneButton.titleLabel?.font = UIFont.button
+        sendPhoneButton.setTitleColor(UIColor.titleBlack, for: .normal)
+        sendPhoneButton.backgroundColor = UIColor.mainTheme
+        sendPhoneButton.setTitle("SEND VERIFICATION CODE", for: .normal)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureUI()
+        
         digitsField.delegate = self
         codeView.isHidden = true
-        phoneField.map {
-            $0.withFlag = true
-            $0.withPrefix = true
-            if #available(iOS 11.0, *) {
-                $0.withDefaultPickerUI = true
-            }
-        }
+        textLabel.text = "A message with a verification code will be sent to your phone"
 
         // dismiss keyboard on tap
         view.rx.tapGesture().subscribe(onNext: { [weak self] _ in
@@ -87,7 +111,7 @@ class ActivationViewController: UIViewController {
             .catchError({ [weak self] _ in
                 // subscribe again
                 defer { self?.handleSendVerificationCode() }
-                self?.sendPhoneButton.isEnabled = true
+                self?.setPhoneButtonEnabled(true)
                 return Observable.just(false)
             })
             .map({ !$0 })
@@ -135,8 +159,13 @@ class ActivationViewController: UIViewController {
     
     private func didGetPhoneNumber(_ number: String) {
         self.phoneField.resignFirstResponder()
-        self.sendPhoneButton.isEnabled = false
+        setPhoneButtonEnabled(false)
         self.phoneNumber = number
+    }
+    
+    private func setPhoneButtonEnabled(_ val: Bool) {
+        sendPhoneButton.isEnabled = val
+        sendPhoneButton.alpha = val ? 1 : 0.4
     }
 }
 
