@@ -23,11 +23,15 @@ class NetworkClient {
                 if let error = error {
                     observer(.error(error))
                 } else {
-                    do {
-                        let model: T = try JSONDecoder().decode(T.self, from: data ?? Data())
-                        observer(.success(model))
-                    } catch let error {
-                        observer(.error(error))
+                    if T.self == Empty.self {
+                        observer(.success(Empty() as! T))
+                    } else {
+                        do {
+                            let model: T = try JSONDecoder().decode(T.self, from: data ?? Data())
+                            observer(.success(model))
+                        } catch let error {
+                            observer(.error(error))
+                        }
                     }
                 }
             }

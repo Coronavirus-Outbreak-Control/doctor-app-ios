@@ -10,7 +10,7 @@ import RxSwift
 
 class NetworkAPI: API {
     
-    let client = NetworkClient(baseURL: URL(string: "https://doctors.api.coronaviruscheck.org/v1")!)
+    let client = NetworkClient(baseURL: URL(string: "https://doctors.coronaviruscheck.org/v1")!)
     
     func sendPhoneVerificationCode(_ number: String) -> Single<Empty> {
         let req = SendPhoneVerificationCodeRequest(phoneNumber: number)
