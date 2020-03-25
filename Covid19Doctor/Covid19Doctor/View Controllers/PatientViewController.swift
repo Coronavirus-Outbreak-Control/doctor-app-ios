@@ -26,13 +26,17 @@ class PatientViewController: UIViewController {
     
     private func configureUI() {
         confirmButton.backgroundColor = UIColor(red:0.85, green:0.00, blue:0.11, alpha:1.00)
+        confirmButton.setTitle("COVID-19 POSITIVE", for: .normal)
         
         suspectedButton.backgroundColor = UIColor(red:0.96, green:0.60, blue:0.14, alpha:1.00)
+        suspectedButton.setTitle("SUSPECTED COVID-19", for: .normal)
         
         recoveredButton.backgroundColor = UIColor(red:1.00, green:0.82, blue:0.15, alpha:1.00)
+        recoveredButton.setTitle("HEALED/NEGATIVE", for: .normal)
         
         textLabel.font = UIFont.title
-        textLabel.text = "What's the patient status?"
+        textLabel.textColor = .titleBlack
+        textLabel.text = "Diagnosis"
     }
     
     override func viewDidLoad() {

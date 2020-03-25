@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -120,12 +120,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jTT-0N-l6Y" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
-                                <rect key="frame" x="40" y="291.5" width="334" height="32"/>
+                                <rect key="frame" x="40" y="291.5" width="334" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmX-fU-UxG">
-                                <rect key="frame" x="30" y="439.5" width="354" height="422.5"/>
+                                <rect key="frame" x="30" y="440.5" width="354" height="421.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert the verification code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMf-x2-RpM">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="20"/>
@@ -157,14 +157,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaZ-Hn-g0v">
-                                <rect key="frame" x="40" y="331.5" width="334" height="1"/>
+                                <rect key="frame" x="40" y="332.5" width="334" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="FoJ-NN-A41"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqZ-fg-BCc" customClass="PMSuperButton" customModule="PMSuperButton">
-                                <rect key="frame" x="59.5" y="353.5" width="295" height="56"/>
+                                <rect key="frame" x="59.5" y="354.5" width="295" height="56"/>
                                 <color key="backgroundColor" red="0.53825595540000004" green="0.86038698189999996" blue="0.60722287519999996" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Itw-Rv-jE9"/>
@@ -379,23 +379,23 @@
                                     <constraint firstItem="heX-El-P12" firstAttribute="top" secondItem="Yb5-DX-ufW" secondAttribute="top" id="xUv-oP-Mld"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the patient status?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="A2L-Gz-dT4">
-                                <rect key="frame" x="50" y="128" width="314" height="82"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diagnosis" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="A2L-Gz-dT4">
+                                <rect key="frame" x="50" y="128" width="314" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="szS-2b-zVx"/>
+                                    <constraint firstAttribute="height" constant="60" id="szS-2b-zVx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="110" translatesAutoresizingMaskIntoConstraints="NO" id="ru8-uL-fMI">
-                                <rect key="frame" x="57" y="242" width="300" height="520"/>
+                                <rect key="frame" x="57" y="220" width="300" height="388"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbJ-AE-BZM" customClass="PMSuperButton" customModule="PMSuperButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="56"/>
                                         <color key="backgroundColor" red="0.89932804404145084" green="0.44758780620793248" blue="0.49332087369590494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="5E0-hT-tOW"/>
+                                            <constraint firstAttribute="height" constant="56" id="5E0-hT-tOW"/>
                                             <constraint firstAttribute="width" constant="300" id="APb-KQ-QOc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
@@ -407,12 +407,12 @@
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="50"/>
+                                                <real key="value" value="28"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qX-Ou-Sbb" customClass="PMSuperButton" customModule="PMSuperButton">
-                                        <rect key="frame" x="0.0" y="210" width="300" height="100"/>
+                                        <rect key="frame" x="0.0" y="166" width="300" height="56"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                         <state key="normal" title="Suspected">
@@ -423,12 +423,12 @@
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="50"/>
+                                                <real key="value" value="28"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxe-UF-U9P" customClass="PMSuperButton" customModule="PMSuperButton">
-                                        <rect key="frame" x="0.0" y="420" width="300" height="100"/>
+                                        <rect key="frame" x="0.0" y="332" width="300" height="56"/>
                                         <color key="backgroundColor" red="0.53465739235088816" green="0.85722959844559588" blue="0.52476742466321025" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                         <state key="normal" title="Recovered">
@@ -439,7 +439,7 @@
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="50"/>
+                                                <real key="value" value="28"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
@@ -490,41 +490,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activated" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg6-9G-7iH">
-                                <rect key="frame" x="101" y="122" width="212.5" height="63.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All set!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg6-9G-7iH">
+                                <rect key="frame" x="50" y="74" width="314" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="53"/>
                                 <color key="textColor" red="0.2244822819" green="0.248710183" blue="0.27032059590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have been accepted" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpu-ja-vGB">
-                                <rect key="frame" x="70" y="285.5" width="274" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpu-ja-vGB">
+                                <rect key="frame" x="50" y="215" width="333" height="186.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="333" id="XR6-0p-ENQ"/>
+                                </constraints>
+                                <string key="text">On this app you will now be able to scan a patient's QR code in order to change a patient health status, and invite other doctors on the app.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="0.2244822819" green="0.248710183" blue="0.27032059590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="Kpx-Fa-3DS">
-                                <rect key="frame" x="162" y="390" width="90" height="90"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHm-xx-9hq" customClass="PMSuperButton" customModule="PMSuperButton">
+                                <rect key="frame" x="59.5" y="741" width="295" height="56"/>
+                                <color key="backgroundColor" red="0.53825595540000004" green="0.86038698189999996" blue="0.60722287519999996" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="1BJ-C0-Wr9"/>
-                                    <constraint firstAttribute="height" constant="90" id="FZf-N1-1tp"/>
+                                    <constraint firstAttribute="width" constant="295" id="dam-LK-koF"/>
+                                    <constraint firstAttribute="height" constant="56" id="yow-0a-pcB"/>
                                 </constraints>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <state key="normal" title="GO TO APPLICATION">
+                                    <color key="titleColor" red="0.22352941179999999" green="0.2470588235" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Jlk-hM-n4y" eventType="touchUpInside" id="wSI-jR-d70"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="cpu-ja-vGB" firstAttribute="centerX" secondItem="dHO-ej-SMP" secondAttribute="centerX" id="0La-6A-cBe"/>
-                            <constraint firstItem="Kpx-Fa-3DS" firstAttribute="top" secondItem="cpu-ja-vGB" secondAttribute="bottom" constant="73" id="BD6-Ge-KFz"/>
-                            <constraint firstItem="Kpx-Fa-3DS" firstAttribute="centerX" secondItem="dHO-ej-SMP" secondAttribute="centerX" id="hkR-FE-iUQ"/>
-                            <constraint firstItem="Eg6-9G-7iH" firstAttribute="top" secondItem="DHT-ZM-213" secondAttribute="bottom" constant="78" id="k98-CP-mSu"/>
-                            <constraint firstItem="cpu-ja-vGB" firstAttribute="top" secondItem="Eg6-9G-7iH" secondAttribute="bottom" constant="100" id="pwz-Vz-8QJ"/>
+                            <constraint firstItem="Eg6-9G-7iH" firstAttribute="leading" secondItem="dHO-ej-SMP" secondAttribute="leadingMargin" constant="30" id="5hh-vD-Evb"/>
+                            <constraint firstItem="jHm-xx-9hq" firstAttribute="centerX" secondItem="dHO-ej-SMP" secondAttribute="centerX" id="AwL-eS-Luo"/>
+                            <constraint firstItem="cpu-ja-vGB" firstAttribute="top" secondItem="Eg6-9G-7iH" secondAttribute="bottom" constant="77" id="JZM-S4-8Oy"/>
+                            <constraint firstItem="cpu-ja-vGB" firstAttribute="leading" secondItem="dHO-ej-SMP" secondAttribute="leadingMargin" constant="30" id="TwK-EK-ZU4"/>
+                            <constraint firstItem="Eg6-9G-7iH" firstAttribute="top" secondItem="DHT-ZM-213" secondAttribute="bottom" constant="30" id="dbQ-lm-Vcf"/>
+                            <constraint firstItem="pPz-kl-LWH" firstAttribute="top" secondItem="jHm-xx-9hq" secondAttribute="bottom" constant="64" id="tFA-Ox-BEw"/>
                             <constraint firstItem="Eg6-9G-7iH" firstAttribute="centerX" secondItem="dHO-ej-SMP" secondAttribute="centerX" id="tkC-Vz-vVW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SDO-ch-yNI"/>
+                    <connections>
+                        <outlet property="button" destination="jHm-xx-9hq" id="AJM-ZD-IpW"/>
+                        <outlet property="textLabel" destination="cpu-ja-vGB" id="v1h-Xp-uqA"/>
+                        <outlet property="titleLabel" destination="Eg6-9G-7iH" id="DJ5-Nj-B1D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUn-Kt-eiX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="601" y="359"/>
+            <point key="canvasLocation" x="598.55072463768124" y="358.92857142857139"/>
         </scene>
         <!--Scanner View Controller-->
         <scene sceneID="0h6-bH-Y5O">
@@ -636,6 +659,5 @@
         <image name="arrow-left-solid" width="448" height="512"/>
         <image name="photo-camera" width="548" height="548"/>
         <image name="qr-code" width="402" height="402"/>
-        <image name="tick" width="512" height="512"/>
     </resources>
 </document>
