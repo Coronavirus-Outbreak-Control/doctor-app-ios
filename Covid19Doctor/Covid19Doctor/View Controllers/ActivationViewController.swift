@@ -37,20 +37,20 @@ class ActivationViewController: UIViewController {
             phoneField.withDefaultPickerUI = true
         }
         
-        titleLabel.font = UIFont.title
-        titleLabel.textColor = UIColor.titleBlack
+        titleLabel.font = .title
+        titleLabel.textColor = .titleBlack
         titleLabel.text = "Phone number verification"
         
-        textLabel.font = UIFont.caption
-        textLabel.textColor = UIColor.textGray
+        textLabel.font = .caption
+        textLabel.textColor = .textGray
         
-        lineView.backgroundColor = UIColor.mainTheme
+        lineView.backgroundColor = .mainTheme
         
-        phoneField.tintColor = UIColor.mainTheme
+        phoneField.tintColor = .mainTheme
         
-        sendPhoneButton.titleLabel?.font = UIFont.button
-        sendPhoneButton.setTitleColor(UIColor.titleBlack, for: .normal)
-        sendPhoneButton.backgroundColor = UIColor.mainTheme
+        sendPhoneButton.titleLabel?.font = .button
+        sendPhoneButton.setTitleColor(.white, for: .normal)
+        sendPhoneButton.backgroundColor = .mainTheme
         sendPhoneButton.setTitle("SEND VERIFICATION CODE", for: .normal)
     }
 
@@ -59,7 +59,6 @@ class ActivationViewController: UIViewController {
         
         configureUI()
         
-        navigationController?.setNavigationBarHidden(true, animated: false)
         digitsField.delegate = self
         codeView.isHidden = true
         textLabel.text = "A message with a verification code will be sent to your phone"
@@ -88,6 +87,11 @@ class ActivationViewController: UIViewController {
         
         // action when verfication code button is tapped
         handleCodeVerification()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     // MARK: -

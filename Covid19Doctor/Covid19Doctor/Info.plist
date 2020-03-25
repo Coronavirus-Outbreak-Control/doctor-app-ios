@@ -20,8 +20,25 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>This app requires to access the camera to scan patient&apos;s QR codes</string>
+	<string>This app requires to access the camera to scan patient's QR codes</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SF-Compact-Display-Heavy.otf</string>
+		<string>SF-Compact-Display-Thin.otf</string>
+		<string>SF-Compact-Display-Ultralight.otf</string>
+		<string>SF-Compact-Display-Regular.otf</string>
+		<string>SF-Compact-Display-Semibold.otf</string>
+		<string>SF-Compact-Display-Light.otf</string>
+		<string>SF-Compact-Display-Black.otf</string>
+		<string>SF-Compact-Display-Medium.otf</string>
+		<string>SF-Compact-Display-Bold.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -41,22 +58,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>UIAppFonts</key>
-    <array>
-        <string>SF-Compact-Display-Heavy.otf</string>
-        <string>SF-Compact-Display-Thin.otf</string>
-        <string>SF-Compact-Display-Ultralight.otf</string>
-        <string>SF-Compact-Display-Regular.otf</string>
-        <string>SF-Compact-Display-Semibold.otf</string>
-        <string>SF-Compact-Display-Light.otf</string>
-        <string>SF-Compact-Display-Black.otf</string>
-        <string>SF-Compact-Display-Medium.otf</string>
-        <string>SF-Compact-Display-Bold.otf</string>
-    </array>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-      <key>NSAllowsArbitraryLoads</key>
-          <true/>
-    </dict>
 </dict>
 </plist>

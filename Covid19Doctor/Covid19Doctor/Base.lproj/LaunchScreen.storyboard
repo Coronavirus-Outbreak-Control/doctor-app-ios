@@ -6,6 +6,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Display-Semibold.otf">
+            <string>SFCompactDisplay-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -19,24 +24,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connections" translatesAutoresizingMaskIntoConstraints="NO" id="pWD-Sa-Fsr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coronavirus Doctor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSK-jc-jpa">
-                                <rect key="frame" x="84" y="218" width="246.5" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                                <nil key="textColor"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSK-jc-jpa">
+                                <rect key="frame" x="144" y="144" width="126" height="66.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="CoviDoc">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <font key="NSOriginalFont" size="61" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="🩺">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="60" name=".AppleColorEmojiUI"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLd-pr-kB1">
+                                <rect key="frame" x="20" y="226.5" width="374" height="62.5"/>
+                                <string key="text">Doctor
+Covid Community Alert</string>
+                                <fontDescription key="fontDescription" name="SFCompactDisplay-Semibold" family="SF Compact Display" pointSize="26"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="covidoc-img" translatesAutoresizingMaskIntoConstraints="NO" id="EWu-Sg-fu2">
+                                <rect key="frame" x="67" y="129" width="280" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="3Kp-gz-ek2"/>
+                                    <constraint firstAttribute="height" constant="96" id="frN-SR-8YD"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="pWD-Sa-Fsr" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="3LW-qI-Y9N"/>
-                            <constraint firstAttribute="trailing" secondItem="pWD-Sa-Fsr" secondAttribute="trailing" id="9YD-FB-rAT"/>
-                            <constraint firstItem="pWD-Sa-Fsr" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="E23-SD-Ejo"/>
-                            <constraint firstItem="KSK-jc-jpa" firstAttribute="top" secondItem="iL7-qh-lG5" secondAttribute="bottom" constant="174" id="ISL-oq-dey"/>
+                            <constraint firstItem="OLd-pr-kB1" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="EvG-oE-shh"/>
+                            <constraint firstItem="KSK-jc-jpa" firstAttribute="top" secondItem="iL7-qh-lG5" secondAttribute="bottom" constant="100" id="ISL-oq-dey"/>
                             <constraint firstItem="KSK-jc-jpa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Kgn-W2-5yU"/>
-                            <constraint firstAttribute="bottom" secondItem="pWD-Sa-Fsr" secondAttribute="bottom" id="fuW-tn-FeE"/>
+                            <constraint firstItem="OLd-pr-kB1" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="Pr0-V9-tqq"/>
+                            <constraint firstItem="OLd-pr-kB1" firstAttribute="top" secondItem="KSK-jc-jpa" secondAttribute="bottom" constant="16" id="XRn-vV-6gQ"/>
+                            <constraint firstItem="EWu-Sg-fu2" firstAttribute="top" secondItem="iL7-qh-lG5" secondAttribute="bottom" constant="85" id="Xst-Aj-ceZ"/>
+                            <constraint firstItem="EWu-Sg-fu2" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bac-1A-KJ1"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -46,6 +86,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="connections" width="1754" height="2703"/>
+        <image name="covidoc-img" width="676" height="184"/>
     </resources>
 </document>

@@ -11,20 +11,44 @@ import PMSuperButton
 import ContactsUI
 import RxSwift
 import RxCocoa
+import RxGesture
 import Toast_Swift
 
 class ActivityViewController: UIViewController {
 
-    @IBOutlet weak var scanButton: PMSuperButton!
+    @IBOutlet weak var scanView: UIView!
     @IBOutlet weak var inviteButton: PMSuperButton!
-    @IBOutlet weak var invitationsButton: PMSuperButton!
+    
+    @IBOutlet weak var qrTextLabel: UILabel!
+    @IBOutlet weak var qrImageView: UIImageView!
+    @IBOutlet weak var photoImageView: UIImageView!
     
     private let bag = DisposeBag()
+    
+    private func configureUI() {
+        qrTextLabel.text = "CLICK HERE\nTO SCAN PATIENT'S\nQR CODE"
+        qrTextLabel.font = UIFont(name: "SFCompactDisplay-Semibold", size: 22)
+        qrTextLabel.textColor = UIColor.mainTheme
+        
+        qrImageView.image = UIImage(named: "qr-code")?.withRenderingMode(.alwaysTemplate)
+        qrImageView.tintColor = UIColor.mainTheme
+        qrImageView.alpha = 0.25
+        
+        photoImageView.image = UIImage(named: "photo-camera")?.withRenderingMode(.alwaysTemplate)
+        photoImageView.tintColor = UIColor.mainTheme
+        
+        inviteButton.titleLabel?.font = .button
+        inviteButton.setTitleColor(.white, for: .normal)
+        inviteButton.setTitle("INVITE OTHER DOCTORS", for: .normal)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scanButton.rx.tap
+        configureUI()
+        
+        scanView.rx.tapGesture()
+        .skip(1)
         .subscribe(onNext: { [weak self] _ in
             self?.launchScanner()
         })
@@ -35,12 +59,16 @@ class ActivityViewController: UIViewController {
             self?.launchContactPicker()
         })
         .disposed(by: bag)
-        
-        invitationsButton.rx.tap
-        .subscribe(onNext: { [weak self] _ in
-            self?.launchInvitations()
-        })
-        .disposed(by: bag)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     // MARK: - Scanner

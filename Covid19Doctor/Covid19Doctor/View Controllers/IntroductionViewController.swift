@@ -23,21 +23,27 @@ class IntroductionViewController: UIViewController {
         super.viewDidLoad()
         
         titleLabel.map {
-            $0.font = UIFont.title
-            $0.textColor = UIColor.titleBlack
-            $0.text = "Welcome to\nanonymous\nCoronavirus\ncheck"
+            $0.font = .title
+            $0.textColor = .titleBlack
+            
+            let text = "Welcome to\nanonymous\nCoronavirus\nalert"
+            let str = "Coronavirus"
+            let range = (text as NSString).range(of: str)
+            let attributed = NSMutableAttributedString(string: text)
+            attributed.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.mainTheme, range: range)
+            $0.attributedText = attributed
         }
         
         subtitleLabel.map {
-            $0.font = UIFont.subtitle
-            $0.textColor = UIColor.textGray
+            $0.font = .subtitle
+            $0.textColor = .textGray
         }
         
         continueButton.map {
-            $0.titleLabel?.font = UIFont.button
-            $0.setTitleColor(UIColor.titleBlack, for: .normal)
-            $0.backgroundColor = UIColor.mainTheme
-            $0.setTitle("CONTINUE", for: .normal)
+            $0.titleLabel?.font = .button
+            $0.setTitleColor(.white, for: .normal)
+            $0.backgroundColor = .mainTheme
+            $0.setTitle("LET'S GET STARTED", for: .normal)
         }
 
         continueButton.rx.tap.bind {
