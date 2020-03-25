@@ -7,5 +7,5 @@
 //
 
 class APIManager {
-    static let api = NetworkAPI() //MockAPI()
+    static let api = NetworkAPI()
 }
