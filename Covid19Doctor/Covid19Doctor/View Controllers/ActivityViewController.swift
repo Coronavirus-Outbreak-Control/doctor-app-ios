@@ -22,8 +22,6 @@ class ActivityViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var qrTextLabel: UILabel!
-    @IBOutlet weak var qrImageView: UIImageView!
-    @IBOutlet weak var photoImageView: UIImageView!
     
     private let bag = DisposeBag()
     
@@ -40,16 +38,9 @@ class ActivityViewController: UIViewController {
             $0.attributedText = attributed
         }
         
-        qrTextLabel.text = "CLICK HERE\nTO SCAN PATIENT'S\nQR CODE"
-        qrTextLabel.font = UIFont(name: "SFCompactDisplay-Semibold", size: 22)
-        qrTextLabel.textColor = UIColor.mainTheme
-        
-        qrImageView.image = UIImage(named: "qr-code")?.withRenderingMode(.alwaysTemplate)
-        qrImageView.tintColor = UIColor.mainTheme
-        qrImageView.alpha = 0.25
-        
-        photoImageView.image = UIImage(named: "photo-camera")?.withRenderingMode(.alwaysTemplate)
-        photoImageView.tintColor = UIColor.mainTheme
+        qrTextLabel.text = "CLICK HERE TO\nSCAN QR CODE"
+        qrTextLabel.font = UIFont(name: "SFCompactDisplay-Semibold", size: 20)
+        qrTextLabel.textColor = .white
         
         inviteButton.titleLabel?.font = .button
         inviteButton.setTitleColor(.white, for: .normal)

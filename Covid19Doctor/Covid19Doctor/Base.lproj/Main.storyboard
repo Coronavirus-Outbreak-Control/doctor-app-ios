@@ -237,7 +237,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewV-3p-LfE" customClass="PMSuperButton" customModule="PMSuperButton">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewV-3p-LfE" customClass="PMSuperButton" customModule="PMSuperButton">
                                 <rect key="frame" x="59.5" y="702" width="295" height="56"/>
                                 <color key="backgroundColor" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -266,27 +266,13 @@ CoviDoc</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7J-DA-yb7">
-                                <rect key="frame" x="60" y="301" width="294" height="294"/>
+                                <rect key="frame" x="60" y="267" width="294" height="362"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset 2" translatesAutoresizingMaskIntoConstraints="NO" id="EhR-Ao-sj0">
-                                        <rect key="frame" x="0.0" y="0.0" width="294" height="294"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr-code" translatesAutoresizingMaskIntoConstraints="NO" id="al9-TT-nMZ">
-                                        <rect key="frame" x="72" y="114" width="150" height="150"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="33Q-lO-PGa"/>
-                                            <constraint firstAttribute="height" constant="150" id="4bb-dv-KuS"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-camera" translatesAutoresizingMaskIntoConstraints="NO" id="zvV-fI-ayB">
-                                        <rect key="frame" x="118" y="160" width="58" height="58"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="58" id="Lp9-sU-dnM"/>
-                                            <constraint firstAttribute="width" constant="58" id="Nqm-Td-GcO"/>
-                                        </constraints>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr-base" translatesAutoresizingMaskIntoConstraints="NO" id="EhR-Ao-sj0">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="362"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eFU-6Z-7PD">
-                                        <rect key="frame" x="8" y="8" width="278" height="98"/>
+                                        <rect key="frame" x="8" y="16" width="278" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -295,18 +281,13 @@ CoviDoc</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="EhR-Ao-sj0" firstAttribute="leading" secondItem="O7J-DA-yb7" secondAttribute="leading" id="4SJ-n9-0qm"/>
-                                    <constraint firstItem="zvV-fI-ayB" firstAttribute="centerX" secondItem="al9-TT-nMZ" secondAttribute="centerX" id="C7r-ZO-WBb"/>
-                                    <constraint firstAttribute="bottom" secondItem="al9-TT-nMZ" secondAttribute="bottom" constant="30" id="Gtc-cw-Awo"/>
-                                    <constraint firstAttribute="width" secondItem="O7J-DA-yb7" secondAttribute="height" multiplier="1:1" id="Jha-VO-r4m"/>
+                                    <constraint firstAttribute="width" secondItem="O7J-DA-yb7" secondAttribute="height" multiplier="1:1.23" id="Jha-VO-r4m"/>
                                     <constraint firstItem="eFU-6Z-7PD" firstAttribute="leading" secondItem="O7J-DA-yb7" secondAttribute="leading" constant="8" id="L4o-zI-XSt"/>
-                                    <constraint firstItem="al9-TT-nMZ" firstAttribute="top" secondItem="eFU-6Z-7PD" secondAttribute="bottom" constant="8" id="N31-Jn-hWG"/>
                                     <constraint firstAttribute="trailing" secondItem="EhR-Ao-sj0" secondAttribute="trailing" id="OW8-hO-XKg"/>
-                                    <constraint firstItem="zvV-fI-ayB" firstAttribute="centerY" secondItem="al9-TT-nMZ" secondAttribute="centerY" id="Pvn-qd-wHc"/>
                                     <constraint firstAttribute="trailing" secondItem="eFU-6Z-7PD" secondAttribute="trailing" constant="8" id="UF4-pa-MPo"/>
-                                    <constraint firstItem="al9-TT-nMZ" firstAttribute="centerX" secondItem="O7J-DA-yb7" secondAttribute="centerX" id="bVP-9O-N8S"/>
                                     <constraint firstItem="EhR-Ao-sj0" firstAttribute="top" secondItem="O7J-DA-yb7" secondAttribute="top" id="d6y-Qu-E1X"/>
                                     <constraint firstAttribute="bottom" secondItem="EhR-Ao-sj0" secondAttribute="bottom" id="eZ2-aX-nP2"/>
-                                    <constraint firstItem="eFU-6Z-7PD" firstAttribute="top" secondItem="O7J-DA-yb7" secondAttribute="top" constant="8" id="nOa-pM-3cE"/>
+                                    <constraint firstItem="eFU-6Z-7PD" firstAttribute="top" secondItem="O7J-DA-yb7" secondAttribute="top" constant="16" id="nOa-pM-3cE"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -326,8 +307,6 @@ CoviDoc</string>
                     <navigationItem key="navigationItem" id="Ie1-up-Ywm"/>
                     <connections>
                         <outlet property="inviteButton" destination="ewV-3p-LfE" id="H0t-zB-x5X"/>
-                        <outlet property="photoImageView" destination="zvV-fI-ayB" id="f41-KE-xpa"/>
-                        <outlet property="qrImageView" destination="al9-TT-nMZ" id="Msy-7B-FQx"/>
                         <outlet property="qrTextLabel" destination="eFU-6Z-7PD" id="bcg-4B-8DT"/>
                         <outlet property="scanView" destination="O7J-DA-yb7" id="kDP-Gw-T5B"/>
                         <outlet property="titleLabel" destination="yXR-Rs-CHD" id="1U3-og-GWK"/>
@@ -647,10 +626,8 @@ CoviDoc</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Asset 2" width="590" height="664"/>
         <image name="arrow-left-solid" width="448" height="512"/>
         <image name="neural" width="800" height="1557"/>
-        <image name="photo-camera" width="548" height="548"/>
-        <image name="qr-code" width="402" height="402"/>
+        <image name="qr-base" width="882" height="1085"/>
     </resources>
 </document>
