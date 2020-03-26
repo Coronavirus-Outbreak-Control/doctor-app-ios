@@ -497,9 +497,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpu-ja-vGB">
-                                <rect key="frame" x="50" y="215" width="333" height="186.5"/>
+                                <rect key="frame" x="50" y="215" width="314" height="186.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="333" id="XR6-0p-ENQ"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="999" constant="333" id="XR6-0p-ENQ"/>
                                 </constraints>
                                 <string key="text">On this app you will now be able to scan a patient's QR code in order to change a patient health status, and invite other doctors on the app.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -532,6 +532,7 @@
                             <constraint firstItem="Eg6-9G-7iH" firstAttribute="leading" secondItem="dHO-ej-SMP" secondAttribute="leadingMargin" constant="30" id="5hh-vD-Evb"/>
                             <constraint firstItem="jHm-xx-9hq" firstAttribute="centerX" secondItem="dHO-ej-SMP" secondAttribute="centerX" id="AwL-eS-Luo"/>
                             <constraint firstItem="cpu-ja-vGB" firstAttribute="top" secondItem="Eg6-9G-7iH" secondAttribute="bottom" constant="77" id="JZM-S4-8Oy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cpu-ja-vGB" secondAttribute="trailing" constant="30" id="KvF-MX-mJG"/>
                             <constraint firstItem="cpu-ja-vGB" firstAttribute="leading" secondItem="dHO-ej-SMP" secondAttribute="leadingMargin" constant="30" id="TwK-EK-ZU4"/>
                             <constraint firstItem="Eg6-9G-7iH" firstAttribute="top" secondItem="DHT-ZM-213" secondAttribute="bottom" constant="30" id="dbQ-lm-Vcf"/>
                             <constraint firstItem="pPz-kl-LWH" firstAttribute="top" secondItem="jHm-xx-9hq" secondAttribute="bottom" constant="64" id="tFA-Ox-BEw"/>

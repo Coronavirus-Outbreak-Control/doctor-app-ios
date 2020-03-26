@@ -125,13 +125,14 @@ class ActivityViewController: UIViewController {
         APIManager.api.runAuthenticated(reAuthToken: reAuthToken, apiBuilder: {
             APIManager.api.inviteDoctor(number: phoneNumber)
         })
-        .do(onDispose: { [weak self] in
-            self?.view.hideToastActivity()
-        })
+        .timeout(.seconds(30), scheduler: MainScheduler.instance)
+        .observeOn(MainScheduler.instance)
         .subscribe(onSuccess: { [weak self] _ in
             self?.storeInvitation(name: contact.fullName, phoneNumber: phoneNumber)
+            self?.view.hideToastActivity()
             self?.view.makeToast("Invitation sent to \(contact.fullName)", duration: 3.0, position: .center)
         }, onError: { [weak self] _ in
+            self?.view.hideToastActivity()
             self?.view.makeToast("Error inviting \(contact.fullName)", duration: 3.0, position: .center)
         })
         .disposed(by: bag)
@@ -178,7 +179,7 @@ extension ActivityViewController: CNContactPickerDelegate {
             let contact = Contact(contact: contactProperty.contact) {
             
             picker.dismiss(animated: true) { [weak self] in
-                if let number = PhoneNumberKit().validatedPhoneNumber(string: phoneNumber.stringValue, pretty: true) {
+                if let number = PhoneNumberKit().validatedPhoneNumber(string: phoneNumber.stringValue) {
                     self?.promptInvitation(contact: contact, phoneNumber: number)
                 }
                 else {

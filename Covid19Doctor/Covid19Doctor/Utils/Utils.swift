@@ -46,14 +46,10 @@ extension PhoneNumberTextField {
 }
 
 extension PhoneNumberKit {
-    func validatedPhoneNumber(string: String, pretty: Bool = false) -> String? {
+    func validatedPhoneNumber(string: String) -> String? {
         do {
             let phoneNumber = try parse(string)
-            if pretty {
-                return "+\(phoneNumber.countryCode) \(phoneNumber.numberString)"
-            } else {
-                return "+\(phoneNumber.countryCode)\(phoneNumber.nationalNumber)"
-            }
+            return "+\(phoneNumber.countryCode)\(phoneNumber.nationalNumber)"
         }
         catch {
             return nil
