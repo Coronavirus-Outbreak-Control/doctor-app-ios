@@ -20,7 +20,7 @@ class PatientViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     
-    var patientId: String!
+    var patientId: String! = "sddsds"
     
     private let bag = DisposeBag()
     
@@ -33,6 +33,11 @@ class PatientViewController: UIViewController {
         
         recoveredButton.backgroundColor = UIColor(red:1.00, green:0.82, blue:0.15, alpha:1.00)
         recoveredButton.setTitle("HEALED/NEGATIVE", for: .normal)
+        
+        [confirmButton, suspectedButton, recoveredButton].forEach {
+            $0?.titleLabel?.font = .button
+            $0?.setTitleColor(.white, for: .normal)
+        }
         
         textLabel.font = UIFont.title
         textLabel.textColor = .titleBlack
@@ -52,19 +57,19 @@ class PatientViewController: UIViewController {
 
         confirmButton.rx.tap
         .subscribe(onNext: { [weak self] _ in
-            self?.setStatus(.infected)
+            self?.askConfirmation(forStatus: .infected)
         })
         .disposed(by: bag)
         
         suspectedButton.rx.tap
         .subscribe(onNext: { [weak self] _ in
-            self?.setStatus(.suspected)
+            self?.askConfirmation(forStatus: .suspected)
         })
         .disposed(by: bag)
         
         recoveredButton.rx.tap
         .subscribe(onNext: { [weak self] _ in
-            self?.setStatus(.healed)
+            self?.askConfirmation(forStatus: .healed)
         })
         .disposed(by: bag)
     }
@@ -77,5 +82,21 @@ class PatientViewController: UIViewController {
             // TODO
         })
         .disposed(by: bag)
+    }
+    
+    func askConfirmation(forStatus status: PatientStatus) {
+        let alertController = UIAlertController(title: "\(status)", message: "Are you sure?", preferredStyle: .alert)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            // nothing
+        }
+        alertController.addAction(cancelAction)
+
+        let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+            self?.setStatus(status)
+        }
+        alertController.addAction(okAction)
+
+        self.present(alertController, animated: true)
     }
 }
