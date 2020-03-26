@@ -13,5 +13,7 @@ enum Errors: Error {
     case missingActivationToken
     case userNotLoggedIn
     case invalidPhoneNumber
-    case requestFailed
+    case verificationCodeExpired
+    case tokenAlreadyRequested
+    case requestFailed(Int)
 }

@@ -137,8 +137,8 @@ class ActivationViewController: UIViewController {
                 DispatchQueue.main.delay(1) {
                     self?.performSegue(withIdentifier: "activate-accepted", sender: self)
                 }
-            }, onError: { [weak self] _ in
-                self?.view.makeToast("Invalid code", duration: 3.0, position: .top)
+            }, onError: { [weak self] error in
+                self?.didReceiveError(error)
                 self?.handleCodeVerification()
             })
             .disposed(by: bag)
@@ -152,6 +152,21 @@ class ActivationViewController: UIViewController {
         }
         
         phoneNumber = nil
+    }
+    
+    private func didReceiveError(_ error: Error) {
+        let text: String
+        if let error = error as? Errors {
+            switch error {
+                //TODO: show errors
+            default:
+                text = "Error"
+            }
+        } else {
+            text = "Error"
+        }
+        
+        view.makeToast(text, duration: 3.0, position: .center)
     }
     
     // MARK: -

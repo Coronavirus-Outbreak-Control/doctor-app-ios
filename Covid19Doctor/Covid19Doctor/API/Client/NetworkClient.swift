@@ -20,10 +20,17 @@ class NetworkClient {
         return Single<T>.create { [unowned self] observer in
             let request = apiRequest.request(with: self.baseURL)
             let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-                guard let status = (response as? HTTPURLResponse)?.statusCode,
-                    (200..<299).contains(status)
-                else {
-                    observer(.error(Errors.requestFailed))
+                guard let status = (response as? HTTPURLResponse)?.statusCode else {
+                    observer(.error(Errors.unknown))
+                    return
+                }
+                
+                // check response code and return on error if any
+                switch status {
+                case 200..<299:
+                    break
+                default:
+                    observer(.error(Errors.requestFailed(status)))
                     return
                 }
                 
