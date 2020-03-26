@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             root = UIStoryboard.getViewController(id: "Introduction")
         }
 
-        self.window?.rootViewController = root
+        self.window?.rootViewController = root //UIStoryboard.getViewController(id: "PatientViewController")
         self.window?.makeKeyAndVisible()
     }
 }

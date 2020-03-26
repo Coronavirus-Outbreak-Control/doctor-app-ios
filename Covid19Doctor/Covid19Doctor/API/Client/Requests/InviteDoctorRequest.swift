@@ -17,7 +17,7 @@ struct InviteDoctorRequest: NetworkRequest {
     
     init(authToken: String, phoneNumber: String) {
         self.authToken = authToken
-        let dict = ["phone-number": phoneNumber]
+        let dict = ["phone_number": phoneNumber]
         self.body = try! JSONSerialization.data(withJSONObject: dict)
     }
 }

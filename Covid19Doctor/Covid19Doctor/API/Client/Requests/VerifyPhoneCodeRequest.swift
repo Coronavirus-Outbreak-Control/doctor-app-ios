@@ -22,5 +22,5 @@ struct VerifyPhoneCodeRequest: NetworkRequest {
 
 struct VerifyPhoneCodeResponse: Codable {
     let id: Int
-    let reAuthToken: String
+    let token: String
 }

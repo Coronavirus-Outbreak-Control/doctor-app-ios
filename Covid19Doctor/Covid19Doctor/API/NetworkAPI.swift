@@ -10,7 +10,10 @@ import RxSwift
 
 class NetworkAPI: API {
     
+    // remote
     let client = NetworkClient(baseURL: URL(string: "https://doctors.coronaviruscheck.org/v1")!)
+    // local
+    //let client = NetworkClient(baseURL: URL(string: "http://127.0.0.1:9000/v1")!)
     
     func sendPhoneVerificationCode(_ number: String) -> Single<Empty> {
         let req = SendPhoneVerificationCodeRequest(phoneNumber: number)
@@ -52,7 +55,7 @@ extension NetworkAPI {
     func runAuthenticated<T>(reAuthToken: String, apiBuilder: @escaping () -> Single<T>) -> Single<T> {
         authenticate(reAuthToken: reAuthToken)
             .flatMap { res in
-                Database.shared.setAccountValue(res.jwt, key: .jwt)
+                Database.shared.setAccountValue(res.token, key: .jwt)
                 return apiBuilder()
             }
     }

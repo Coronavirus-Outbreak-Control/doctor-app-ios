@@ -108,7 +108,7 @@ class ActivationViewController: UIViewController {
                 self?.didGetPhoneNumber(number)
                 return APIManager.api.sendPhoneVerificationCode(number).asObservable()
             })
-            .flatMap({ [weak self] response -> Observable<Bool> in
+            .flatMap({ response -> Observable<Bool> in
                 return Observable.just(true)
             })
             .catchError({ [weak self] _ in
@@ -147,7 +147,7 @@ class ActivationViewController: UIViewController {
     private func didActivate(response: VerifyPhoneCodeResponse) {
         if let phoneNumber = phoneNumber {
             Database.shared.setAccountValue(response.id, key: .userId)
-            Database.shared.setAccountValue(response.reAuthToken, key: .reAuthToken)
+            Database.shared.setAccountValue(response.token, key: .reAuthToken)
             Database.shared.setAccountValue(phoneNumber, key: .phoneNumber)
         }
         

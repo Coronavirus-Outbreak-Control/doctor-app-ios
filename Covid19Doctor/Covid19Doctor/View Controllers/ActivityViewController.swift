@@ -13,6 +13,7 @@ import RxSwift
 import RxCocoa
 import RxGesture
 import Toast_Swift
+import PhoneNumberKit
 
 class ActivityViewController: UIViewController {
 
@@ -136,6 +137,23 @@ class ActivityViewController: UIViewController {
         .disposed(by: bag)
     }
     
+    private func promptInvitation(contact: Contact, phoneNumber: String) {
+        // phoneNumber is already validated
+        let alertController = UIAlertController(title: "You are inviting\n\(phoneNumber)", message: "Are you sure?", preferredStyle: .alert)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { [weak self] _ in
+            self?.dismiss(animated: true, completion: nil)
+        }
+        alertController.addAction(cancelAction)
+
+        let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+            self?.inviteContact(contact, phoneNumber: phoneNumber)
+        }
+        alertController.addAction(okAction)
+
+        present(alertController, animated: true)
+    }
+    
     private func storeInvitation(name: String, phoneNumber: String) {
         let realm = Database.shared.realm()
         let invitation = InvitationObject()
@@ -158,7 +176,15 @@ extension ActivityViewController: CNContactPickerDelegate {
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contactProperty: CNContactProperty) {
         if let phoneNumber = contactProperty.value as? CNPhoneNumber,
             let contact = Contact(contact: contactProperty.contact) {
-            inviteContact(contact, phoneNumber: phoneNumber.stringValue)
+            
+            picker.dismiss(animated: true) { [weak self] in
+                if let number = PhoneNumberKit().validatedPhoneNumber(string: phoneNumber.stringValue, pretty: true) {
+                    self?.promptInvitation(contact: contact, phoneNumber: number)
+                }
+                else {
+                    self?.view.makeToast("The selected number is invalid", duration: 3.0, position: .center)
+                }
+            }
         }
         picker.dismiss(animated: true, completion: nil)
     }

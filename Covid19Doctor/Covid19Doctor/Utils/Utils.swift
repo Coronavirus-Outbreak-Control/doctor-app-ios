@@ -37,14 +37,26 @@ extension PhoneNumberTextField {
             return .error(Errors.invalidPhoneNumber)
         }
         
-        let kit = self.phoneNumberKit
+        if let number = phoneNumberKit.validatedPhoneNumber(string: text) {
+            return .just(number)
+        } else {
+            return .error(Errors.invalidPhoneNumber)
+        }
+    }
+}
+
+extension PhoneNumberKit {
+    func validatedPhoneNumber(string: String, pretty: Bool = false) -> String? {
         do {
-            let phoneNumber = try kit.parse(text, withRegion: currentRegion, ignoreType: false)
-            let string = "+\(phoneNumber.countryCode)\(phoneNumber.nationalNumber)"
-            return .just(string)
+            let phoneNumber = try parse(string)
+            if pretty {
+                return "+\(phoneNumber.countryCode) \(phoneNumber.numberString)"
+            } else {
+                return "+\(phoneNumber.countryCode)\(phoneNumber.nationalNumber)"
+            }
         }
         catch {
-            return .error(Errors.invalidPhoneNumber)
+            return nil
         }
     }
 }

@@ -27,7 +27,7 @@ class MockAPI: API {
     func verifyPhoneCode(_ code: String) -> Single<VerifyPhoneCodeResponse> {
         .create { observer in
             DispatchQueue.main.delay(1) {
-                let response = VerifyPhoneCodeResponse(id: 1, reAuthToken: "re12345")
+                let response = VerifyPhoneCodeResponse(id: 1, token: "re12345")
                 observer(.success(response))
             }
             return Disposables.create()
@@ -37,7 +37,7 @@ class MockAPI: API {
     func authenticate(reAuthToken: String) -> Single<AuthenticateResponse> {
         .create { observer in
             DispatchQueue.main.delay(1) {
-                let response = AuthenticateResponse(jwt: "jwt123")
+                let response = AuthenticateResponse(token: "jwt123")
                 observer(.success(response))
             }
             return Disposables.create()
@@ -76,7 +76,7 @@ class MockAPI: API {
     func runAuthenticated<T>(reAuthToken: String, apiBuilder: @escaping () -> Single<T>) -> Single<T> {
         authenticate(reAuthToken: reAuthToken)
             .flatMap { res in
-                Database.shared.setAccountValue(res.jwt, key: .jwt)
+                Database.shared.setAccountValue(res.token, key: .jwt)
                 return apiBuilder()
             }
     }

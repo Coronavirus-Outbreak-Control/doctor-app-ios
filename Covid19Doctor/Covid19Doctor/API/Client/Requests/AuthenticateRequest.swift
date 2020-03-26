@@ -21,5 +21,5 @@ struct AuthenticateRequest: NetworkRequest {
 }
 
 struct AuthenticateResponse: Codable {
-    let jwt: String
+    let token: String
 }
