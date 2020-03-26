@@ -10,7 +10,7 @@
         <!--Introduction View Controller-->
         <scene sceneID="aIY-QN-0cl">
             <objects>
-                <viewController storyboardIdentifier="Introduction" id="haD-86-c3b" customClass="IntroductionViewController" customModule="Covid19Doctor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Introduction" id="haD-86-c3b" customClass="IntroductionViewController" customModule="CoviDoc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kbl-ZD-adt"/>
                         <viewControllerLayoutGuide type="bottom" id="707-kB-hXQ"/>
@@ -95,7 +95,7 @@
         <!--Activation View Controller-->
         <scene sceneID="Wuw-5s-weq">
             <objects>
-                <viewController id="dak-rZ-GVr" customClass="ActivationViewController" customModule="Covid19Doctor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dak-rZ-GVr" customClass="ActivationViewController" customModule="CoviDoc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7lY-1r-X9B"/>
                         <viewControllerLayoutGuide type="bottom" id="ccy-9Z-O4n"/>
@@ -228,7 +228,7 @@
         <!--Activity View Controller-->
         <scene sceneID="ZCI-Sf-Vgd">
             <objects>
-                <viewController storyboardIdentifier="Activity" id="ydi-VX-7E6" customClass="ActivityViewController" customModule="Covid19Doctor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Activity" id="ydi-VX-7E6" customClass="ActivityViewController" customModule="CoviDoc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rIC-rI-c4p"/>
                         <viewControllerLayoutGuide type="bottom" id="tI9-nB-Di0"/>
@@ -257,8 +257,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Doctor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-Rs-CHD">
-                                <rect key="frame" x="50" y="99" width="200.5" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-Rs-CHD">
+                                <rect key="frame" x="50" y="99" width="344" height="119.5"/>
+                                <string key="text">Welcome to
+CoviDoc</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -313,6 +315,7 @@
                             <constraint firstItem="ewV-3p-LfE" firstAttribute="centerX" secondItem="ILs-JG-4Xn" secondAttribute="centerX" id="1s2-Bf-MPp"/>
                             <constraint firstItem="ewV-3p-LfE" firstAttribute="top" relation="lessThanOrEqual" secondItem="O7J-DA-yb7" secondAttribute="bottom" constant="107" id="3zN-Gf-Joh"/>
                             <constraint firstItem="yXR-Rs-CHD" firstAttribute="leading" secondItem="ILs-JG-4Xn" secondAttribute="leadingMargin" constant="30" id="IGF-Qd-yu8"/>
+                            <constraint firstItem="yXR-Rs-CHD" firstAttribute="trailing" secondItem="ILs-JG-4Xn" secondAttribute="trailingMargin" id="LQ2-aG-Tlb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="O7J-DA-yb7" secondAttribute="trailing" constant="40" id="LdK-qb-WMQ"/>
                             <constraint firstItem="O7J-DA-yb7" firstAttribute="centerY" secondItem="ILs-JG-4Xn" secondAttribute="centerY" id="idy-jV-kE9"/>
                             <constraint firstItem="O7J-DA-yb7" firstAttribute="leading" secondItem="ILs-JG-4Xn" secondAttribute="leadingMargin" constant="40" id="lO3-Vt-y2z"/>
@@ -327,6 +330,7 @@
                         <outlet property="qrImageView" destination="al9-TT-nMZ" id="Msy-7B-FQx"/>
                         <outlet property="qrTextLabel" destination="eFU-6Z-7PD" id="bcg-4B-8DT"/>
                         <outlet property="scanView" destination="O7J-DA-yb7" id="kDP-Gw-T5B"/>
+                        <outlet property="titleLabel" destination="yXR-Rs-CHD" id="1U3-og-GWK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mqh-48-TR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -336,7 +340,7 @@
         <!--Patient View Controller-->
         <scene sceneID="8Uc-B5-IJW">
             <objects>
-                <viewController storyboardIdentifier="PatientViewController" id="K7m-p2-FTG" customClass="PatientViewController" customModule="Covid19Doctor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PatientViewController" id="K7m-p2-FTG" customClass="PatientViewController" customModule="CoviDoc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NXA-fJ-La8"/>
                         <viewControllerLayoutGuide type="bottom" id="dPp-xr-Mef"/>
@@ -345,42 +349,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoS-Cy-Evd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BACK TO HOMEPAGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyL-4b-L43">
-                                        <rect key="frame" x="74" y="60" width="167" height="52"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-left-solid" translatesAutoresizingMaskIntoConstraints="NO" id="Yb5-DX-ufW">
-                                        <rect key="frame" x="14" y="60" width="52" height="52"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="52" id="44t-MV-pCt"/>
-                                            <constraint firstAttribute="height" constant="52" id="mGj-jH-azq"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heX-El-P12">
-                                        <rect key="frame" x="14" y="60" width="227" height="52"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="heX-El-P12" firstAttribute="leading" secondItem="Yb5-DX-ufW" secondAttribute="leading" id="626-qv-R93"/>
-                                    <constraint firstItem="NyL-4b-L43" firstAttribute="bottom" secondItem="Yb5-DX-ufW" secondAttribute="bottom" id="C4i-pV-lPg"/>
-                                    <constraint firstItem="NyL-4b-L43" firstAttribute="top" secondItem="Yb5-DX-ufW" secondAttribute="top" id="CNO-u3-BkE"/>
-                                    <constraint firstItem="NyL-4b-L43" firstAttribute="trailing" secondItem="heX-El-P12" secondAttribute="trailing" id="Vwl-UQ-kNh"/>
-                                    <constraint firstItem="heX-El-P12" firstAttribute="bottom" secondItem="Yb5-DX-ufW" secondAttribute="bottom" id="Wgg-08-eHR"/>
-                                    <constraint firstItem="NyL-4b-L43" firstAttribute="leading" secondItem="Yb5-DX-ufW" secondAttribute="trailing" constant="8" id="e7y-He-mBW"/>
-                                    <constraint firstItem="Yb5-DX-ufW" firstAttribute="leading" secondItem="OoS-Cy-Evd" secondAttribute="leading" constant="14" id="jSO-BE-2hd"/>
-                                    <constraint firstAttribute="bottom" secondItem="Yb5-DX-ufW" secondAttribute="bottom" constant="8" id="oBS-hj-etc"/>
-                                    <constraint firstAttribute="height" constant="120" id="sUU-pZ-YjS"/>
-                                    <constraint firstItem="heX-El-P12" firstAttribute="top" secondItem="Yb5-DX-ufW" secondAttribute="top" id="xUv-oP-Mld"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diagnosis" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="A2L-Gz-dT4">
-                                <rect key="frame" x="50" y="128" width="314" height="60"/>
+                                <rect key="frame" x="50" y="74" width="314" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="szS-2b-zVx"/>
                                 </constraints>
@@ -389,7 +359,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="110" translatesAutoresizingMaskIntoConstraints="NO" id="ru8-uL-fMI">
-                                <rect key="frame" x="57" y="220" width="300" height="388"/>
+                                <rect key="frame" x="57" y="192" width="300" height="388"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbJ-AE-BZM" customClass="PMSuperButton" customModule="PMSuperButton">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="56"/>
@@ -451,23 +421,35 @@
                                     <constraint firstItem="6qX-Ou-Sbb" firstAttribute="width" secondItem="GbJ-AE-BZM" secondAttribute="width" id="mRl-I6-KTn"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJp-bX-Xje" customClass="PMSuperButton" customModule="PMSuperButton">
+                                <rect key="frame" x="50" y="768" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="uzP-OZ-uVg"/>
+                                    <constraint firstAttribute="width" constant="64" id="wmR-91-7BV"/>
+                                </constraints>
+                                <state key="normal" image="arrow-left-solid"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="OoS-Cy-Evd" secondAttribute="trailing" id="GrT-Up-4br"/>
-                            <constraint firstItem="ru8-uL-fMI" firstAttribute="top" secondItem="A2L-Gz-dT4" secondAttribute="bottom" constant="32" id="Kxp-E6-p2O"/>
+                            <constraint firstItem="A2L-Gz-dT4" firstAttribute="top" secondItem="NXA-fJ-La8" secondAttribute="bottom" constant="30" id="HM6-xC-0T6"/>
+                            <constraint firstItem="ru8-uL-fMI" firstAttribute="top" secondItem="A2L-Gz-dT4" secondAttribute="bottom" constant="58" id="Kxp-E6-p2O"/>
+                            <constraint firstItem="CJp-bX-Xje" firstAttribute="leading" secondItem="wjA-eO-R22" secondAttribute="leadingMargin" constant="30" id="OWG-IE-uoI"/>
                             <constraint firstItem="A2L-Gz-dT4" firstAttribute="leading" secondItem="wjA-eO-R22" secondAttribute="leadingMargin" constant="30" id="QPD-Et-bhQ"/>
                             <constraint firstItem="dPp-xr-Mef" firstAttribute="top" secondItem="ru8-uL-fMI" secondAttribute="bottom" priority="999" constant="66" id="U00-PZ-XYt"/>
-                            <constraint firstItem="OoS-Cy-Evd" firstAttribute="leading" secondItem="wjA-eO-R22" secondAttribute="leading" id="aKh-v4-3fh"/>
-                            <constraint firstItem="OoS-Cy-Evd" firstAttribute="top" secondItem="wjA-eO-R22" secondAttribute="top" id="bw6-wZ-IpV"/>
-                            <constraint firstItem="A2L-Gz-dT4" firstAttribute="top" secondItem="OoS-Cy-Evd" secondAttribute="bottom" constant="8" id="cQk-Fl-WeS"/>
+                            <constraint firstItem="dPp-xr-Mef" firstAttribute="top" secondItem="CJp-bX-Xje" secondAttribute="bottom" constant="30" id="hk1-jo-vFB"/>
                             <constraint firstItem="ru8-uL-fMI" firstAttribute="centerX" secondItem="wjA-eO-R22" secondAttribute="centerX" id="wYF-Gd-0Du"/>
                             <constraint firstAttribute="trailingMargin" secondItem="A2L-Gz-dT4" secondAttribute="trailing" constant="30" id="zxb-Ca-aT6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dYr-A5-brE"/>
                     <connections>
-                        <outlet property="backButton" destination="heX-El-P12" id="xY6-nD-OWf"/>
+                        <outlet property="backButton" destination="CJp-bX-Xje" id="h4y-8z-FAv"/>
                         <outlet property="confirmButton" destination="GbJ-AE-BZM" id="n6D-Ub-dyj"/>
                         <outlet property="recoveredButton" destination="yxe-UF-U9P" id="TEe-54-D6R"/>
                         <outlet property="suspectedButton" destination="6qX-Ou-Sbb" id="G8L-PO-e2R"/>
@@ -481,7 +463,7 @@
         <!--Activated View Controller-->
         <scene sceneID="OvM-8A-dnU">
             <objects>
-                <viewController id="Jlk-hM-n4y" customClass="ActivatedViewController" customModule="Covid19Doctor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jlk-hM-n4y" customClass="ActivatedViewController" customModule="CoviDoc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DHT-ZM-213"/>
                         <viewControllerLayoutGuide type="bottom" id="pPz-kl-LWH"/>
@@ -490,6 +472,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neural" translatesAutoresizingMaskIntoConstraints="NO" id="ZSt-W8-EQR">
+                                <rect key="frame" x="-28" y="378" width="470" height="623"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="623" id="fu8-Jm-Du9"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All set!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg6-9G-7iH">
                                 <rect key="frame" x="50" y="74" width="314" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="53"/>
@@ -533,7 +521,10 @@
                             <constraint firstItem="jHm-xx-9hq" firstAttribute="centerX" secondItem="dHO-ej-SMP" secondAttribute="centerX" id="AwL-eS-Luo"/>
                             <constraint firstItem="cpu-ja-vGB" firstAttribute="top" secondItem="Eg6-9G-7iH" secondAttribute="bottom" constant="77" id="JZM-S4-8Oy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cpu-ja-vGB" secondAttribute="trailing" constant="30" id="KvF-MX-mJG"/>
+                            <constraint firstItem="ZSt-W8-EQR" firstAttribute="leading" secondItem="dHO-ej-SMP" secondAttribute="leading" constant="-28" id="QHf-gJ-uDT"/>
                             <constraint firstItem="cpu-ja-vGB" firstAttribute="leading" secondItem="dHO-ej-SMP" secondAttribute="leadingMargin" constant="30" id="TwK-EK-ZU4"/>
+                            <constraint firstAttribute="bottom" secondItem="ZSt-W8-EQR" secondAttribute="bottom" constant="-105" id="Yd6-jM-gOt"/>
+                            <constraint firstAttribute="trailing" secondItem="ZSt-W8-EQR" secondAttribute="trailing" constant="-28" id="bj1-ss-HNG"/>
                             <constraint firstItem="Eg6-9G-7iH" firstAttribute="top" secondItem="DHT-ZM-213" secondAttribute="bottom" constant="30" id="dbQ-lm-Vcf"/>
                             <constraint firstItem="pPz-kl-LWH" firstAttribute="top" secondItem="jHm-xx-9hq" secondAttribute="bottom" constant="64" id="tFA-Ox-BEw"/>
                             <constraint firstItem="Eg6-9G-7iH" firstAttribute="centerX" secondItem="dHO-ej-SMP" secondAttribute="centerX" id="tkC-Vz-vVW"/>
@@ -553,7 +544,7 @@
         <!--Scanner View Controller-->
         <scene sceneID="0h6-bH-Y5O">
             <objects>
-                <viewController storyboardIdentifier="ScannerViewController" id="SPD-WG-CZq" customClass="ScannerViewController" customModule="Covid19Doctor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScannerViewController" id="SPD-WG-CZq" customClass="ScannerViewController" customModule="CoviDoc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p3V-nm-tas"/>
                         <viewControllerLayoutGuide type="bottom" id="CPV-JZ-ZK8"/>
@@ -571,7 +562,7 @@
         <!--Invitations View Controller-->
         <scene sceneID="HIE-uH-nJx">
             <objects>
-                <viewController storyboardIdentifier="InvitationsViewController" id="IcN-fk-DFs" customClass="InvitationsViewController" customModule="Covid19Doctor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InvitationsViewController" id="IcN-fk-DFs" customClass="InvitationsViewController" customModule="CoviDoc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZoI-h8-85o"/>
                         <viewControllerLayoutGuide type="bottom" id="cWq-Gs-9t4"/>
@@ -584,7 +575,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="BBV-Bb-xpn" customClass="InvitationCell" customModule="Covid19Doctor" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="BBV-Bb-xpn" customClass="InvitationCell" customModule="CoviDoc" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BBV-Bb-xpn" id="eoL-rB-G3X">
@@ -658,6 +649,7 @@
     <resources>
         <image name="Asset 2" width="590" height="664"/>
         <image name="arrow-left-solid" width="448" height="512"/>
+        <image name="neural" width="800" height="1557"/>
         <image name="photo-camera" width="548" height="548"/>
         <image name="qr-code" width="402" height="402"/>
     </resources>

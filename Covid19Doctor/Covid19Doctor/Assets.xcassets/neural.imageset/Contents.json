@@ -1,15 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "arrow-left-solid.png",
+      "filename" : "neural.png",
       "idiom" : "universal"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "template-rendering-intent" : "template"
   }
 }

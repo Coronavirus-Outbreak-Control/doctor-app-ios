@@ -20,6 +20,7 @@ class ActivityViewController: UIViewController {
     @IBOutlet weak var scanView: UIView!
     @IBOutlet weak var inviteButton: PMSuperButton!
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var qrTextLabel: UILabel!
     @IBOutlet weak var qrImageView: UIImageView!
     @IBOutlet weak var photoImageView: UIImageView!
@@ -27,6 +28,18 @@ class ActivityViewController: UIViewController {
     private let bag = DisposeBag()
     
     private func configureUI() {
+        titleLabel.map {
+            $0.font = .title
+            $0.textColor = .titleBlack
+            
+            let text = "Welcome to\nCoviDoc"
+            let str = "Covi"
+            let range = (text as NSString).range(of: str)
+            let attributed = NSMutableAttributedString(string: text)
+            attributed.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.mainTheme, range: range)
+            $0.attributedText = attributed
+        }
+        
         qrTextLabel.text = "CLICK HERE\nTO SCAN PATIENT'S\nQR CODE"
         qrTextLabel.font = UIFont(name: "SFCompactDisplay-Semibold", size: 22)
         qrTextLabel.textColor = UIColor.mainTheme
@@ -40,6 +53,7 @@ class ActivityViewController: UIViewController {
         
         inviteButton.titleLabel?.font = .button
         inviteButton.setTitleColor(.white, for: .normal)
+        inviteButton.backgroundColor = .mainTheme
         inviteButton.setTitle("INVITE OTHER DOCTORS", for: .normal)
     }
     

@@ -17,21 +17,21 @@ class PatientViewController: UIViewController {
     @IBOutlet weak var suspectedButton: PMSuperButton!
     @IBOutlet weak var recoveredButton: PMSuperButton!
     
-    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var backButton: PMSuperButton!
     
     var patientId: String! = "sddsds"
     
     private let bag = DisposeBag()
     
     private func configureUI() {
-        confirmButton.backgroundColor = UIColor(red:0.85, green:0.00, blue:0.11, alpha:1.00)
+        confirmButton.backgroundColor = UIColor(red:0.88, green:0.24, blue:0.24, alpha:1.00)
         confirmButton.setTitle("COVID-19 POSITIVE", for: .normal)
         
-        suspectedButton.backgroundColor = UIColor(red:0.96, green:0.60, blue:0.14, alpha:1.00)
+        suspectedButton.backgroundColor = UIColor(red:0.92, green:0.54, blue:0.33, alpha:1.00)
         suspectedButton.setTitle("SUSPECTED COVID-19", for: .normal)
         
-        recoveredButton.backgroundColor = UIColor(red:1.00, green:0.82, blue:0.15, alpha:1.00)
+        recoveredButton.backgroundColor = UIColor(red:0.18, green:0.74, blue:0.47, alpha:1.00)
         recoveredButton.setTitle("HEALED/NEGATIVE", for: .normal)
         
         [confirmButton, suspectedButton, recoveredButton].forEach {
@@ -42,6 +42,12 @@ class PatientViewController: UIViewController {
         textLabel.font = UIFont.title
         textLabel.textColor = .titleBlack
         textLabel.text = "Diagnosis"
+        
+        backButton.map {
+            $0.backgroundColor = .mainTheme
+            $0.imageEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+            $0.tintColor = .white
+        }
     }
     
     override func viewDidLoad() {
@@ -73,6 +79,18 @@ class PatientViewController: UIViewController {
         })
         .disposed(by: bag)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    // MARK: - Set status
 
     func setStatus(_ status: PatientStatus) {
         APIManager.api.setPatientStatus(patientId: patientId, status: status)
