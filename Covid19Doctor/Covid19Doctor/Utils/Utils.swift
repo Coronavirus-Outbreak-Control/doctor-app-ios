@@ -37,9 +37,13 @@ extension PhoneNumberTextField {
             return .error(Errors.invalidPhoneNumber)
         }
         
-        if let number = phoneNumberKit.validatedPhoneNumber(string: text) {
-            return .just(number)
-        } else {
+        let kit = self.phoneNumberKit
+        do {
+            let phoneNumber = try kit.parse(text, withRegion: currentRegion, ignoreType: false)
+            let string = "+\(phoneNumber.countryCode)\(phoneNumber.nationalNumber)"
+            return .just(string)
+        }
+        catch {
             return .error(Errors.invalidPhoneNumber)
         }
     }

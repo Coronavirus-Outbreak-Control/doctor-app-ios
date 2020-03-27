@@ -37,6 +37,11 @@ class ActivatedViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     @IBAction func buttonTapped(_ sender: Any) {
         let vc = UIStoryboard.getViewController(id: "Activity")
         let nc = UINavigationController(rootViewController: vc)

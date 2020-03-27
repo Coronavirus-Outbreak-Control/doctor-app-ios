@@ -10,6 +10,7 @@ import UIKit
 import PMSuperButton
 import RxSwift
 import RxCocoa
+import Toast_Swift
 
 class PatientViewController: UIViewController {
 
@@ -20,7 +21,7 @@ class PatientViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var backButton: PMSuperButton!
     
-    var patientId: String! = "sddsds"
+    var patientId: String!
     
     private let bag = DisposeBag()
     
@@ -94,10 +95,10 @@ class PatientViewController: UIViewController {
 
     func setStatus(_ status: PatientStatus) {
         APIManager.api.setPatientStatus(patientId: patientId, status: status)
-        .subscribe(onSuccess: { _ in
-            // TODO
-        }, onError: { error in
-            // TODO
+        .subscribe(onSuccess: { [weak self] _ in
+            self?.view.makeToast("Patient status updated successfully", duration: 3.0, position: .center)
+        }, onError: { [weak self] error in
+            self?.view.makeToast("Error updating patient status", duration: 3.0, position: .center)
         })
         .disposed(by: bag)
     }

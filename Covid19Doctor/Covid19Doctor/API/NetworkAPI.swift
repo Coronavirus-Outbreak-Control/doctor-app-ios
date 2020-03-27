@@ -13,7 +13,7 @@ class NetworkAPI: API {
     // remote
     let client = NetworkClient(baseURL: URL(string: "https://doctors.coronaviruscheck.org/v1")!)
     // local
-    //let client = NetworkClient(baseURL: URL(string: "http://127.0.0.1:9000/v1")!)
+//    let client = NetworkClient(baseURL: URL(string: "http://192.168.1.172:9000/v1")!)
     
     func sendPhoneVerificationCode(_ number: String) -> Single<Empty> {
         let req = SendPhoneVerificationCodeRequest(phoneNumber: number)

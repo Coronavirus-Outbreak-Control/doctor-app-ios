@@ -18,6 +18,14 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        #if targetEnvironment(simulator)
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+            self.dismiss(animated: true)
+            self.found(code: "covid-outbreak-control:1234")
+        }
+        return
+        #endif
 
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
