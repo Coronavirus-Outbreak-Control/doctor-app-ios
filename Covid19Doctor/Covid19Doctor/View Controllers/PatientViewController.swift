@@ -27,13 +27,13 @@ class PatientViewController: UIViewController {
     
     private func configureUI() {
         confirmButton.backgroundColor = UIColor(red:0.88, green:0.24, blue:0.24, alpha:1.00)
-        confirmButton.setTitle("COVID-19 POSITIVE", for: .normal)
+        confirmButton.setTitle("🤒 POSITIVO AL COVID-19", for: .normal)
         
         suspectedButton.backgroundColor = UIColor(red:0.92, green:0.54, blue:0.33, alpha:1.00)
-        suspectedButton.setTitle("SUSPECTED COVID-19", for: .normal)
+        suspectedButton.setTitle("😷 SOSPETTO DI COVID-19", for: .normal)
         
         recoveredButton.backgroundColor = UIColor(red:0.18, green:0.74, blue:0.47, alpha:1.00)
-        recoveredButton.setTitle("HEALED/NEGATIVE", for: .normal)
+        recoveredButton.setTitle("😊 GUARITO", for: .normal)
         
         [confirmButton, suspectedButton, recoveredButton].forEach {
             $0?.titleLabel?.font = .button
@@ -42,7 +42,7 @@ class PatientViewController: UIViewController {
         
         textLabel.font = UIFont.title
         textLabel.textColor = .titleBlack
-        textLabel.text = "Diagnosis"
+        textLabel.text = "Diagnosi 🔬"
         
         backButton.map {
             $0.backgroundColor = .mainTheme
@@ -96,9 +96,9 @@ class PatientViewController: UIViewController {
     func setStatus(_ status: PatientStatus) {
         APIManager.api.setPatientStatus(patientId: patientId, status: status)
         .subscribe(onSuccess: { [weak self] _ in
-            self?.view.makeToast("Patient status updated successfully", duration: 3.0, position: .center)
+            self?.view.makeToast("Stato di salute registrato", duration: 3.0, position: .center)
         }, onError: { [weak self] error in
-            self?.view.makeToast("Error updating patient status", duration: 3.0, position: .center)
+            self?.view.makeToast("Errore, lo stato di salute non è stato registrato", duration: 3.0, position: .center)
         })
         .disposed(by: bag)
     }

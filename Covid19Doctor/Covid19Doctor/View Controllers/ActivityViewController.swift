@@ -38,14 +38,15 @@ class ActivityViewController: UIViewController {
             $0.attributedText = attributed
         }
         
-        qrTextLabel.text = "CLICK HERE TO\nSCAN QR CODE"
+        qrTextLabel.text = "CLICCA QUI PER SCANSIONARE IL\nCODICE QR" //"CLICK HERE TO\nSCAN QR CODE"
         qrTextLabel.font = UIFont(name: "SFCompactDisplay-Semibold", size: 20)
         qrTextLabel.textColor = .white
         
         inviteButton.titleLabel?.font = .button
         inviteButton.setTitleColor(.white, for: .normal)
         inviteButton.backgroundColor = .mainTheme
-        inviteButton.setTitle("INVITE OTHER DOCTORS", for: .normal)
+//        inviteButton.setTitle("INVITE OTHER DOCTORS", for: .normal)
+        inviteButton.setTitle("INVITA ALTRI DOTTORI", for: .normal)
     }
     
     override func viewDidLoad() {
@@ -135,24 +136,24 @@ class ActivityViewController: UIViewController {
         .subscribe(onSuccess: { [weak self] _ in
             self?.storeInvitation(name: contact.fullName, phoneNumber: phoneNumber)
             self?.view.hideToastActivity()
-            self?.view.makeToast("Invitation sent to \(contact.fullName)", duration: 3.0, position: .center)
+            self?.view.makeToast("Dottore invitato: \(contact.fullName)", duration: 3.0, position: .center)
         }, onError: { [weak self] _ in
             self?.view.hideToastActivity()
-            self?.view.makeToast("Error inviting \(contact.fullName)", duration: 3.0, position: .center)
+            self?.view.makeToast("Error durante l'invito di \(contact.fullName)", duration: 3.0, position: .center)
         })
         .disposed(by: bag)
     }
     
     private func promptInvitation(contact: Contact, phoneNumber: String) {
         // phoneNumber is already validated
-        let alertController = UIAlertController(title: "You are inviting\n\(phoneNumber)", message: "Are you sure?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Stai invitando\n\(phoneNumber)", message: "Confermi l'invito?", preferredStyle: .alert)
 
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { [weak self] _ in
+        let cancelAction = UIAlertAction(title: "No", style: .cancel) { [weak self] _ in
             self?.dismiss(animated: true, completion: nil)
         }
         alertController.addAction(cancelAction)
 
-        let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+        let okAction = UIAlertAction(title: "Sì", style: .default) { [weak self] _ in
             self?.inviteContact(contact, phoneNumber: phoneNumber)
         }
         alertController.addAction(okAction)
@@ -188,7 +189,7 @@ extension ActivityViewController: CNContactPickerDelegate {
                     self?.promptInvitation(contact: contact, phoneNumber: number)
                 }
                 else {
-                    self?.view.makeToast("The selected number is invalid", duration: 3.0, position: .center)
+                    self?.view.makeToast("Il numero selezionato non è valido", duration: 3.0, position: .center)
                 }
             }
         }

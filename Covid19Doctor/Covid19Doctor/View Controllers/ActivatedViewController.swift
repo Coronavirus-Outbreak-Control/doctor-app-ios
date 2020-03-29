@@ -21,19 +21,21 @@ class ActivatedViewController: UIViewController {
         titleLabel.map {
             $0.font = .title
             $0.textColor = .titleBlack
-            $0.text = "All set!"
+            $0.text = "Fatto!" //"All set!"
         }
         
         textLabel.map {
             $0.font = .subtitle
             $0.textColor = .titleBlack
+            $0.text = "Ora potrai scansionare il Codice QR dei pazienti, registrare il loro stato di salute e invitare altri dottori ad usare app."
         }
         
         button.map {
             $0.titleLabel?.font = .button
             $0.setTitleColor(.white, for: .normal)
             $0.backgroundColor = .mainTheme
-            $0.setTitle("GO TO APPLICATION", for: .normal)
+//            $0.setTitle("GO TO APPLICATION", for: .normal)
+            $0.setTitle("VAI ALL'APPLICAZIONE", for: .normal)
         }
     }
     

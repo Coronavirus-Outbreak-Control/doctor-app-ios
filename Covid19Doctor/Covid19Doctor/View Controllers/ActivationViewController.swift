@@ -24,13 +24,14 @@ class ActivationViewController: UIViewController {
     @IBOutlet weak var sendPhoneButton: PMSuperButton!
     @IBOutlet weak var codeView: UIView!
     @IBOutlet weak var digitsField: KWVerificationCodeView!
+    @IBOutlet weak var codeTextLabel: UILabel!
     
     private let bag = DisposeBag()
     private let viewVisibleCommand = PublishRelay<Bool>()
     private let verificationCode = PublishRelay<String>()
     
     private func configureUI() {
-        phoneField.placeholder = "Phone number"
+        phoneField.placeholder = "Numero di cellulare" //"Phone number"
         phoneField.withFlag = true
         phoneField.withPrefix = true
         if #available(iOS 11.0, *) {
@@ -39,10 +40,12 @@ class ActivationViewController: UIViewController {
         
         titleLabel.font = .title
         titleLabel.textColor = .titleBlack
-        titleLabel.text = "Phone number verification"
+        titleLabel.text = "Verifica numero" //"Phone number verification"
         
         textLabel.font = .caption
         textLabel.textColor = .textGray
+        
+        codeTextLabel.text = "Inserisci il codice di 6 cifre ricevuto per SMS"
         
         lineView.backgroundColor = .mainTheme
         
@@ -51,7 +54,8 @@ class ActivationViewController: UIViewController {
         sendPhoneButton.titleLabel?.font = .button
         sendPhoneButton.setTitleColor(.white, for: .normal)
         sendPhoneButton.backgroundColor = .mainTheme
-        sendPhoneButton.setTitle("SEND VERIFICATION CODE", for: .normal)
+//        sendPhoneButton.setTitle("SEND VERIFICATION CODE", for: .normal)
+        sendPhoneButton.setTitle("INVIA", for: .normal)
     }
 
     override func viewDidLoad() {
@@ -61,7 +65,7 @@ class ActivationViewController: UIViewController {
         
         digitsField.delegate = self
         codeView.isHidden = true
-        textLabel.text = "A message with a verification code will be sent to your phone"
+        textLabel.text = "Inserisci numero" //"A message with a verification code will be sent to your phone"
 
         // dismiss keyboard on tap
         view.rx.tapGesture().subscribe(onNext: { [weak self] _ in

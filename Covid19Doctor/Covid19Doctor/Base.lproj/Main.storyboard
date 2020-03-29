@@ -37,7 +37,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxc-Z6-j02">
-                                <rect key="frame" x="40" y="144" width="334" height="287"/>
+                                <rect key="frame" x="40" y="144" width="340" height="287"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="c2E-nY-SmB"/>
                                 </constraints>
@@ -46,7 +46,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="1000" text="Together we can save lives and help people keep their jobs." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbL-dJ-cfb">
-                                <rect key="frame" x="40" y="501" width="334" height="41"/>
+                                <rect key="frame" x="40" y="501" width="340" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                             <constraint firstItem="SbL-dJ-cfb" firstAttribute="top" relation="lessThanOrEqual" secondItem="Nxc-Z6-j02" secondAttribute="bottom" constant="70" id="bOg-Bw-ZdI"/>
                             <constraint firstItem="SbL-dJ-cfb" firstAttribute="leading" secondItem="Nxc-Z6-j02" secondAttribute="leading" id="ids-M7-ohO"/>
                             <constraint firstItem="4xz-NC-SBo" firstAttribute="centerX" secondItem="j9x-5c-lxI" secondAttribute="centerX" id="l9E-Ab-nJa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Nxc-Z6-j02" secondAttribute="trailing" constant="20" id="oT1-dz-PvO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nxc-Z6-j02" secondAttribute="trailing" constant="14" id="oT1-dz-PvO"/>
                             <constraint firstItem="4xz-NC-SBo" firstAttribute="top" relation="lessThanOrEqual" secondItem="SbL-dJ-cfb" secondAttribute="bottom" priority="999" constant="200" id="zBU-zB-EkC"/>
                         </constraints>
                     </view>
@@ -211,6 +211,7 @@
                     <navigationItem key="navigationItem" id="KJ6-gv-wRD"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="codeTextLabel" destination="gMf-x2-RpM" id="Pib-Q8-rea"/>
                         <outlet property="codeView" destination="nmX-fU-UxG" id="JBK-Jv-h2x"/>
                         <outlet property="digitsField" destination="0rJ-aL-50Z" id="UwG-5d-7Ke"/>
                         <outlet property="lineView" destination="qaZ-Hn-g0v" id="5P1-iW-s0B"/>

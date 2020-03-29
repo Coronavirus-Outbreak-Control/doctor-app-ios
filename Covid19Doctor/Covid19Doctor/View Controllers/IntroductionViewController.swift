@@ -26,8 +26,8 @@ class IntroductionViewController: UIViewController {
             $0.font = .title
             $0.textColor = .titleBlack
             
-            let text = "Welcome to\nanonymous\nCoronavirus\nalert"
-            let str = "Coronavirus"
+            let text = "Hey Doctor,\n\nWelcome to\nanonymous\nCovidCommunity\nAlert 👋"
+            let str = "CovidCommunity"
             let range = (text as NSString).range(of: str)
             let attributed = NSMutableAttributedString(string: text)
             attributed.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.mainTheme, range: range)
@@ -37,13 +37,15 @@ class IntroductionViewController: UIViewController {
         subtitleLabel.map {
             $0.font = .subtitle
             $0.textColor = .textGray
+            $0.text = "Insieme possiamo salvare vite!"
         }
         
         continueButton.map {
             $0.titleLabel?.font = .button
             $0.setTitleColor(.white, for: .normal)
             $0.backgroundColor = .mainTheme
-            $0.setTitle("LET'S GET STARTED", for: .normal)
+//            $0.setTitle("LET'S GET STARTED", for: .normal)
+            $0.setTitle("INIZIAMO", for: .normal)
         }
 
         continueButton.rx.tap.bind {
