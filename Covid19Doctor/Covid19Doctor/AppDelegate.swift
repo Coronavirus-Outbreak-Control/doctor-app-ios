@@ -26,7 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let vc = UIStoryboard.getViewController(id: "Activity") as! ActivityViewController
             root = UINavigationController(rootViewController: vc)
         } else {
-            root = UIStoryboard.getViewController(id: "Introduction")
+            let vc = UIStoryboard.getViewController(id: "Introduction")
+            root = UINavigationController(rootViewController: vc)
         }
 
         self.window?.rootViewController = root //UIStoryboard.getViewController(id: "PatientViewController")

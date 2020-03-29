@@ -10,7 +10,7 @@ import UIKit
 
 extension UIFont {
     
-    static let title = UIFont(name: "SFCompactDisplay-Heavy", size: 42)
+    static let title = UIFont(name: "SFCompactDisplay-Heavy", size: 38)
     
     static let subtitle = UIFont(name: "SFCompactDisplay-Regular", size: 22)
     

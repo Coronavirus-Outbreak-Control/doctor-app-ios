@@ -16,6 +16,7 @@ class IntroductionViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var continueButton: PMSuperButton!
+    @IBOutlet weak var howToButton: UIButton!
     
     private let bag = DisposeBag()
     
@@ -47,10 +48,26 @@ class IntroductionViewController: UIViewController {
 //            $0.setTitle("LET'S GET STARTED", for: .normal)
             $0.setTitle("INIZIAMO", for: .normal)
         }
+        
+        howToButton.map {
+            $0.setTitle("COME FUNZIONA 🤔", for: .normal)
+            $0.titleLabel?.font = UIFont(name: "SFCompactDisplay-Semibold", size: 15)
+            $0.setTitleColor(.titleBlack, for: .normal)
+        }
 
         continueButton.rx.tap.bind {
             let vc = UIStoryboard.getViewController(id: "Activation")
             UIApplication.shared.keyWindow?.rootViewController = vc
         }.disposed(by: bag)
+        
+        howToButton.rx.tap.bind { [weak self] _ in
+            let vc = UIStoryboard.getViewController(id: "HowItWorksViewController")
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }.disposed(by: bag)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 }
