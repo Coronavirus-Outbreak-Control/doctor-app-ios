@@ -20,6 +20,7 @@
 		FD086D82242838D300368BDF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD086D81242838D300368BDF /* Colors.swift */; };
 		FD086D8424283B6D00368BDF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD086D8324283B6D00368BDF /* Fonts.swift */; };
 		FD086D8624295F6A00368BDF /* AuthenticateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD086D8524295F6A00368BDF /* AuthenticateRequest.swift */; };
+		FD0918DC24314F46005229FD /* HowItWorksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0918DB24314F46005229FD /* HowItWorksViewController.swift */; };
 		FD1720612419B33E003EEBD5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1720602419B33E003EEBD5 /* Utils.swift */; };
 		FD27564F241D6016009FB650 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27564E241D6016009FB650 /* ScannerViewController.swift */; };
 		FD275653241D7969009FB650 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD275652241D7969009FB650 /* Contact.swift */; };
@@ -66,6 +67,7 @@
 		FD086D81242838D300368BDF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		FD086D8324283B6D00368BDF /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		FD086D8524295F6A00368BDF /* AuthenticateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateRequest.swift; sourceTree = "<group>"; };
+		FD0918DB24314F46005229FD /* HowItWorksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorksViewController.swift; sourceTree = "<group>"; };
 		FD1720602419B33E003EEBD5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		FD27564E241D6016009FB650 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		FD275652241D7969009FB650 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				FDEB442B2419813E000B5320 /* IntroductionViewController.swift */,
+				FD0918DB24314F46005229FD /* HowItWorksViewController.swift */,
 				FDEB442D241984B9000B5320 /* ActivationViewController.swift */,
 				FDEB44342419977F000B5320 /* ActivatedViewController.swift */,
 				FDEB443624199830000B5320 /* ActivityViewController.swift */,
@@ -409,6 +412,7 @@
 				FDEEF199241C42C70010E368 /* MockAPI.swift in Sources */,
 				FD275659241D9A1D009FB650 /* Database.swift in Sources */,
 				FDEB44392419AFD1000B5320 /* PatientViewController.swift in Sources */,
+				FD0918DC24314F46005229FD /* HowItWorksViewController.swift in Sources */,
 				FDEB443724199830000B5320 /* ActivityViewController.swift in Sources */,
 				FDEB44352419977F000B5320 /* ActivatedViewController.swift in Sources */,
 				FD086D82242838D300368BDF /* Colors.swift in Sources */,

@@ -90,7 +90,8 @@ class ActivityViewController: UIViewController {
     
     private func launchScanner() {
         let scanner = UIStoryboard.getViewController(id: "ScannerViewController") as! ScannerViewController
-        present(scanner, animated: true, completion: nil)
+        let scannerNC = UINavigationController(rootViewController: scanner)
+        present(scannerNC, animated: true, completion: nil)
         
         scanner.output
         .flatMap({ self.extractPatientData(string: $0) })

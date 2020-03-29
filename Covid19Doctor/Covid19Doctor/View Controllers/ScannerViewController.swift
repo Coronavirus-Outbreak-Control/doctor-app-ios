@@ -26,6 +26,8 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         }
         return
         #endif
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Annulla", style: .plain, target: self, action: #selector(close))
 
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
@@ -64,6 +66,10 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         view.layer.addSublayer(previewLayer)
 
         captureSession.startRunning()
+    }
+    
+    @objc func close() {
+        dismiss(animated: true, completion: nil)
     }
 
     func failed() {

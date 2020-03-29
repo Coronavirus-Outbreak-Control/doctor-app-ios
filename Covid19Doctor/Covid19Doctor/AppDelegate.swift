@@ -32,4 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = root //UIStoryboard.getViewController(id: "PatientViewController")
         self.window?.makeKeyAndVisible()
     }
+    
+    func configureUI() {
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).tintColor = .mainTheme
+    }
 }
