@@ -25,6 +25,7 @@
 		FD27564F241D6016009FB650 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27564E241D6016009FB650 /* ScannerViewController.swift */; };
 		FD275653241D7969009FB650 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD275652241D7969009FB650 /* Contact.swift */; };
 		FD275659241D9A1D009FB650 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD275658241D9A1D009FB650 /* Database.swift */; };
+		FDE5894C243163C800BF60A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDE5894A243163C800BF60A7 /* Localizable.strings */; };
 		FDEB441724197D67000B5320 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB441624197D67000B5320 /* AppDelegate.swift */; };
 		FDEB441E24197D67000B5320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEB441C24197D67000B5320 /* Main.storyboard */; };
 		FDEB442024197D69000B5320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDEB441F24197D69000B5320 /* Assets.xcassets */; };
@@ -72,6 +73,10 @@
 		FD27564E241D6016009FB650 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		FD275652241D7969009FB650 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		FD275658241D9A1D009FB650 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		FDE589482431631100BF60A7 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		FDE589492431631100BF60A7 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		FDE5894B243163C800BF60A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FDE5894D2431642700BF60A7 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FDEB441324197D67000B5320 /* CoviDoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoviDoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEB441624197D67000B5320 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDEB441D24197D67000B5320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -200,6 +205,7 @@
 				FDEB441F24197D69000B5320 /* Assets.xcassets */,
 				FDEB442124197D69000B5320 /* LaunchScreen.storyboard */,
 				FDEB442424197D69000B5320 /* Info.plist */,
+				FDE5894A243163C800BF60A7 /* Localizable.strings */,
 			);
 			path = Covid19Doctor;
 			sourceTree = "<group>";
@@ -323,6 +329,7 @@
 			knownRegions = (
 				en,
 				Base,
+				it,
 			);
 			mainGroup = FDEB440A24197D67000B5320;
 			productRefGroup = FDEB441424197D67000B5320 /* Products */;
@@ -348,6 +355,7 @@
 				FD086D7A2428350B00368BDF /* SF-Compact-Display-Thin.otf in Resources */,
 				FD086D792428350B00368BDF /* SF-Compact-Display-Light.otf in Resources */,
 				FDEB442024197D69000B5320 /* Assets.xcassets in Resources */,
+				FDE5894C243163C800BF60A7 /* Localizable.strings in Resources */,
 				FD086D7E2428350B00368BDF /* SF-Compact-Display-Bold.otf in Resources */,
 				FD086D802428350B00368BDF /* SF-Compact-Display-Semibold.otf in Resources */,
 				FDEB441E24197D67000B5320 /* Main.storyboard in Resources */,
@@ -439,10 +447,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		FDE5894A243163C800BF60A7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDE5894B243163C800BF60A7 /* Base */,
+				FDE5894D2431642700BF60A7 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		FDEB441C24197D67000B5320 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FDEB441D24197D67000B5320 /* Base */,
+				FDE589482431631100BF60A7 /* it */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -451,6 +469,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FDEB442224197D69000B5320 /* Base */,
+				FDE589492431631100BF60A7 /* it */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -462,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -522,6 +542,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -585,7 +606,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.covidapp-coronavirus-outbreak-control.covidoc";
 				PRODUCT_NAME = CoviDoc;
 				SWIFT_VERSION = 5.0;
@@ -606,7 +627,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.covidapp-coronavirus-outbreak-control.covidoc";
 				PRODUCT_NAME = CoviDoc;
 				SWIFT_VERSION = 5.0;

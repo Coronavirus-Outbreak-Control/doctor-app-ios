@@ -1,0 +1,65 @@
+/* 
+  Localizable.strings
+  Covid19Doctor
+
+  Created by Francesco Cosentino on 30/03/2020.
+  Copyright © 2020 Francesco Cosentino. All rights reserved.
+*/
+
+"welcome" = "Hey Doctor,\n\nWelcome to\nanonymous\nCovidCommunity\nAlert 👋";
+"together_we" = "Insieme possiamo salvare vite!";
+"let_s_get_s" = "INIZIAMO";
+"bt_how_it_works" = "COME FUNZIONA 🤔";
+
+
+"how_it_works" = "Come funziona 🤔";
+"how_it_works_p0" = "Useremo la fotocamera del tuo cellulare
+e i contatti, per permetterti di scansionare i codici QR dei pazienti
+e invitare altri dottori.";
+"how_it_works_q1" = "Come posso aiutare?";
+"how_it_works_p1" = "Puoi registrare lo stato di salute del paziente in modo da notificare altre persone che hanno interagito con il paziente.";
+"how_it_works_q2" = "Come posso promuovere questa app?";
+"how_it_works_p2" = "Puoi invitare altri dottori fidati inviandoci il loro numero di telefono.";
+
+
+
+"phone_number" = "Numero di cellulare";
+"verify_number" = "Verifica numero";
+"tv_code" = "Inserisci il codice di 6 cifre ricevuto per SMS";
+"bt_send_number" = "INVIA";
+"insert_num" = "Inserisci numero";
+"err_code" = "Errore";
+
+
+
+"all_set" = "Fatto!";
+"what_to_do" = "Ora potrai scansionare il Codice QR dei pazienti, registrare il loro stato di salute e invitare altri dottori ad usare app.";
+"go" = "VAI ALL'APPLICAZIONE";
+
+
+
+"main_title" = "Welcome to\nCoviDoc";
+"bt_scan_qrcode" = "CLICCA QUI PER SCANSIONARE IL\nCODICE QR";
+"bt_invite_doc" = "INVITA ALTRI DOTTORI";
+"toast_num_doc_invited" = "Dottore invitato";
+"toast_err_doc_invited" = "Errore durante l'invito di";
+"alert_inviting_title" = "Stai invitando";
+"alert_inviting_text" = "Confermi l'invito?";
+"toast_invalid_number" = "Il numero selezionato non è valido";
+
+
+
+"bt_confirm_covid" = "🤒  POSITIVO AL COVID-19";
+"bt_suspect_covid" = "😷  SOSPETTO DI COVID-19";
+"bt_recover_covid" = "😊  GUARITO";
+"diagnosis_title" = "Diagnosi 🔬";
+"toast_status_changed" = "Stato di salute registrato";
+"toast_status_error" = "Errore, lo stato di salute non è stato registrato";
+"alert_sure_text" = "Sei sicuro?";
+
+
+
+"yes" = "Sì";
+"no" = "No";
+"cancel" = "Annulla";
+"confirm" = "Conferma";

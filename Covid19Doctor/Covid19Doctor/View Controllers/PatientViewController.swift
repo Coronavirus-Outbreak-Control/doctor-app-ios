@@ -27,13 +27,13 @@ class PatientViewController: UIViewController {
     
     private func configureUI() {
         confirmButton.backgroundColor = UIColor(red:0.88, green:0.24, blue:0.24, alpha:1.00)
-        confirmButton.setTitle("🤒 POSITIVO AL COVID-19", for: .normal)
+        confirmButton.setTitle(NSLocalizedString("bt_confirm_covid", comment: ""), for: .normal)
         
         suspectedButton.backgroundColor = UIColor(red:0.92, green:0.54, blue:0.33, alpha:1.00)
-        suspectedButton.setTitle("😷 SOSPETTO DI COVID-19", for: .normal)
+        suspectedButton.setTitle(NSLocalizedString("bt_suspect_covid", comment: ""), for: .normal)
         
         recoveredButton.backgroundColor = UIColor(red:0.18, green:0.74, blue:0.47, alpha:1.00)
-        recoveredButton.setTitle("😊 GUARITO", for: .normal)
+        recoveredButton.setTitle(NSLocalizedString("bt_recover_covid", comment: ""), for: .normal)
         
         [confirmButton, suspectedButton, recoveredButton].forEach {
             $0?.titleLabel?.font = .button
@@ -42,7 +42,7 @@ class PatientViewController: UIViewController {
         
         textLabel.font = UIFont.title
         textLabel.textColor = .titleBlack
-        textLabel.text = "Diagnosi 🔬"
+        textLabel.text = NSLocalizedString("diagnosis_title", comment: "")
         
         backButton.map {
             $0.backgroundColor = .mainTheme
@@ -96,22 +96,22 @@ class PatientViewController: UIViewController {
     func setStatus(_ status: PatientStatus) {
         APIManager.api.setPatientStatus(patientId: patientId, status: status)
         .subscribe(onSuccess: { [weak self] _ in
-            self?.view.makeToast("Stato di salute registrato", duration: 3.0, position: .center)
+            self?.view.makeToast(NSLocalizedString("toast_status_changed", comment: ""), duration: 3.0, position: .center)
         }, onError: { [weak self] error in
-            self?.view.makeToast("Errore, lo stato di salute non è stato registrato", duration: 3.0, position: .center)
+            self?.view.makeToast(NSLocalizedString("toast_status_error", comment: ""), duration: 3.0, position: .center)
         })
         .disposed(by: bag)
     }
     
     func askConfirmation(forStatus status: PatientStatus) {
-        let alertController = UIAlertController(title: "\(status)", message: "Are you sure?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: nil, message: NSLocalizedString("alert_sure_text", comment: ""), preferredStyle: .alert)
 
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+        let cancelAction = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel) { _ in
             // nothing
         }
         alertController.addAction(cancelAction)
 
-        let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+        let okAction = UIAlertAction(title: NSLocalizedString("confirm", comment: ""), style: .default) { [weak self] _ in
             self?.setStatus(status)
         }
         alertController.addAction(okAction)

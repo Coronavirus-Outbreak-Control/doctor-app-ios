@@ -1,0 +1,78 @@
+
+/* Class = "UILabel"; text = "A message will be sent..."; ObjectID = "2TN-yo-rPR"; */
+"2TN-yo-rPR.text" = "A message will be sent...";
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "4xz-NC-SBo"; */
+"4xz-NC-SBo.normalTitle" = "Continue";
+
+/* Class = "UIButton"; normalTitle = "Suspected"; ObjectID = "6qX-Ou-Sbb"; */
+"6qX-Ou-Sbb.normalTitle" = "Suspected";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "8CH-wZ-3sP"; */
+"8CH-wZ-3sP.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "8ex-XF-186"; */
+"8ex-XF-186.text" = "Label";
+
+/* Class = "UILabel"; text = "Diagnosis"; ObjectID = "A2L-Gz-dT4"; */
+"A2L-Gz-dT4.text" = "Diagnosis";
+
+/* Class = "UILabel"; text = "All set!"; ObjectID = "Eg6-9G-7iH"; */
+"Eg6-9G-7iH.text" = "All set!";
+
+/* Class = "UIButton"; normalTitle = "Confirm coronavirus"; ObjectID = "GbJ-AE-BZM"; */
+"GbJ-AE-BZM.normalTitle" = "Confirm coronavirus";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "HBQ-1L-86L"; */
+"HBQ-1L-86L.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "I3y-nx-UnT"; */
+"I3y-nx-UnT.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ief-d0-Sul"; */
+"Ief-d0-Sul.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Nxc-Z6-j02"; */
+"Nxc-Z6-j02.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "O6h-91-C2B"; */
+"O6h-91-C2B.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Together we can save lives and help people keep their jobs."; ObjectID = "SbL-dJ-cfb"; */
+"SbL-dJ-cfb.text" = "Together we can save lives and help people keep their jobs.";
+
+/* Class = "UILabel"; text = "Phone number verification"; ObjectID = "Uvv-9e-9gp"; */
+"Uvv-9e-9gp.text" = "Phone number verification";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "YvZ-ZG-ad2"; */
+"YvZ-ZG-ad2.text" = "Label";
+
+/* Class = "UILabel"; text = "On this app you will now be able to scan a patient's QR code in order to change a patient health status, and invite other doctors on the app."; ObjectID = "cpu-ja-vGB"; */
+"cpu-ja-vGB.text" = "On this app you will now be able to scan a patient's QR code in order to change a patient health status, and invite other doctors on the app.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dgg-zW-xaJ"; */
+"dgg-zW-xaJ.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eFU-6Z-7PD"; */
+"eFU-6Z-7PD.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "INVITE OTHER DOCTORS"; ObjectID = "ewV-3p-LfE"; */
+"ewV-3p-LfE.normalTitle" = "INVITE OTHER DOCTORS";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fUn-pA-iGR"; */
+"fUn-pA-iGR.text" = "Label";
+
+/* Class = "UILabel"; text = "Insert the verification code"; ObjectID = "gMf-x2-RpM"; */
+"gMf-x2-RpM.text" = "Insert the verification code";
+
+/* Class = "UIButton"; normalTitle = "GO TO APPLICATION"; ObjectID = "jHm-xx-9hq"; */
+"jHm-xx-9hq.normalTitle" = "GO TO APPLICATION";
+
+/* Class = "UILabel"; text = "Come funziona 🤔"; ObjectID = "kHQ-uP-LBv"; */
+"kHQ-uP-LBv.text" = "Come funziona 🤔";
+
+/* Class = "UILabel"; text = "Welcome to\nCoviDoc"; ObjectID = "yXR-Rs-CHD"; */
+"yXR-Rs-CHD.text" = "Welcome to\nCoviDoc";
+
+/* Class = "UIButton"; normalTitle = "Recovered"; ObjectID = "yxe-UF-U9P"; */
+"yxe-UF-U9P.normalTitle" = "Recovered";

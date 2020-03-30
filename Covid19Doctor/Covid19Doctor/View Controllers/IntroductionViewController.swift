@@ -27,7 +27,7 @@ class IntroductionViewController: UIViewController {
             $0.font = .title
             $0.textColor = .titleBlack
             
-            let text = "Hey Doctor,\n\nWelcome to\nanonymous\nCovidCommunity\nAlert 👋"
+            let text = NSLocalizedString("welcome", comment: "")
             let str = "CovidCommunity"
             let range = (text as NSString).range(of: str)
             let attributed = NSMutableAttributedString(string: text)
@@ -38,19 +38,18 @@ class IntroductionViewController: UIViewController {
         subtitleLabel.map {
             $0.font = .subtitle
             $0.textColor = .textGray
-            $0.text = "Insieme possiamo salvare vite!"
+            $0.text = NSLocalizedString("together_we", comment: "")
         }
         
         continueButton.map {
             $0.titleLabel?.font = .button
             $0.setTitleColor(.white, for: .normal)
             $0.backgroundColor = .mainTheme
-//            $0.setTitle("LET'S GET STARTED", for: .normal)
-            $0.setTitle("INIZIAMO", for: .normal)
+            $0.setTitle(NSLocalizedString("let_s_get_s", comment: ""), for: .normal)
         }
         
         howToButton.map {
-            $0.setTitle("COME FUNZIONA 🤔", for: .normal)
+            $0.setTitle(NSLocalizedString("bt_how_it_works", comment: ""), for: .normal)
             $0.titleLabel?.font = UIFont(name: "SFCompactDisplay-Semibold", size: 15)
             $0.setTitleColor(.titleBlack, for: .normal)
         }

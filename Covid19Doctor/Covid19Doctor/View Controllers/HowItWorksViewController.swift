@@ -34,37 +34,37 @@ class HowItWorksViewController: UIViewController {
         }
 
         titleLabel.map {
-            $0.text = "Come funziona 🤔"
+            $0.text = NSLocalizedString("how_it_works", comment: "")
             $0.font = UIFont(name: "SFCompactDisplay-Heavy", size: 38)
             $0.textColor = .titleBlack
         }
         
         text1.map {
-            $0.text = "Useremo la fotocamera del tuo cellulare e i contatti, per permetterti di scansionare i codici QR dei pazienti e invitare altri dottori."
+            $0.text = NSLocalizedString("how_it_works_p0", comment: "")
             $0.font = fontA
             $0.textColor = .titleBlack
         }
         
         text2.map {
-            $0.text = "Come posso aiutare?"
+            $0.text = NSLocalizedString("how_it_works_q1", comment: "")
             $0.font = fontQ
             $0.textColor = .titleBlack
         }
         
         text3.map {
-            $0.text = "Puoi registrare lo stato di salute del paziente in modo da notificare altre persone che hanno interagito con il paziente."
+            $0.text = NSLocalizedString("how_it_works_p1", comment: "")
             $0.font = fontA
             $0.textColor = .titleBlack
         }
         
         text4.map {
-            $0.text = "Come posso promuovere questa app?"
+            $0.text = NSLocalizedString("how_it_works_q2", comment: "")
             $0.font = fontQ
             $0.textColor = .titleBlack
         }
         
         text5.map {
-            $0.text = "Puoi invitare altri dottori fidati inviandoci il loro numero di telefono."
+            $0.text = NSLocalizedString("how_it_works_p2", comment: "")
             $0.font = fontA
             $0.textColor = .titleBlack
         }

@@ -27,7 +27,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         return
         #endif
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Annulla", style: .plain, target: self, action: #selector(close))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: NSLocalizedString("cancel", comment: ""), style: .plain, target: self, action: #selector(close))
 
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()

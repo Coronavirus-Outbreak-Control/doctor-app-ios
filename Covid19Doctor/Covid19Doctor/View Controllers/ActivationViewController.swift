@@ -31,7 +31,7 @@ class ActivationViewController: UIViewController {
     private let verificationCode = PublishRelay<String>()
     
     private func configureUI() {
-        phoneField.placeholder = "Numero di cellulare" //"Phone number"
+        phoneField.placeholder = NSLocalizedString("phone_number", comment: "")
         phoneField.withFlag = true
         phoneField.withPrefix = true
         if #available(iOS 11.0, *) {
@@ -40,12 +40,12 @@ class ActivationViewController: UIViewController {
         
         titleLabel.font = .title
         titleLabel.textColor = .titleBlack
-        titleLabel.text = "Verifica numero" //"Phone number verification"
+        titleLabel.text = NSLocalizedString("verify_number", comment: "")
         
         textLabel.font = .caption
         textLabel.textColor = .textGray
         
-        codeTextLabel.text = "Inserisci il codice di 6 cifre ricevuto per SMS"
+        codeTextLabel.text = NSLocalizedString("tv_code", comment: "")
         
         lineView.backgroundColor = .mainTheme
         
@@ -54,8 +54,7 @@ class ActivationViewController: UIViewController {
         sendPhoneButton.titleLabel?.font = .button
         sendPhoneButton.setTitleColor(.white, for: .normal)
         sendPhoneButton.backgroundColor = .mainTheme
-//        sendPhoneButton.setTitle("SEND VERIFICATION CODE", for: .normal)
-        sendPhoneButton.setTitle("INVIA", for: .normal)
+        sendPhoneButton.setTitle(NSLocalizedString("bt_send_number", comment: ""), for: .normal)
     }
 
     override func viewDidLoad() {
@@ -65,7 +64,7 @@ class ActivationViewController: UIViewController {
         
         digitsField.delegate = self
         codeView.isHidden = true
-        textLabel.text = "Inserisci numero" //"A message with a verification code will be sent to your phone"
+        textLabel.text = NSLocalizedString("insert_num", comment: "")
 
         // dismiss keyboard on tap
         view.rx.tapGesture().subscribe(onNext: { [weak self] _ in
@@ -164,10 +163,10 @@ class ActivationViewController: UIViewController {
             switch error {
                 //TODO: show errors
             default:
-                text = "Error"
+                text = NSLocalizedString("err_code", comment: "")
             }
         } else {
-            text = "Error"
+            text = NSLocalizedString("err_code", comment: "")
         }
         
         view.makeToast(text, duration: 3.0, position: .center)
