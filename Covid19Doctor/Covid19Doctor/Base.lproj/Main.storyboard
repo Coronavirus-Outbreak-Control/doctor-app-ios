@@ -295,28 +295,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number verification" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Uvv-9e-9gp">
-                                <rect key="frame" x="40" y="74" width="334" height="126.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="126.5" id="OBT-VX-dne"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number verification" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Uvv-9e-9gp">
+                                <rect key="frame" x="40" y="84" width="334" height="63.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="53"/>
                                 <color key="textColor" red="0.2244822819" green="0.248710183" blue="0.27032059590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A message will be sent..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TN-yo-rPR">
-                                <rect key="frame" x="40" y="235.5" width="334" height="30"/>
+                                <rect key="frame" x="40" y="182.5" width="334" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.2244822819" green="0.248710183" blue="0.27032059590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jTT-0N-l6Y" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
-                                <rect key="frame" x="40" y="291.5" width="334" height="33"/>
+                                <rect key="frame" x="40" y="238.5" width="334" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmX-fU-UxG">
-                                <rect key="frame" x="30" y="440.5" width="354" height="421.5"/>
+                                <rect key="frame" x="30" y="387.5" width="354" height="474.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert the verification code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMf-x2-RpM">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="20"/>
@@ -348,14 +345,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaZ-Hn-g0v">
-                                <rect key="frame" x="40" y="332.5" width="334" height="1"/>
+                                <rect key="frame" x="40" y="279.5" width="334" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="FoJ-NN-A41"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqZ-fg-BCc" customClass="PMSuperButton" customModule="PMSuperButton">
-                                <rect key="frame" x="59.5" y="354.5" width="295" height="56"/>
+                                <rect key="frame" x="59.5" y="301.5" width="295" height="56"/>
                                 <color key="backgroundColor" red="0.53825595540000004" green="0.86038698189999996" blue="0.60722287519999996" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Itw-Rv-jE9"/>
@@ -386,13 +383,13 @@
                             <constraint firstItem="jTT-0N-l6Y" firstAttribute="trailing" secondItem="2TN-yo-rPR" secondAttribute="trailing" id="N4V-vu-zYN"/>
                             <constraint firstAttribute="trailing" secondItem="Uvv-9e-9gp" secondAttribute="trailing" constant="40" id="Pd2-jp-zdL"/>
                             <constraint firstItem="Uvv-9e-9gp" firstAttribute="leading" secondItem="fCJ-lh-01c" secondAttribute="leading" constant="40" id="Qe2-vB-M3U"/>
-                            <constraint firstItem="Uvv-9e-9gp" firstAttribute="top" secondItem="7lY-1r-X9B" secondAttribute="bottom" priority="999" constant="30" id="U2O-ON-4qx"/>
+                            <constraint firstItem="Uvv-9e-9gp" firstAttribute="top" secondItem="7lY-1r-X9B" secondAttribute="bottom" priority="999" constant="40" id="U2O-ON-4qx"/>
                             <constraint firstItem="jTT-0N-l6Y" firstAttribute="centerX" secondItem="fCJ-lh-01c" secondAttribute="centerX" id="VJg-SS-5eR"/>
                             <constraint firstItem="qaZ-Hn-g0v" firstAttribute="top" secondItem="jTT-0N-l6Y" secondAttribute="bottom" constant="8" id="WQd-oe-zg3"/>
                             <constraint firstItem="jTT-0N-l6Y" firstAttribute="top" secondItem="2TN-yo-rPR" secondAttribute="bottom" constant="26" id="WhV-qi-zYF"/>
                             <constraint firstItem="jTT-0N-l6Y" firstAttribute="leading" secondItem="2TN-yo-rPR" secondAttribute="leading" id="YYY-5w-MfI"/>
                             <constraint firstItem="2TN-yo-rPR" firstAttribute="leading" secondItem="Uvv-9e-9gp" secondAttribute="leading" id="dWy-kM-vhK"/>
-                            <constraint firstItem="Uvv-9e-9gp" firstAttribute="top" relation="lessThanOrEqual" secondItem="7lY-1r-X9B" secondAttribute="bottom" constant="30" id="eb8-Yy-piR"/>
+                            <constraint firstItem="Uvv-9e-9gp" firstAttribute="top" relation="lessThanOrEqual" secondItem="7lY-1r-X9B" secondAttribute="bottom" constant="40" id="eb8-Yy-piR"/>
                             <constraint firstItem="cqZ-fg-BCc" firstAttribute="top" secondItem="jTT-0N-l6Y" secondAttribute="bottom" constant="30" id="gWb-P6-PTx"/>
                             <constraint firstItem="qaZ-Hn-g0v" firstAttribute="leading" secondItem="jTT-0N-l6Y" secondAttribute="leading" id="i2Z-G1-UhF"/>
                             <constraint firstItem="cqZ-fg-BCc" firstAttribute="centerX" secondItem="fCJ-lh-01c" secondAttribute="centerX" id="pM1-3B-cTl"/>
