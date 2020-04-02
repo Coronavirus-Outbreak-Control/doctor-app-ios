@@ -532,15 +532,15 @@ CoviDoc</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="ru8-uL-fMI">
-                                <rect key="frame" x="57" y="192" width="300" height="344"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ru8-uL-fMI">
+                                <rect key="frame" x="59.5" y="276" width="295" height="344"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbJ-AE-BZM" customClass="PMSuperButton" customModule="PMSuperButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="56"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="56"/>
                                         <color key="backgroundColor" red="0.89932804404145084" green="0.44758780620793248" blue="0.49332087369590494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="5E0-hT-tOW"/>
-                                            <constraint firstAttribute="width" constant="300" id="APb-KQ-QOc"/>
+                                            <constraint firstAttribute="width" priority="999" constant="295" id="APb-KQ-QOc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                         <state key="normal" title="Confirm coronavirus">
@@ -556,7 +556,7 @@ CoviDoc</string>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qX-Ou-Sbb" customClass="PMSuperButton" customModule="PMSuperButton">
-                                        <rect key="frame" x="0.0" y="144" width="300" height="56"/>
+                                        <rect key="frame" x="0.0" y="144" width="295" height="56"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                         <state key="normal" title="Suspected">
@@ -572,7 +572,7 @@ CoviDoc</string>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxe-UF-U9P" customClass="PMSuperButton" customModule="PMSuperButton">
-                                        <rect key="frame" x="0.0" y="288" width="300" height="56"/>
+                                        <rect key="frame" x="0.0" y="288" width="295" height="56"/>
                                         <color key="backgroundColor" red="0.53465739235088816" green="0.85722959844559588" blue="0.52476742466321025" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                         <state key="normal" title="Recovered">
@@ -592,11 +592,13 @@ CoviDoc</string>
                                     <constraint firstItem="6qX-Ou-Sbb" firstAttribute="height" secondItem="GbJ-AE-BZM" secondAttribute="height" id="49u-hB-vSH"/>
                                     <constraint firstItem="yxe-UF-U9P" firstAttribute="width" secondItem="GbJ-AE-BZM" secondAttribute="width" id="7CH-Dg-P6b"/>
                                     <constraint firstItem="yxe-UF-U9P" firstAttribute="height" secondItem="GbJ-AE-BZM" secondAttribute="height" id="RDS-WM-ZCL"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="260" id="UF0-Mx-ok9"/>
                                     <constraint firstItem="6qX-Ou-Sbb" firstAttribute="width" secondItem="GbJ-AE-BZM" secondAttribute="width" id="mRl-I6-KTn"/>
+                                    <constraint firstAttribute="height" priority="999" constant="344" id="mWO-KC-npV"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJp-bX-Xje" customClass="PMSuperButton" customModule="PMSuperButton">
-                                <rect key="frame" x="50" y="768" width="64" height="64"/>
+                                <rect key="frame" x="59.5" y="768" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="uzP-OZ-uVg"/>
                                     <constraint firstAttribute="width" constant="64" id="wmR-91-7BV"/>
@@ -612,11 +614,15 @@ CoviDoc</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="CJp-bX-Xje" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ru8-uL-fMI" secondAttribute="bottom" constant="54" id="Ba1-rw-TqG"/>
+                            <constraint firstItem="ru8-uL-fMI" firstAttribute="centerY" secondItem="wjA-eO-R22" secondAttribute="centerY" priority="999" id="Dsf-N1-wOj"/>
+                            <constraint firstItem="ru8-uL-fMI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="A2L-Gz-dT4" secondAttribute="bottom" constant="30" id="DwX-fv-10v"/>
                             <constraint firstItem="A2L-Gz-dT4" firstAttribute="top" secondItem="NXA-fJ-La8" secondAttribute="bottom" constant="30" id="HM6-xC-0T6"/>
-                            <constraint firstItem="ru8-uL-fMI" firstAttribute="top" secondItem="A2L-Gz-dT4" secondAttribute="bottom" constant="58" id="Kxp-E6-p2O"/>
-                            <constraint firstItem="CJp-bX-Xje" firstAttribute="leading" secondItem="wjA-eO-R22" secondAttribute="leadingMargin" constant="30" id="OWG-IE-uoI"/>
+                            <constraint firstItem="ru8-uL-fMI" firstAttribute="top" secondItem="A2L-Gz-dT4" secondAttribute="bottom" priority="998" constant="58" id="Kxp-E6-p2O"/>
                             <constraint firstItem="A2L-Gz-dT4" firstAttribute="leading" secondItem="wjA-eO-R22" secondAttribute="leadingMargin" constant="30" id="QPD-Et-bhQ"/>
+                            <constraint firstItem="CJp-bX-Xje" firstAttribute="leading" secondItem="ru8-uL-fMI" secondAttribute="leading" id="Qoh-TF-Nd9"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="ru8-uL-fMI" secondAttribute="trailing" constant="30" id="XwA-VC-rU4"/>
                             <constraint firstItem="dPp-xr-Mef" firstAttribute="top" secondItem="CJp-bX-Xje" secondAttribute="bottom" constant="30" id="hk1-jo-vFB"/>
+                            <constraint firstItem="ru8-uL-fMI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wjA-eO-R22" secondAttribute="leadingMargin" constant="30" id="p8x-nK-um1"/>
                             <constraint firstItem="ru8-uL-fMI" firstAttribute="centerX" secondItem="wjA-eO-R22" secondAttribute="centerX" id="wYF-Gd-0Du"/>
                             <constraint firstAttribute="trailingMargin" secondItem="A2L-Gz-dT4" secondAttribute="trailing" constant="30" id="zxb-Ca-aT6"/>
                         </constraints>
