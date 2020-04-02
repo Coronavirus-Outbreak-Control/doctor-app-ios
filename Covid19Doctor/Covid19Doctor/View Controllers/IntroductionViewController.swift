@@ -60,7 +60,7 @@ class IntroductionViewController: UIViewController {
         }.disposed(by: bag)
         
         howToButton.rx.tap.bind { [weak self] _ in
-            let vc = UIStoryboard.getViewController(id: "HowItWorksViewController")
+            let vc = UIStoryboard.getViewController(id: "Help")
             self?.navigationController?.pushViewController(vc, animated: true)
         }.disposed(by: bag)
     }
