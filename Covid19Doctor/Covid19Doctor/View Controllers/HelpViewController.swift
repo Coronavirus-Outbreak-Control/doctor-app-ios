@@ -30,7 +30,7 @@ class HelpViewController: UIViewController {
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ]
         NSLayoutConstraint.activate(cc)
-        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 72, right: 0)
+        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
         
         // howItWorksView
         howItWorksView.frame = view.bounds

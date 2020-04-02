@@ -10,10 +10,11 @@ import UIKit
 import PMSuperButton
 import RxSwift
 import RxCocoa
+import FittableFontLabel
 
 class IntroductionViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: FittableFontLabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var continueButton: PMSuperButton!
     @IBOutlet weak var howToButton: UIButton!
@@ -28,6 +29,10 @@ class IntroductionViewController: UIViewController {
             $0.textColor = .titleBlack
             
             let text = NSLocalizedString("welcome", comment: "")
+            // set inset as a workaround
+            // for miscalculation of FittabbleFontLabel
+            $0.leftInset = -1
+            $0.rightInset = -1
             let str = "CovidCommunity"
             let range = (text as NSString).range(of: str)
             let attributed = NSMutableAttributedString(string: text)

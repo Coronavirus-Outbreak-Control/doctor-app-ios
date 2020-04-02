@@ -19,5 +19,6 @@ target 'Covid19Doctor' do
   pod 'KWVerificationCodeView'
   pod 'PhoneNumberKit'
   pod 'Toast-Swift'
+  pod 'FittableFontLabel'
 
 end

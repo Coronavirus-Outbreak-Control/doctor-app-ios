@@ -1,4 +1,5 @@
 PODS:
+  - FittableFontLabel (3.0.0)
   - KWVerificationCodeView (0.4.0)
   - PhoneNumberKit (3.2.0):
     - PhoneNumberKit/PhoneNumberKitCore (= 3.2.0)
@@ -35,6 +36,7 @@ PODS:
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
+  - FittableFontLabel
   - KWVerificationCodeView
   - PhoneNumberKit
   - PMSuperButton
@@ -49,6 +51,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - FittableFontLabel
     - KWVerificationCodeView
     - PhoneNumberKit
     - PMSuperButton
@@ -63,6 +66,7 @@ SPEC REPOS:
     - Toast-Swift
 
 SPEC CHECKSUMS:
+  FittableFontLabel: 34581be026d89c02eb7be992c163e705b586b86f
   KWVerificationCodeView: 92cca6ad028546d3232fa75cda3a40d00109a1a2
   PhoneNumberKit: df411d46177d1492da84e10b6c093846dd861452
   PMSuperButton: 72105fef415890c8792a9e5a784f75c461066f8b
@@ -76,6 +80,6 @@ SPEC CHECKSUMS:
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: ae3c055f4dd46c0ebe056343e930fdd0cba60d8f
+PODFILE CHECKSUM: 598217f976da3f578218f3a039148fc5f5128739
 
 COCOAPODS: 1.9.1

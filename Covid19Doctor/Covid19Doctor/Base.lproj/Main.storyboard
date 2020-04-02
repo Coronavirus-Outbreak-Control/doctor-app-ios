@@ -36,17 +36,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxc-Z6-j02">
-                                <rect key="frame" x="40" y="144" width="340" height="287"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxc-Z6-j02" customClass="FittableFontLabel" customModule="FittableFontLabel">
+                                <rect key="frame" x="40" y="144" width="340" height="307.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="c2E-nY-SmB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoAdjustFontSize" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="1000" text="Together we can save lives and help people keep their jobs." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbL-dJ-cfb">
-                                <rect key="frame" x="40" y="501" width="340" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="1000" text="Together we can save lives and help people keep their jobs." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="SbL-dJ-cfb">
+                                <rect key="frame" x="40" y="521.5" width="340" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -64,7 +67,7 @@
                         <constraints>
                             <constraint firstItem="O6h-91-C2B" firstAttribute="top" secondItem="4xz-NC-SBo" secondAttribute="bottom" constant="8" id="1PN-v5-3et"/>
                             <constraint firstItem="Nxc-Z6-j02" firstAttribute="leading" secondItem="j9x-5c-lxI" secondAttribute="leadingMargin" constant="20" id="HRK-1J-jv1"/>
-                            <constraint firstItem="SbL-dJ-cfb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Nxc-Z6-j02" secondAttribute="bottom" constant="20" id="L5c-58-phO"/>
+                            <constraint firstItem="SbL-dJ-cfb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Nxc-Z6-j02" secondAttribute="bottom" constant="12" id="L5c-58-phO"/>
                             <constraint firstItem="SbL-dJ-cfb" firstAttribute="trailing" secondItem="Nxc-Z6-j02" secondAttribute="trailing" id="NDh-na-YFC"/>
                             <constraint firstItem="Nxc-Z6-j02" firstAttribute="top" relation="lessThanOrEqual" secondItem="Kbl-ZD-adt" secondAttribute="bottom" priority="999" constant="100" id="POk-yS-NTl"/>
                             <constraint firstItem="707-kB-hXQ" firstAttribute="top" secondItem="4xz-NC-SBo" secondAttribute="bottom" constant="64" id="RXn-TM-CHb"/>
