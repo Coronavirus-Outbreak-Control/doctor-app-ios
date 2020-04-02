@@ -136,10 +136,10 @@ class ActivityViewController: UIViewController {
         .subscribe(onSuccess: { [weak self] _ in
             self?.storeInvitation(name: contact.fullName, phoneNumber: phoneNumber)
             self?.view.hideToastActivity()
-            self?.view.makeToast("\(NSLocalizedString("toast_num_doc_invited", comment: "")): \(contact.fullName)", duration: 3.0, position: .center)
+            self?.view.makeToast("\(NSLocalizedString("toast_num_doc_invited", comment: "")): \(contact.fullName)")
         }, onError: { [weak self] _ in
             self?.view.hideToastActivity()
-            self?.view.makeToast("\(NSLocalizedString("toast_err_doc_invited", comment: "")) \(contact.fullName)", duration: 3.0, position: .center)
+            self?.view.makeToast("\(NSLocalizedString("toast_err_doc_invited", comment: "")) \(contact.fullName)")
         })
         .disposed(by: bag)
     }
@@ -159,6 +159,7 @@ class ActivityViewController: UIViewController {
         alertController.addAction(okAction)
 
         present(alertController, animated: true)
+        alertController.view.tintColor = .mainTheme
     }
     
     private func storeInvitation(name: String, phoneNumber: String) {
@@ -189,7 +190,7 @@ extension ActivityViewController: CNContactPickerDelegate {
                     self?.promptInvitation(contact: contact, phoneNumber: number)
                 }
                 else {
-                    self?.view.makeToast(NSLocalizedString("toast_invalid_number", comment: ""), duration: 3.0, position: .center)
+                    self?.view.makeToast(NSLocalizedString("toast_invalid_number", comment: ""))
                 }
             }
         }

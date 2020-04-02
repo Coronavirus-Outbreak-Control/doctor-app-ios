@@ -169,7 +169,7 @@ class ActivationViewController: UIViewController {
             text = NSLocalizedString("err_code", comment: "")
         }
         
-        view.makeToast(text, duration: 3.0, position: .center)
+        view.makeToast(text)
     }
     
     // MARK: -

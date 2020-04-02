@@ -96,9 +96,9 @@ class PatientViewController: UIViewController {
     func setStatus(_ status: PatientStatus) {
         APIManager.api.setPatientStatus(patientId: patientId, status: status)
         .subscribe(onSuccess: { [weak self] _ in
-            self?.view.makeToast(NSLocalizedString("toast_status_changed", comment: ""), duration: 3.0, position: .center)
+            self?.view.makeToast(NSLocalizedString("toast_status_changed", comment: ""))
         }, onError: { [weak self] error in
-            self?.view.makeToast(NSLocalizedString("toast_status_error", comment: ""), duration: 3.0, position: .center)
+            self?.view.makeToast(NSLocalizedString("toast_status_error", comment: ""))
         })
         .disposed(by: bag)
     }
@@ -117,5 +117,6 @@ class PatientViewController: UIViewController {
         alertController.addAction(okAction)
 
         self.present(alertController, animated: true)
+        alertController.view.tintColor = .mainTheme
     }
 }

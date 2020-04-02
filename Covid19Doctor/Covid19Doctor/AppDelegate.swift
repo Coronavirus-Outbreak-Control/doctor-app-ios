@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        configureUI()
         runUI()
         return true
     }
@@ -36,5 +38,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func configureUI() {
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).tintColor = .mainTheme
+        
+        var style = ToastStyle()
+        style.backgroundColor = UIColor(white: 0.35, alpha: 0.95)
+        style.activityBackgroundColor = style.backgroundColor
+        style.titleFont = style.titleFont.withSize(20)
+        style.messageFont = style.titleFont
+        style.horizontalPadding = 25
+        style.verticalPadding = 25
+        style.cornerRadius = 30
+        ToastManager.shared.style = style
+        ToastManager.shared.duration = 3.5
+        ToastManager.shared.isTapToDismissEnabled = false
+        ToastManager.shared.position = .center
     }
 }
