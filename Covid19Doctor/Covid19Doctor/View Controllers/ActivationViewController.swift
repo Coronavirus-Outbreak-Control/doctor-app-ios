@@ -111,6 +111,7 @@ class ActivationViewController: UIViewController {
                 self?.didGetPhoneNumber(number)
                 return APIManager.api.sendPhoneVerificationCode(number).asObservable()
             })
+            .timeout(.seconds(30), scheduler: MainScheduler.instance)
             .flatMap({ response -> Observable<Bool> in
                 return Observable.just(true)
             })
@@ -131,6 +132,7 @@ class ActivationViewController: UIViewController {
             .map({ $0.digits })
             .filter({ $0.count == self.digitsField.digits })
             .throttle(.seconds(1), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
             .flatMapLatest({ code -> Single<VerifyPhoneCodeResponse> in
                 return APIManager.api.verifyPhoneCode(code)
             })
