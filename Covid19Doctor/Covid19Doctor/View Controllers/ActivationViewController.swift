@@ -109,6 +109,7 @@ class ActivationViewController: UIViewController {
             })
             .flatMap({ [weak self] number -> Observable<Empty> in
                 self?.didGetPhoneNumber(number)
+                self?.setSendButtonEnabled(false)
                 return APIManager.api.sendPhoneVerificationCode(number).asObservable()
             })
             .timeout(.seconds(30), scheduler: MainScheduler.instance)
@@ -118,7 +119,7 @@ class ActivationViewController: UIViewController {
             .catchError({ [weak self] _ in
                 // subscribe again
                 defer { self?.handleSendVerificationCode() }
-                self?.setPhoneButtonEnabled(true)
+                self?.setSendButtonEnabled(true)
                 return Observable.just(false)
             })
             .map({ !$0 })
@@ -178,14 +179,17 @@ class ActivationViewController: UIViewController {
     
     private func didGetPhoneNumber(_ number: String) {
         self.phoneField.resignFirstResponder()
-        setPhoneButtonEnabled(false)
         self.phoneNumber = number
     }
     
-    private func setPhoneButtonEnabled(_ val: Bool) {
+    private func setSendButtonEnabled(_ val: Bool) {
         DispatchQueue.main.async {
             self.sendPhoneButton.isEnabled = val
             self.sendPhoneButton.alpha = val ? 1 : 0.4
+            
+            if !val {
+                self.viewVisibleCommand.accept(false)
+            }
         }
     }
 }
