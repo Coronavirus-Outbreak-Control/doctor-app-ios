@@ -16,7 +16,7 @@ target 'Covid19Doctor' do
   pod 'RxAppState'
   
   # database
-  pod 'RealmSwift', '4.3.2'
+  pod 'RealmSwift', '4.4.0'
   
   # UI
   pod 'PMSuperButton'
