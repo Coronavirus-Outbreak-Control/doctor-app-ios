@@ -31,6 +31,7 @@ by sending us their phone number.";
 "bt_send_number" = "SEND";
 "insert_num" = "Enter number";
 "err_code" = "Error";
+"retry_time" = "You can retry in %d seconds";
 
 
 

@@ -371,12 +371,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBW-gt-3bZ">
+                                <rect key="frame" x="59.5" y="360.5" width="295" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="2TN-yo-rPR" firstAttribute="top" secondItem="Uvv-9e-9gp" secondAttribute="bottom" constant="35" id="9m6-hb-iPK"/>
                             <constraint firstAttribute="trailing" secondItem="nmX-fU-UxG" secondAttribute="trailing" constant="30" id="Ax8-1G-BzW"/>
                             <constraint firstItem="ccy-9Z-O4n" firstAttribute="top" secondItem="nmX-fU-UxG" secondAttribute="bottom" id="CNT-Vg-yr0"/>
+                            <constraint firstItem="qBW-gt-3bZ" firstAttribute="top" secondItem="cqZ-fg-BCc" secondAttribute="bottom" constant="3" id="FYV-QX-LSU"/>
                             <constraint firstItem="2TN-yo-rPR" firstAttribute="trailing" secondItem="Uvv-9e-9gp" secondAttribute="trailing" id="FpJ-jE-Tf1"/>
                             <constraint firstItem="nmX-fU-UxG" firstAttribute="top" secondItem="cqZ-fg-BCc" secondAttribute="bottom" constant="30" id="Kg6-d9-XEC"/>
                             <constraint firstItem="qaZ-Hn-g0v" firstAttribute="trailing" secondItem="jTT-0N-l6Y" secondAttribute="trailing" id="Kqb-Yf-b4i"/>
@@ -390,7 +397,9 @@
                             <constraint firstItem="jTT-0N-l6Y" firstAttribute="leading" secondItem="2TN-yo-rPR" secondAttribute="leading" id="YYY-5w-MfI"/>
                             <constraint firstItem="2TN-yo-rPR" firstAttribute="leading" secondItem="Uvv-9e-9gp" secondAttribute="leading" id="dWy-kM-vhK"/>
                             <constraint firstItem="Uvv-9e-9gp" firstAttribute="top" relation="lessThanOrEqual" secondItem="7lY-1r-X9B" secondAttribute="bottom" constant="40" id="eb8-Yy-piR"/>
+                            <constraint firstItem="qBW-gt-3bZ" firstAttribute="leading" secondItem="cqZ-fg-BCc" secondAttribute="leading" id="gJd-zi-co4"/>
                             <constraint firstItem="cqZ-fg-BCc" firstAttribute="top" secondItem="jTT-0N-l6Y" secondAttribute="bottom" constant="30" id="gWb-P6-PTx"/>
+                            <constraint firstItem="qBW-gt-3bZ" firstAttribute="trailing" secondItem="cqZ-fg-BCc" secondAttribute="trailing" id="h7I-GT-DnA"/>
                             <constraint firstItem="qaZ-Hn-g0v" firstAttribute="leading" secondItem="jTT-0N-l6Y" secondAttribute="leading" id="i2Z-G1-UhF"/>
                             <constraint firstItem="cqZ-fg-BCc" firstAttribute="centerX" secondItem="fCJ-lh-01c" secondAttribute="centerX" id="pM1-3B-cTl"/>
                             <constraint firstItem="nmX-fU-UxG" firstAttribute="leading" secondItem="fCJ-lh-01c" secondAttribute="leading" constant="30" id="wy8-zi-4SQ"/>
@@ -404,6 +413,7 @@
                         <outlet property="digitsField" destination="0rJ-aL-50Z" id="UwG-5d-7Ke"/>
                         <outlet property="lineView" destination="qaZ-Hn-g0v" id="5P1-iW-s0B"/>
                         <outlet property="phoneField" destination="jTT-0N-l6Y" id="clb-Oi-lif"/>
+                        <outlet property="retryLabel" destination="qBW-gt-3bZ" id="vkl-ab-KpP"/>
                         <outlet property="sendPhoneButton" destination="cqZ-fg-BCc" id="Jkg-oY-Z11"/>
                         <outlet property="textLabel" destination="2TN-yo-rPR" id="rrv-qs-Ah2"/>
                         <outlet property="titleLabel" destination="Uvv-9e-9gp" id="ixI-M9-YvD"/>

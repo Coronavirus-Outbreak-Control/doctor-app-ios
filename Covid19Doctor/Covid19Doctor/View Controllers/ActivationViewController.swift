@@ -22,6 +22,7 @@ class ActivationViewController: UIViewController {
     @IBOutlet weak var lineView: UIView!
     @IBOutlet weak var phoneField: PhoneNumberTextField!
     @IBOutlet weak var sendPhoneButton: PMSuperButton!
+    @IBOutlet weak var retryLabel: UILabel!
     @IBOutlet weak var codeView: UIView!
     @IBOutlet weak var digitsField: KWVerificationCodeView!
     @IBOutlet weak var codeTextLabel: UILabel!
@@ -44,6 +45,9 @@ class ActivationViewController: UIViewController {
         
         textLabel.font = .caption
         textLabel.textColor = .textGray
+        
+        retryLabel.font = UIFont(name: "SFCompactDisplay-Regular", size: 15)
+        retryLabel.textColor = .textGray
         
         codeTextLabel.text = NSLocalizedString("tv_code", comment: "")
         
@@ -111,16 +115,18 @@ class ActivationViewController: UIViewController {
                 self?.didGetPhoneNumber(number)
                 self?.setSendButtonEnabled(false)
                 return APIManager.api.sendPhoneVerificationCode(number).asObservable()
+                    .timeout(.seconds(30), scheduler: MainScheduler.instance)
             })
-            .timeout(.seconds(30), scheduler: MainScheduler.instance)
-            .flatMap({ response -> Observable<Bool> in
+            .flatMap({ [weak self] response -> Observable<Bool> in
+                self?.runTimerForResend()
                 return Observable.just(true)
             })
-            .catchError({ [weak self] _ in
+            .catchError({ [weak self] error in
                 // subscribe again
                 defer { self?.handleSendVerificationCode() }
                 self?.setSendButtonEnabled(true)
-                return Observable.just(false)
+                self?.stopTimerForResend()
+                return .just(false)
             })
             .map({ !$0 })
             .bind(to: viewVisibleCommand)
@@ -148,6 +154,38 @@ class ActivationViewController: UIViewController {
                 self?.handleCodeVerification()
             })
             .disposed(by: bag)
+    }
+    
+    var timerBag = DisposeBag()
+    private func runTimerForResend() {
+        timerBag = DisposeBag()
+        
+        let timer = Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
+        
+        let counter = timer
+            .scan(45, accumulator: { count, c in
+                count - 1
+            })
+            .share()
+        
+        counter
+            .filter({ $0 == 0 })
+            .subscribe(onNext: { [weak self] _ in
+                self?.setSendButtonEnabled(true)
+                self?.timerBag = DisposeBag()
+            }, onDisposed: { [weak self] in
+                self?.retryLabel.text = " "
+            })
+            .disposed(by: timerBag)
+        
+        counter
+            .map({ String(format: NSLocalizedString("retry_time", comment: ""), $0) })
+            .bind(to: retryLabel.rx.text)
+            .disposed(by: timerBag)
+    }
+    
+    private func stopTimerForResend() {
+        timerBag = DisposeBag()
     }
     
     private func didActivate(response: VerifyPhoneCodeResponse) {
@@ -186,10 +224,6 @@ class ActivationViewController: UIViewController {
         DispatchQueue.main.async {
             self.sendPhoneButton.isEnabled = val
             self.sendPhoneButton.alpha = val ? 1 : 0.4
-            
-            if !val {
-                self.viewVisibleCommand.accept(false)
-            }
         }
     }
 }

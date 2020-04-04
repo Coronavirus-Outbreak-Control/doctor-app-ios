@@ -29,6 +29,7 @@ e invitare altri dottori.";
 "bt_send_number" = "INVIA";
 "insert_num" = "Inserisci numero";
 "err_code" = "Errore";
+"retry_time" = "Puoi riprovare tra %d secondi";
 
 
 
