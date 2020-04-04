@@ -6,6 +6,8 @@ target 'Covid19Doctor' do
   use_frameworks!
 
   # Pods for Covid19Doctor
+  
+  # reactive
   pod 'RxSwift'
   pod 'RxRelay'
   pod 'RxCocoa'
@@ -13,12 +15,17 @@ target 'Covid19Doctor' do
   pod 'RxGesture'
   pod 'RxAppState'
   
+  # database
   pod 'RealmSwift', '4.3.2'
   
+  # UI
   pod 'PMSuperButton'
   pod 'KWVerificationCodeView'
   pod 'PhoneNumberKit'
   pod 'Toast-Swift'
   pod 'FittableFontLabel'
+  
+  # crash reporting
+  pod 'Sentry', '4.5.0'
 
 end

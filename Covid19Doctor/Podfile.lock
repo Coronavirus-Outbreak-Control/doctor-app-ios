@@ -33,6 +33,9 @@ PODS:
   - RxSwiftExt/RxCocoa (5.2.0):
     - RxCocoa (~> 5.0)
     - RxSwiftExt/Core
+  - Sentry (4.5.0):
+    - Sentry/Core (= 4.5.0)
+  - Sentry/Core (4.5.0)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
@@ -47,6 +50,7 @@ DEPENDENCIES:
   - RxRelay
   - RxSwift
   - RxSwiftExt
+  - Sentry (= 4.5.0)
   - Toast-Swift
 
 SPEC REPOS:
@@ -63,6 +67,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxSwiftExt
+    - Sentry
     - Toast-Swift
 
 SPEC CHECKSUMS:
@@ -78,8 +83,9 @@ SPEC CHECKSUMS:
   RxRelay: a168bd6caf712d00c676ac344e9295afc93b418e
   RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+  Sentry: ab6c209f23700d1460691dbc90e19ed0a05d496b
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 598217f976da3f578218f3a039148fc5f5128739
+PODFILE CHECKSUM: 6ad3c471208f4a138d249aad87c017454ae055e9
 
 COCOAPODS: 1.9.1

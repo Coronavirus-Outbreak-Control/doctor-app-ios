@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Sentry
 import Toast_Swift
 
 @UIApplicationMain
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        startCrashReporting()
         configureUI()
         runUI()
         return true
@@ -32,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             root = UINavigationController(rootViewController: vc)
         }
 
-        self.window?.rootViewController = root //UIStoryboard.getViewController(id: "PatientViewController")
+        self.window?.rootViewController = root
         self.window?.makeKeyAndVisible()
     }
     
@@ -51,5 +53,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ToastManager.shared.duration = 3.5
         ToastManager.shared.isTapToDismissEnabled = false
         ToastManager.shared.position = .center
+    }
+    
+    func startCrashReporting() {
+        do {
+            Client.shared = try Client(dsn: "https://2d08d421fc5e40f1ba4a04ee468b5898@sentry.io/4506990")
+            try Client.shared?.startCrashHandler()
+        } catch let error {
+            print(error)
+        }
     }
 }
