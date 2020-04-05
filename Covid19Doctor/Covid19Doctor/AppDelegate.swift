@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func startCrashReporting() {
         do {
-            Client.shared = try Client(dsn: "https://2d08d421fc5e40f1ba4a04ee468b5898@sentry.io/4506990")
+            Client.shared = try Client(dsn: "https://3b84719427b643c89738c8a88476d0af@sentry.io/5189678")
             try Client.shared?.startCrashHandler()
         } catch let error {
             print(error)
