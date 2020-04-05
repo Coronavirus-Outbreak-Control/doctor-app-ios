@@ -76,11 +76,11 @@ class Scanner {
         let zero: Unicode.Scalar = "0"
         let nine: Unicode.Scalar = "9"
         
-        let sum = patientId.unicodeScalars.reduce(0) { (result, letter) -> UInt32 in
+        let sum = patientId.unicodeScalars.reduce(0) { (result, letter) -> Int in
             let val = letter.value
             switch val {
             case zero.value...nine.value:
-                return result + val
+                return result + Int(val) - 48
             default:
                 return result
             }
@@ -107,7 +107,7 @@ class Scanner {
     /// - Parameter patientId: the patient id
     /// - Returns: the patient id + checksum
     class func computePublicPatientId(patientId: String) -> String {
-        "patientId\(computeChecksum(patientId: patientId))"
+        "\(patientId)\(computeChecksum(patientId: patientId))"
     }
     
     /// Remove checksum from safe patient id.
