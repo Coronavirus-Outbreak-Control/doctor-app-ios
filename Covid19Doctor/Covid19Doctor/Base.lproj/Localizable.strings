@@ -99,3 +99,9 @@ log their health status and invite other doctors on the app.";
 "positive" = "POSITIVE";
 "suspect" = "SUSPECT";
 "healed" = "HEALED";
+
+
+
+"camera_permission_title" = "Camera access is required";
+"camera_permission_text" = "Please allow CoviDoc to access the camera in Settings.";
+"camera_permission_bt_settings" = "Go to Settings";

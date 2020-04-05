@@ -96,3 +96,8 @@ e invitare altri dottori.";
 "positive" = "POSITIVO";
 "suspect" = "SOSPETTO";
 "healed" = "GUARITO";
+
+
+"camera_permission_title" = "Accesso alla fotocamera necessario";
+"camera_permission_text" = "Consenti l'accesso alla fotocamera nelle Impostazioni di sistema.";
+"camera_permission_bt_settings" = "Vai a Impostazioni";

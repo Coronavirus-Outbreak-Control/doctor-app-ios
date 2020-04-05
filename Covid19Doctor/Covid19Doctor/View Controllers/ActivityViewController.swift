@@ -110,7 +110,13 @@ class ActivityViewController: UIViewController {
     
     let scanner = Scanner()
     private func launchScanner() {
-        scanner.present(from: self)
+        CameraPermission.check(from: self)
+            .subscribe(onSuccess: { [weak self] permissionGranted in
+                if permissionGranted, let `self` = self {
+                    self.scanner.present(from: self)
+                }
+            })
+            .disposed(by: bag)
     }
     
     // MARK: - Enter manually

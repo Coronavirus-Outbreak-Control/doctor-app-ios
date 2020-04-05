@@ -49,6 +49,7 @@
 		FDEEFD4B24266B3200D1DF15 /* SetPatientStatusRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEFD4A24266B3200D1DF15 /* SetPatientStatusRequest.swift */; };
 		FDEEFD4D2426719F00D1DF15 /* InvitationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEFD4C2426719F00D1DF15 /* InvitationObject.swift */; };
 		FDF8527824394B0E00BCB7B9 /* PendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8527724394B0E00BCB7B9 /* PendingViewController.swift */; };
+		FDF8D42C243A9C8400DDAF0B /* CameraPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8D42B243A9C8400DDAF0B /* CameraPermission.swift */; };
 		FDFA1A7324203F8F00FB5B9F /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA1A7224203F8F00FB5B9F /* NetworkRequest.swift */; };
 		FDFA1A7524203FBF00FB5B9F /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA1A7424203FBF00FB5B9F /* NetworkClient.swift */; };
 		FDFA1A782420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA1A772420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift */; };
@@ -108,6 +109,7 @@
 		FDEEFD4A24266B3200D1DF15 /* SetPatientStatusRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPatientStatusRequest.swift; sourceTree = "<group>"; };
 		FDEEFD4C2426719F00D1DF15 /* InvitationObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationObject.swift; sourceTree = "<group>"; };
 		FDF8527724394B0E00BCB7B9 /* PendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingViewController.swift; sourceTree = "<group>"; };
+		FDF8D42B243A9C8400DDAF0B /* CameraPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermission.swift; sourceTree = "<group>"; };
 		FDFA1A7224203F8F00FB5B9F /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		FDFA1A7424203FBF00FB5B9F /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		FDFA1A772420D86400FB5B9F /* SendPhoneVerificationCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPhoneVerificationCodeRequest.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				FDFB15672438F1760073F4FA /* Scanner.swift */,
+				FDF8D42B243A9C8400DDAF0B /* CameraPermission.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				FDEB44312419862C000B5320 /* NetworkAPI.swift in Sources */,
 				FDFA1A7A2420D90D00FB5B9F /* VerifyPhoneCodeRequest.swift in Sources */,
 				FD086D8624295F6A00368BDF /* AuthenticateRequest.swift in Sources */,
+				FDF8D42C243A9C8400DDAF0B /* CameraPermission.swift in Sources */,
 				FDEB443324198875000B5320 /* Errors.swift in Sources */,
 				FDEDB1212426C76D0042B8D0 /* InvitationsViewController.swift in Sources */,
 				FDEEFD4B24266B3200D1DF15 /* SetPatientStatusRequest.swift in Sources */,
