@@ -30,10 +30,10 @@ class PendingViewController: UIViewController {
     
     private let bag = DisposeBag()
     
-    var safePatientId: String!
+    var publicPatientId: String!
     var patientId: String! {
         didSet {
-            safePatientId = Scanner.computeSafePatientId(patientId: patientId)
+            publicPatientId = Scanner.computePublicPatientId(patientId: patientId)
         }
     }
     
@@ -45,7 +45,7 @@ class PendingViewController: UIViewController {
         }
         
         idLabel.map {
-            $0.text = safePatientId
+            $0.text = publicPatientId
             $0.textColor = .black
             $0.font = UIFont(name: "SFCompactDisplay-Semibold", size: 40)
         }

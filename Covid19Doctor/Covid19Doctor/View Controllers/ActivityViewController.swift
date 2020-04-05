@@ -71,6 +71,12 @@ class ActivityViewController: UIViewController {
             self?.launchScanner()
         })
         .disposed(by: bag)
+        
+        enterButton.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                self?.launchEnterPatient()
+            })
+            .disposed(by: bag)
 
         inviteButton.rx.tap
         .subscribe(onNext: { [weak self] _ in
@@ -104,6 +110,13 @@ class ActivityViewController: UIViewController {
     let scanner = Scanner()
     private func launchScanner() {
         scanner.present(from: self)
+    }
+    
+    // MARK: - Enter manually
+    
+    private func launchEnterPatient() {
+        let vc = UIStoryboard.getViewController(id: "EnterPatientViewController")
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK: - Invite

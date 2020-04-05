@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A3A0774659C6111AC7D21ADD /* Pods_Covid19Doctor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70721B7AF2FA21EF18A675D5 /* Pods_Covid19Doctor.framework */; };
+		FD0304A1243A17C2005DC6CD /* EnterPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0304A0243A17C2005DC6CD /* EnterPatientViewController.swift */; };
 		FD086D782428350B00368BDF /* SF-Compact-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD086D6F2428350A00368BDF /* SF-Compact-Display-Regular.otf */; };
 		FD086D792428350B00368BDF /* SF-Compact-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD086D702428350A00368BDF /* SF-Compact-Display-Light.otf */; };
 		FD086D7A2428350B00368BDF /* SF-Compact-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD086D712428350A00368BDF /* SF-Compact-Display-Thin.otf */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		70721B7AF2FA21EF18A675D5 /* Pods_Covid19Doctor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid19Doctor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		944F8CA61AEBDB6D90A806E6 /* Pods-Covid19Doctor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19Doctor.release.xcconfig"; path = "Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor.release.xcconfig"; sourceTree = "<group>"; };
+		FD0304A0243A17C2005DC6CD /* EnterPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPatientViewController.swift; sourceTree = "<group>"; };
 		FD086D6F2428350A00368BDF /* SF-Compact-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Regular.otf"; sourceTree = "<group>"; };
 		FD086D702428350A00368BDF /* SF-Compact-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Light.otf"; sourceTree = "<group>"; };
 		FD086D712428350A00368BDF /* SF-Compact-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Thin.otf"; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				FDEB44342419977F000B5320 /* ActivatedViewController.swift */,
 				FDEB443624199830000B5320 /* ActivityViewController.swift */,
 				FDF8527724394B0E00BCB7B9 /* PendingViewController.swift */,
+				FD0304A0243A17C2005DC6CD /* EnterPatientViewController.swift */,
 				FDEB44382419AFD1000B5320 /* PatientViewController.swift */,
 				FD27564E241D6016009FB650 /* ScannerViewController.swift */,
 				FDEDB1202426C76D0042B8D0 /* InvitationsViewController.swift */,
@@ -446,6 +449,7 @@
 				FDEB44392419AFD1000B5320 /* PatientViewController.swift in Sources */,
 				FD0918DC24314F46005229FD /* HowItWorksViewController.swift in Sources */,
 				FDEB443724199830000B5320 /* ActivityViewController.swift in Sources */,
+				FD0304A1243A17C2005DC6CD /* EnterPatientViewController.swift in Sources */,
 				FDFB260F24355807000E9C07 /* HowItWorksView.swift in Sources */,
 				FDEB44352419977F000B5320 /* ActivatedViewController.swift in Sources */,
 				FD086D82242838D300368BDF /* Colors.swift in Sources */,

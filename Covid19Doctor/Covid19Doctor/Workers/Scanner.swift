@@ -72,20 +72,49 @@ class Scanner {
         }
     }
     
+    class func computeChecksum(patientId: String) -> String {
+        let zero: Unicode.Scalar = "0"
+        let nine: Unicode.Scalar = "9"
+        
+        let sum = patientId.unicodeScalars.reduce(0) { (result, letter) -> UInt32 in
+            let val = letter.value
+            switch val {
+            case zero.value...nine.value:
+                return result + val
+            default:
+                return result
+            }
+        }
+        
+        if let lastChar = "\(sum)".last {
+            return String(lastChar)
+        } else {
+            return ""
+        }
+    }
+    
+    class func validateChecksum(publicPatientId: String) -> Bool {
+        if let lastChar = publicPatientId.last {
+            let patientId = String(publicPatientId.dropLast())
+            return computeChecksum(patientId: patientId) == "\(lastChar)"
+        } else {
+            return false
+        }
+    }
     
     /// Append checksum at the end of the patient id.
     /// The result must be the only one to show to the user.
     /// - Parameter patientId: the patient id
     /// - Returns: the patient id + checksum
-    class func computeSafePatientId(patientId: String) -> String {
-        patientId
+    class func computePublicPatientId(patientId: String) -> String {
+        "patientId\(computeChecksum(patientId: patientId))"
     }
     
     /// Remove checksum from safe patient id.
     /// The result is to be used internally and with the backend.
-    /// - Parameter safePatientId: the patient id with checksum
+    /// - Parameter publicPatientId: the patient id with checksum
     /// - Returns: the patient id
-    class func computePatientId(safePatientId: String) -> String {
-        safePatientId
+    class func computePatientId(publicPatientId: String) -> String {
+        String(publicPatientId.dropLast())
     }
 }

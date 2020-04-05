@@ -74,8 +74,15 @@ log their health status and invite other doctors on the app.";
 "view_pending_text3" = "This ID has been saved as %@ and the health status of the patient can be updated later.";
 "view_pending_question" = "Do you already have the result?";
 "view_pending_copied" = "ID copied";
-
 "suspect" = "SUSPECT";
+
+
+
+"enter_patient_title" = "Enter patient ID";
+"enter_patient_invalid_title" = "The entered ID is invalid";
+"enter_patient_invalid_text" = "Please contact the patient to ask him/her the code.";
+
+
 
 "ok" = "OK";
 "yes" = "Yes";

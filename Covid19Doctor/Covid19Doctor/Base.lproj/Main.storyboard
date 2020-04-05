@@ -927,6 +927,99 @@ and can be updated later.</string>
             </objects>
             <point key="canvasLocation" x="598.55072463768124" y="358.92857142857139"/>
         </scene>
+        <!--Enter Patient View Controller-->
+        <scene sceneID="whJ-9g-ToQ">
+            <objects>
+                <viewController storyboardIdentifier="EnterPatientViewController" id="20P-8j-aBw" customClass="EnterPatientViewController" customModule="CoviDoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x03-D3-a0N"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tyo-Si-Rbu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kNb-09-NTT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter patient id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWq-Ws-MCB">
+                                <rect key="frame" x="40" y="75" width="334" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i14-60-lTt">
+                                <rect key="frame" x="40" y="162" width="334" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="XaR-me-nPK"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HmD-tE-cJ7">
+                                <rect key="frame" x="40" y="135.5" width="334" height="18.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrO-1R-J69" customClass="PMSuperButton" customModule="PMSuperButton">
+                                <rect key="frame" x="40" y="790" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="VqL-zl-qZc"/>
+                                    <constraint firstAttribute="height" constant="64" id="Wb0-h2-WhZ"/>
+                                </constraints>
+                                <state key="normal" image="arrow-left-solid"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QV-bD-IYA" customClass="PMSuperButton" customModule="PMSuperButton">
+                                <rect key="frame" x="59.5" y="198" width="295" height="56"/>
+                                <color key="backgroundColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="VgI-Wl-nwa"/>
+                                    <constraint firstAttribute="height" constant="56" id="sHQ-wX-ObY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="i14-60-lTt" firstAttribute="leading" secondItem="HmD-tE-cJ7" secondAttribute="leading" id="0iA-qA-58x"/>
+                            <constraint firstItem="HmD-tE-cJ7" firstAttribute="top" secondItem="eWq-Ws-MCB" secondAttribute="bottom" constant="40" id="2Sh-ef-Zpn"/>
+                            <constraint firstItem="0QV-bD-IYA" firstAttribute="centerX" secondItem="kNb-09-NTT" secondAttribute="centerX" id="3wB-NJ-e4R"/>
+                            <constraint firstItem="HmD-tE-cJ7" firstAttribute="leading" secondItem="kNb-09-NTT" secondAttribute="leadingMargin" constant="20" id="6hZ-F1-VqC"/>
+                            <constraint firstItem="eWq-Ws-MCB" firstAttribute="top" secondItem="x03-D3-a0N" secondAttribute="bottom" constant="31" id="G9r-gt-B1U"/>
+                            <constraint firstItem="0QV-bD-IYA" firstAttribute="top" secondItem="HmD-tE-cJ7" secondAttribute="bottom" constant="44" id="JpR-HK-TbX"/>
+                            <constraint firstItem="nrO-1R-J69" firstAttribute="leading" secondItem="kNb-09-NTT" secondAttribute="leadingMargin" constant="20" id="Zpm-P5-0BW"/>
+                            <constraint firstItem="eWq-Ws-MCB" firstAttribute="leading" secondItem="kNb-09-NTT" secondAttribute="leadingMargin" constant="20" id="bHO-9I-Jdf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HmD-tE-cJ7" secondAttribute="trailing" constant="20" id="eb3-h8-Qe3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eWq-Ws-MCB" secondAttribute="trailing" constant="20" id="gky-Jf-wTh"/>
+                            <constraint firstItem="Tyo-Si-Rbu" firstAttribute="top" secondItem="nrO-1R-J69" secondAttribute="bottom" constant="8" id="ohq-Mr-bL1"/>
+                            <constraint firstItem="i14-60-lTt" firstAttribute="trailing" secondItem="HmD-tE-cJ7" secondAttribute="trailing" id="pNI-jP-Swk"/>
+                            <constraint firstItem="i14-60-lTt" firstAttribute="top" secondItem="HmD-tE-cJ7" secondAttribute="bottom" constant="8" id="pXZ-tN-JKd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="nrO-1R-J69" id="yEd-xz-Z3N"/>
+                        <outlet property="continueButton" destination="0QV-bD-IYA" id="We1-gx-jYU"/>
+                        <outlet property="idField" destination="HmD-tE-cJ7" id="QxU-UF-c9H"/>
+                        <outlet property="lineView" destination="i14-60-lTt" id="yQL-XZ-L1P"/>
+                        <outlet property="titleLabel" destination="eWq-Ws-MCB" id="pwc-e4-eAA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6s5-RX-8Oo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598.55072463768124" y="1827.4553571428571"/>
+        </scene>
         <!--Scanner View Controller-->
         <scene sceneID="0h6-bH-Y5O">
             <objects>
@@ -943,7 +1036,7 @@ and can be updated later.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gP2-xo-j5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="490" y="2405"/>
+            <point key="canvasLocation" x="599" y="2563"/>
         </scene>
         <!--Invitations View Controller-->
         <scene sceneID="HIE-uH-nJx">
@@ -1029,7 +1122,7 @@ and can be updated later.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9W-DT-U3f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317" y="2405"/>
+            <point key="canvasLocation" x="1425" y="2563"/>
         </scene>
     </scenes>
     <resources>
