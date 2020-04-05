@@ -52,6 +52,7 @@ e invitare altri dottori.";
 
 
 "bt_confirm_covid" = "🤒  POSITIVO AL COVID-19";
+"bt_negative_covid" = "😅  NEGATIVO AL COVID-19";
 "bt_suspect_covid" = "😷  SOSPETTO DI COVID-19";
 "bt_recover_covid" = "😊  GUARITO";
 "diagnosis_title" = "Diagnosi 🔬";

@@ -55,6 +55,7 @@ log their health status and invite other doctors on the app.";
 
 
 "bt_confirm_covid" = "🤒  Positive to COVID-19";
+"bt_negative_covid" = "😅  Negative to COVID-19";
 "bt_suspect_covid" = "😷  Suspected of COVID-19";
 "bt_recover_covid" = "😊  Healed";
 "diagnosis_title" = "Diagnosis 🔬";

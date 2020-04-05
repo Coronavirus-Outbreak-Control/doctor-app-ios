@@ -14,9 +14,11 @@ import Toast_Swift
 
 class PatientViewController: UIViewController {
 
-    @IBOutlet weak var confirmButton: PMSuperButton!
-    @IBOutlet weak var suspectedButton: PMSuperButton!
-    @IBOutlet weak var recoveredButton: PMSuperButton!
+    
+    @IBOutlet weak var positiveButton: PMSuperButton!
+    @IBOutlet weak var negativeButton: PMSuperButton!
+    @IBOutlet weak var healedButton: PMSuperButton!
+    
     
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var backButton: PMSuperButton!
@@ -26,16 +28,22 @@ class PatientViewController: UIViewController {
     private let bag = DisposeBag()
     
     private func configureUI() {
-        confirmButton.backgroundColor = UIColor(red:0.88, green:0.24, blue:0.24, alpha:1.00)
-        confirmButton.setTitle(NSLocalizedString("bt_confirm_covid", comment: ""), for: .normal)
+        positiveButton.map {
+            $0.backgroundColor = .statusPositive
+            $0.setTitle(NSLocalizedString("bt_confirm_covid", comment: ""), for: .normal)
+        }
         
-        suspectedButton.backgroundColor = UIColor(red:0.92, green:0.54, blue:0.33, alpha:1.00)
-        suspectedButton.setTitle(NSLocalizedString("bt_suspect_covid", comment: ""), for: .normal)
+        negativeButton.map {
+            $0.backgroundColor = .statusNegative
+            $0.setTitle(NSLocalizedString("bt_negative_covid", comment: ""), for: .normal)
+        }
         
-        recoveredButton.backgroundColor = UIColor(red:0.18, green:0.74, blue:0.47, alpha:1.00)
-        recoveredButton.setTitle(NSLocalizedString("bt_recover_covid", comment: ""), for: .normal)
+        healedButton.map {
+            $0.backgroundColor = .statusHealed
+            $0.setTitle(NSLocalizedString("bt_recover_covid", comment: ""), for: .normal)
+        }
         
-        [confirmButton, suspectedButton, recoveredButton].forEach {
+        [positiveButton, negativeButton, healedButton].forEach {
             $0?.titleLabel?.font = .button
             $0?.setTitleColor(.white, for: .normal)
         }
@@ -62,19 +70,19 @@ class PatientViewController: UIViewController {
         })
         .disposed(by: bag)
 
-        confirmButton.rx.tap
+        positiveButton.rx.tap
         .subscribe(onNext: { [weak self] _ in
             self?.askConfirmation(forStatus: .infected)
         })
         .disposed(by: bag)
         
-        suspectedButton.rx.tap
+        negativeButton.rx.tap
         .subscribe(onNext: { [weak self] _ in
             self?.askConfirmation(forStatus: .pending)
         })
         .disposed(by: bag)
         
-        recoveredButton.rx.tap
+        healedButton.rx.tap
         .subscribe(onNext: { [weak self] _ in
             self?.askConfirmation(forStatus: .healed)
         })

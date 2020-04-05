@@ -765,7 +765,7 @@ and can be updated later.</string>
                                         <rect key="frame" x="0.0" y="144" width="295" height="56"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                                        <state key="normal" title="Suspected">
+                                        <state key="normal" title="Negative">
                                             <color key="titleColor" red="0.2244822819" green="0.248710183" blue="0.27032059590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -836,9 +836,9 @@ and can be updated later.</string>
                     <navigationItem key="navigationItem" id="dYr-A5-brE"/>
                     <connections>
                         <outlet property="backButton" destination="CJp-bX-Xje" id="h4y-8z-FAv"/>
-                        <outlet property="confirmButton" destination="GbJ-AE-BZM" id="n6D-Ub-dyj"/>
-                        <outlet property="recoveredButton" destination="yxe-UF-U9P" id="TEe-54-D6R"/>
-                        <outlet property="suspectedButton" destination="6qX-Ou-Sbb" id="G8L-PO-e2R"/>
+                        <outlet property="healedButton" destination="yxe-UF-U9P" id="LV7-wL-100"/>
+                        <outlet property="negativeButton" destination="6qX-Ou-Sbb" id="qND-U7-jZ8"/>
+                        <outlet property="positiveButton" destination="GbJ-AE-BZM" id="loM-7n-XpO"/>
                         <outlet property="textLabel" destination="A2L-Gz-dT4" id="6KR-IT-bkR"/>
                     </connections>
                 </viewController>
