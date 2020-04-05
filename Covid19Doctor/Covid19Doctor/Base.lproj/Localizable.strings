@@ -44,7 +44,7 @@ log their health status and invite other doctors on the app.";
 
 "main_title" = "Welcome to\nCoviDoc";
 "bt_scan_qrcode" = "TAP HERE TO SCAN\nQR CODE";
-"bt_enter_patient" = "ENTER PATIENT ID";
+"bt_update_status" = "UPDATE HEALTH STATUS";
 "bt_invite_doc" = "INVITE OTHER DOCTORS";
 "toast_num_doc_invited" = "Doctor invited";
 "toast_err_doc_invited" = "Error while inviting";
@@ -71,16 +71,18 @@ log their health status and invite other doctors on the app.";
 "view_pending_text1" = "The ID of this patient is";
 "view_pending_tap_to_copy" = "Tap to copy";
 "view_pending_text2" = "Take note of the code if needed.";
-"view_pending_text3" = "This ID has been saved as %@ and the health status of the patient can be updated later.";
-"view_pending_question" = "Do you already have the result?";
+"view_pending_text3" = "The status of the patient has been changed to %@ waiting for swab results.\nIf you click on NEXT STEP button you can either change the status if you already know the swab results, or go back to main page and change it at a later time.";
+"view_pending_question" = "Do you know the results of the swab for this patient?";
 "view_pending_copied" = "ID copied";
 "suspect" = "SUSPECT";
+"bt_next_step" = "NEXT STEP";
 
 
 
 "enter_patient_title" = "Enter patient ID";
-"enter_patient_invalid_title" = "The entered ID is invalid";
-"enter_patient_invalid_text" = "Please contact the patient to ask him/her the code.";
+"enter_patient_invalid_title" = "The patient ID is invalid";
+"enter_patient_invalid_text" = "Please check it or contact the patient to ask it again.";
+"patient_id" = "Patient ID";
 
 
 

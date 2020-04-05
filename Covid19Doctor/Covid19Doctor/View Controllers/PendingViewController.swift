@@ -77,7 +77,7 @@ class PendingViewController: UIViewController {
         }
         
         continueButton.map {
-            $0.setTitle(NSLocalizedString("continue", comment: "").uppercased(), for: .normal)
+            $0.setTitle(NSLocalizedString("bt_next_step", comment: ""), for: .normal)
             $0.setTitleColor(.mainTheme, for: .normal)
             $0.titleLabel?.font = .button
             $0.backgroundColor = .white
@@ -121,7 +121,9 @@ class PendingViewController: UIViewController {
             .disposed(by: bag)
         continueButton.rx.tap
             .map({ true })
-            .bind(to: continueButton.rx.isHidden)
+            .bind(to: continueButton.rx.isHidden,
+                  text2Label.rx.isHidden,
+                  text3Label.rx.isHidden)
             .disposed(by: bag)
         
         noButton.rx.tap

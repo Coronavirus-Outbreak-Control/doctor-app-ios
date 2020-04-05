@@ -44,7 +44,7 @@ class ActivityViewController: UIViewController {
         qrTextLabel.textColor = .white
         
         enterButton.map {
-            $0.setTitle(NSLocalizedString("bt_enter_patient", comment: ""), for: .normal)
+            $0.setTitle(NSLocalizedString("bt_update_status", comment: ""), for: .normal)
             $0.titleLabel?.font = .button
             $0.setTitleColor(.white, for: .normal)
             $0.backgroundColor = .mainTheme

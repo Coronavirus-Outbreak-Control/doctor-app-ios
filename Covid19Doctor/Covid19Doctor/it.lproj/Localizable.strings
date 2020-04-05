@@ -41,7 +41,7 @@ e invitare altri dottori.";
 
 "main_title" = "Welcome to\nCoviDoc";
 "bt_scan_qrcode" = "CLICCA QUI PER SCANSIONARE IL\nCODICE QR";
-"bt_enter_patient" = "INSERISCI CODICE PAZIENTE";
+"bt_update_status" = "AGGIORNA STATO DI SALUTE";
 "bt_invite_doc" = "INVITA ALTRI DOTTORI";
 "toast_num_doc_invited" = "Dottore invitato";
 "toast_err_doc_invited" = "Errore durante l'invito di";
@@ -68,16 +68,18 @@ e invitare altri dottori.";
 "view_pending_text1" = "Il codice del paziente è";
 "view_pending_tap_to_copy" = "Tocca per copiare";
 "view_pending_text2" = "Prendi nota del codice se necessario.";
-"view_pending_text3" = "Questo codice è stato salvato come %@ e lo stato di salute del paziente può essere aggiornato in seguito.";
-"view_pending_question" = "Hai già i risultati del test?";
+"view_pending_text3" = "Lo stato del paziente è cambiato a %@ in attesa dei risultati del tampone.\nSe clicchi sul bottone PASSO SUCCESSIVO puoi scegliere di cambiare lo stato se conosci già i risultati del tampone, oppure tornare alla pagina principale e modificarlo successivamente.";
+"view_pending_question" = "Hai già i risultati del tampone di questo paziente?";
 "view_pending_copied" = "Codice copiato";
 "suspect" = "SOSPETTO";
+"bt_next_step" = "PASSO SUCCESSIVO";
 
 
 
 "enter_patient_title" = "Inserisci il codice del paziente";
 "enter_patient_invalid_title" = "Il codice inserito non è valido";
-"enter_patient_invalid_text" = "Si prega di contattare il paziente per recuperare il codice.";
+"enter_patient_invalid_text" = "Si prega di controllarlo o di contattare il paziente per richiederlo di nuovo.";
+"patient_id" = "Codice paziente";
 
 
 

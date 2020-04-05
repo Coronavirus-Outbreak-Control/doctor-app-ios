@@ -29,7 +29,7 @@ class EnterPatientViewController: UIViewController {
         }
         
         idField.map {
-            $0.placeholder = "XX-XX-XX-XX-X"
+            $0.placeholder = NSLocalizedString("patient_id", comment: "")
             $0.textColor = .titleBlack
             $0.font = UIFont(name: "SFCompactDisplay-Regular", size: 26)
         }
