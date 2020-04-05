@@ -63,16 +63,17 @@ class PendingViewController: UIViewController {
         }
         
         text3Label.map {
+            $0.font = UIFont(name: "SFCompactDisplay-Regular", size: 18)
+            let boldFont = UIFont(name: "SFCompactDisplay-Semibold", size: 18)
+            
             let suspectWord = NSLocalizedString("suspect", comment: "")
             let text = String(format: NSLocalizedString("view_pending_text3", comment: ""), suspectWord)
             let str = suspectWord
             let range = (text as NSString).range(of: str)
             let attributed = NSMutableAttributedString(string: text)
             attributed.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.statusPending, range: range)
-            
+            attributed.addAttribute(.font, value: boldFont as Any, range: range)
             $0.attributedText = attributed
-            $0.textColor = .titleBlack
-            $0.font = UIFont(name: "SFCompactDisplay-Regular", size: 18)
         }
         
         continueButton.map {

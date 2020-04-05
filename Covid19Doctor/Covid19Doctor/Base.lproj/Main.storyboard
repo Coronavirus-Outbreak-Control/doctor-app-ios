@@ -587,7 +587,7 @@ CoviDoc</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="meK-rD-1Zd">
-                                <rect key="frame" x="36" y="217.5" width="342" height="41"/>
+                                <rect key="frame" x="36" y="213.5" width="342" height="41"/>
                                 <string key="text">This ID has been saved as SUSPECT
 and can be updated later.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -692,7 +692,7 @@ and can be updated later.</string>
                             <constraint firstItem="meK-rD-1Zd" firstAttribute="leading" secondItem="vmO-eC-IXS" secondAttribute="leading" id="Vf0-Qd-Mfd"/>
                             <constraint firstItem="vmO-eC-IXS" firstAttribute="leading" secondItem="ffo-Gd-aCI" secondAttribute="leading" id="Yvq-DV-ysu"/>
                             <constraint firstItem="vmO-eC-IXS" firstAttribute="top" secondItem="udO-CQ-3lV" secondAttribute="bottom" constant="28" id="aPz-t6-nvZ"/>
-                            <constraint firstItem="meK-rD-1Zd" firstAttribute="top" secondItem="vmO-eC-IXS" secondAttribute="bottom" constant="20" id="cVW-mz-GtG"/>
+                            <constraint firstItem="meK-rD-1Zd" firstAttribute="top" secondItem="vmO-eC-IXS" secondAttribute="bottom" constant="16" id="cVW-mz-GtG"/>
                             <constraint firstItem="ffo-Gd-aCI" firstAttribute="top" secondItem="mbF-9p-Aj1" secondAttribute="bottom" constant="28" id="kjV-lp-Rfi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ffo-Gd-aCI" secondAttribute="trailing" constant="16" id="oW0-c1-jka"/>
                             <constraint firstItem="udO-CQ-3lV" firstAttribute="top" secondItem="EGs-sb-gQf" secondAttribute="bottom" id="suo-gL-b71"/>
