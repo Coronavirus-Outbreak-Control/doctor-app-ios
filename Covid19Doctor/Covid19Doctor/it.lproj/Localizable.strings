@@ -41,6 +41,7 @@ e invitare altri dottori.";
 
 "main_title" = "Welcome to\nCoviDoc";
 "bt_scan_qrcode" = "CLICCA QUI PER SCANSIONARE IL\nCODICE QR";
+"bt_enter_patient" = "INSERISCI CODICE PAZIENTE";
 "bt_invite_doc" = "INVITA ALTRI DOTTORI";
 "toast_num_doc_invited" = "Dottore invitato";
 "toast_err_doc_invited" = "Errore durante l'invito di";

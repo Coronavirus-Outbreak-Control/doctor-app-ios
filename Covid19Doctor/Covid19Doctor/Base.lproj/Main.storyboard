@@ -437,11 +437,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewV-3p-LfE" customClass="PMSuperButton" customModule="PMSuperButton">
-                                <rect key="frame" x="59.5" y="702" width="295" height="56"/>
+                                <rect key="frame" x="59.5" y="734" width="295" height="56"/>
                                 <color key="backgroundColor" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="295" id="ckM-NG-JQc"/>
-                                    <constraint firstAttribute="height" constant="56" id="qSe-Kp-pWH"/>
+                                    <constraint firstAttribute="width" secondItem="ewV-3p-LfE" secondAttribute="height" multiplier="295:56" id="Ved-C5-Yjm"/>
+                                    <constraint firstAttribute="height" priority="999" constant="56" id="qSe-Kp-pWH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <state key="normal" title="INVITE OTHER DOCTORS">
@@ -456,10 +456,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-Rs-CHD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-Rs-CHD">
                                 <rect key="frame" x="50" y="99" width="344" height="119.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="119.5" id="OHu-MO-wpe"/>
+                                    <constraint firstAttribute="height" priority="990" constant="119.5" id="OHu-MO-wpe"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="i39-yX-qKj"/>
                                 </constraints>
                                 <string key="text">Welcome to
 CoviDoc</string>
@@ -468,10 +469,10 @@ CoviDoc</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7J-DA-yb7">
-                                <rect key="frame" x="60" y="267" width="294" height="362"/>
+                                <rect key="frame" x="60" y="267.5" width="294" height="361.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr-base" translatesAutoresizingMaskIntoConstraints="NO" id="EhR-Ao-sj0">
-                                        <rect key="frame" x="0.0" y="0.0" width="294" height="362"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="qr-base" translatesAutoresizingMaskIntoConstraints="NO" id="EhR-Ao-sj0">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="361.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eFU-6Z-7PD">
                                         <rect key="frame" x="8" y="16" width="278" height="20.5"/>
@@ -492,25 +493,53 @@ CoviDoc</string>
                                     <constraint firstItem="eFU-6Z-7PD" firstAttribute="top" secondItem="O7J-DA-yb7" secondAttribute="top" constant="16" id="nOa-pM-3cE"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21F-KT-pDB" customClass="PMSuperButton" customModule="PMSuperButton">
+                                <rect key="frame" x="59.5" y="653" width="295" height="56"/>
+                                <color key="backgroundColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="21F-KT-pDB" secondAttribute="height" multiplier="295:56" id="mqQ-dh-gZ5"/>
+                                    <constraint firstAttribute="height" priority="999" constant="56" id="y2A-TK-hff"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="ENTER PATIENT ID">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ewV-3p-LfE" firstAttribute="centerX" secondItem="ILs-JG-4Xn" secondAttribute="centerX" id="1s2-Bf-MPp"/>
-                            <constraint firstItem="ewV-3p-LfE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="O7J-DA-yb7" secondAttribute="bottom" constant="40" id="DtV-wE-1li"/>
+                            <constraint firstItem="yXR-Rs-CHD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rIC-rI-c4p" secondAttribute="bottom" constant="20" id="909-BJ-BD7"/>
+                            <constraint firstItem="21F-KT-pDB" firstAttribute="centerX" secondItem="ILs-JG-4Xn" secondAttribute="centerX" id="BCT-aZ-zb5"/>
                             <constraint firstItem="yXR-Rs-CHD" firstAttribute="leading" secondItem="ILs-JG-4Xn" secondAttribute="leadingMargin" constant="30" id="IGF-Qd-yu8"/>
-                            <constraint firstItem="tI9-nB-Di0" firstAttribute="top" secondItem="ewV-3p-LfE" secondAttribute="bottom" priority="998" constant="104" id="Jev-Tu-yfA"/>
+                            <constraint firstItem="tI9-nB-Di0" firstAttribute="top" secondItem="ewV-3p-LfE" secondAttribute="bottom" priority="990" constant="72" id="Jev-Tu-yfA"/>
                             <constraint firstItem="yXR-Rs-CHD" firstAttribute="trailing" secondItem="ILs-JG-4Xn" secondAttribute="trailingMargin" id="LQ2-aG-Tlb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="O7J-DA-yb7" secondAttribute="trailing" constant="40" id="LdK-qb-WMQ"/>
-                            <constraint firstItem="O7J-DA-yb7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="yXR-Rs-CHD" secondAttribute="bottom" constant="30" id="SlB-q3-HFA"/>
+                            <constraint firstItem="ewV-3p-LfE" firstAttribute="top" secondItem="21F-KT-pDB" secondAttribute="bottom" constant="25" id="NWi-Zv-XSs"/>
+                            <constraint firstItem="21F-KT-pDB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ILs-JG-4Xn" secondAttribute="leadingMargin" constant="20" id="O8h-p2-gh9"/>
+                            <constraint firstItem="O7J-DA-yb7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="yXR-Rs-CHD" secondAttribute="bottom" priority="997" constant="16" id="SlB-q3-HFA"/>
                             <constraint firstItem="yXR-Rs-CHD" firstAttribute="top" relation="lessThanOrEqual" secondItem="rIC-rI-c4p" secondAttribute="bottom" priority="999" constant="55" id="ZD4-04-9fC"/>
-                            <constraint firstItem="O7J-DA-yb7" firstAttribute="centerY" secondItem="ILs-JG-4Xn" secondAttribute="centerY" id="idy-jV-kE9"/>
+                            <constraint firstItem="21F-KT-pDB" firstAttribute="top" secondItem="O7J-DA-yb7" secondAttribute="bottom" constant="24" id="hv7-Qx-Kcc"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="ewV-3p-LfE" secondAttribute="trailing" constant="20" id="j2d-Ka-8tR"/>
+                            <constraint firstItem="ewV-3p-LfE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ILs-JG-4Xn" secondAttribute="leadingMargin" constant="20" id="js0-SX-BRt"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="21F-KT-pDB" secondAttribute="trailing" constant="20" id="l4a-ad-bu3"/>
                             <constraint firstItem="O7J-DA-yb7" firstAttribute="leading" secondItem="ILs-JG-4Xn" secondAttribute="leadingMargin" constant="40" id="lO3-Vt-y2z"/>
-                            <constraint firstItem="tI9-nB-Di0" firstAttribute="top" relation="lessThanOrEqual" secondItem="ewV-3p-LfE" secondAttribute="bottom" priority="999" constant="104" id="tqT-4i-hAd"/>
-                            <constraint firstItem="yXR-Rs-CHD" firstAttribute="top" secondItem="rIC-rI-c4p" secondAttribute="bottom" priority="998" constant="55" id="zYw-Pw-QsS"/>
+                            <constraint firstItem="tI9-nB-Di0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ewV-3p-LfE" secondAttribute="bottom" constant="30" id="oh2-39-bYe"/>
+                            <constraint firstItem="tI9-nB-Di0" firstAttribute="top" relation="lessThanOrEqual" secondItem="ewV-3p-LfE" secondAttribute="bottom" priority="999" constant="72" id="tqT-4i-hAd"/>
+                            <constraint firstItem="yXR-Rs-CHD" firstAttribute="top" secondItem="rIC-rI-c4p" secondAttribute="bottom" priority="990" constant="55" id="zYw-Pw-QsS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ie1-up-Ywm"/>
                     <connections>
+                        <outlet property="enterButton" destination="21F-KT-pDB" id="96x-nW-UaL"/>
                         <outlet property="inviteButton" destination="ewV-3p-LfE" id="H0t-zB-x5X"/>
                         <outlet property="qrTextLabel" destination="eFU-6Z-7PD" id="bcg-4B-8DT"/>
                         <outlet property="scanView" destination="O7J-DA-yb7" id="kDP-Gw-T5B"/>

@@ -18,6 +18,7 @@ import PhoneNumberKit
 class ActivityViewController: UIViewController {
 
     @IBOutlet weak var scanView: UIView!
+    @IBOutlet weak var enterButton: PMSuperButton!
     @IBOutlet weak var inviteButton: PMSuperButton!
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -42,10 +43,21 @@ class ActivityViewController: UIViewController {
         qrTextLabel.font = UIFont(name: "SFCompactDisplay-Semibold", size: 20)
         qrTextLabel.textColor = .white
         
-        inviteButton.titleLabel?.font = .button
-        inviteButton.setTitleColor(.white, for: .normal)
-        inviteButton.backgroundColor = .mainTheme
-        inviteButton.setTitle(NSLocalizedString("bt_invite_doc", comment: ""), for: .normal)
+        enterButton.map {
+            $0.titleLabel?.font = .button
+            $0.setTitleColor(.white, for: .normal)
+            $0.backgroundColor = .mainTheme
+            $0.setTitle(NSLocalizedString("bt_enter_patient", comment: ""), for: .normal)
+        }
+        
+        inviteButton.map {
+            $0.setTitle(NSLocalizedString("bt_invite_doc", comment: ""), for: .normal)
+            $0.titleLabel?.font = .button
+            $0.setTitleColor(.mainTheme, for: .normal)
+            $0.backgroundColor = .white
+            $0.layer.borderColor = UIColor.mainTheme.cgColor
+            $0.layer.borderWidth = 1
+        }
     }
     
     override func viewDidLoad() {
@@ -75,6 +87,16 @@ class ActivityViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        let height = enterButton.bounds.height
+        print(height)
+        [enterButton, inviteButton].forEach {
+            $0?.cornerRadius = height/2
+        }
     }
     
     // MARK: - Scanner

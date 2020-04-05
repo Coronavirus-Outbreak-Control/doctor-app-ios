@@ -44,6 +44,7 @@ log their health status and invite other doctors on the app.";
 
 "main_title" = "Welcome to\nCoviDoc";
 "bt_scan_qrcode" = "TAP HERE TO SCAN\nQR CODE";
+"bt_enter_patient" = "ENTER PATIENT ID";
 "bt_invite_doc" = "INVITE OTHER DOCTORS";
 "toast_num_doc_invited" = "Doctor invited";
 "toast_err_doc_invited" = "Error while inviting";
