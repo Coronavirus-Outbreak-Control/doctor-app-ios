@@ -8,7 +8,10 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
+import RxGesture
 import PMSuperButton
+import Toast_Swift
 
 class PendingViewController: UIViewController {
 
@@ -110,10 +113,45 @@ class PendingViewController: UIViewController {
         super.viewDidLoad()
 
         configureUI()
+        
+        continueButton.rx.tap
+            .map({ false })
+            .bind(to: choiceView.rx.isHidden)
+            .disposed(by: bag)
+        
+        noButton.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: false)
+            })
+            .disposed(by: bag)
+        
+        yesButton.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                self?.launchStatusScreen()
+            })
+            .disposed(by: bag)
+        
+        idLabel.rx.tapGesture()
+            .skip(1)
+            .subscribe(onNext: { [weak self] _ in
+                UIPasteboard.general.string = self?.idLabel.text
+                self?.showCopied()
+            })
+            .disposed(by: bag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    private func showCopied() {
+        view.makeToast(NSLocalizedString("view_pending_copied", comment: ""))
+    }
+    
+    private func launchStatusScreen() {
+        let vc = UIStoryboard.getViewController(id: "PatientViewController") as! PatientViewController
+        vc.patientId = patientId
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -71,6 +71,7 @@ log their health status and invite other doctors on the app.";
 "view_pending_text2" = "Take note of the code if needed.";
 "view_pending_text3" = "This ID has been saved as %@ and the health status of the patient can be updated later.";
 "view_pending_question" = "Do you already have the result?";
+"view_pending_copied" = "ID copied";
 
 "suspect" = "SUSPECT";
 

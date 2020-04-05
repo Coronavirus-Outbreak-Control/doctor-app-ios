@@ -58,7 +58,7 @@ class PatientViewController: UIViewController {
         
         backButton.rx.tap
         .subscribe(onNext: { [weak self] _ in
-            self?.navigationController?.popViewController(animated: true)
+            self?.navigationController?.popToRootViewController(animated: true)
         })
         .disposed(by: bag)
 
