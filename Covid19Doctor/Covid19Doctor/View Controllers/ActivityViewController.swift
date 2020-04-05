@@ -44,10 +44,10 @@ class ActivityViewController: UIViewController {
         qrTextLabel.textColor = .white
         
         enterButton.map {
+            $0.setTitle(NSLocalizedString("bt_enter_patient", comment: ""), for: .normal)
             $0.titleLabel?.font = .button
             $0.setTitleColor(.white, for: .normal)
             $0.backgroundColor = .mainTheme
-            $0.setTitle(NSLocalizedString("bt_enter_patient", comment: ""), for: .normal)
         }
         
         inviteButton.map {
@@ -98,8 +98,9 @@ class ActivityViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
+        // recalculate corner radius for buttons because
+        // the size of the buttons may change for smaller screens
         let height = enterButton.bounds.height
-        print(height)
         [enterButton, inviteButton].forEach {
             $0?.cornerRadius = height/2
         }

@@ -53,13 +53,13 @@ class PendingViewController: UIViewController {
         tapToCopyLabel.map {
             $0.text = NSLocalizedString("view_pending_tap_to_copy", comment: "")
             $0.textColor = .textGray
-            $0.font = UIFont(name: "SFCompactDisplay-Light", size: 18)
+            $0.font = UIFont(name: "SFCompactDisplay-Light", size: 16)
         }
         
         text2Label.map {
             $0.text = NSLocalizedString("view_pending_text2", comment: "")
             $0.textColor = .titleBlack
-            $0.font = UIFont(name: "SFCompactDisplay-Regular", size: 24)
+            $0.font = UIFont(name: "SFCompactDisplay-Regular", size: 18)
         }
         
         text3Label.map {
@@ -72,7 +72,7 @@ class PendingViewController: UIViewController {
             
             $0.attributedText = attributed
             $0.textColor = .titleBlack
-            $0.font = UIFont(name: "SFCompactDisplay-Regular", size: 30)
+            $0.font = UIFont(name: "SFCompactDisplay-Regular", size: 18)
         }
         
         continueButton.map {
@@ -87,7 +87,7 @@ class PendingViewController: UIViewController {
         questionLabel.map {
             $0.text = NSLocalizedString("view_pending_question", comment: "")
             $0.textColor = .titleBlack
-            $0.font = UIFont(name: "SFCompactDisplay-Regular", size: 24)
+            $0.font = UIFont(name: "SFCompactDisplay-Semibold", size: 18)
         }
         
         yesButton.map {
@@ -117,6 +117,10 @@ class PendingViewController: UIViewController {
         continueButton.rx.tap
             .map({ false })
             .bind(to: choiceView.rx.isHidden)
+            .disposed(by: bag)
+        continueButton.rx.tap
+            .map({ true })
+            .bind(to: continueButton.rx.isHidden)
             .disposed(by: bag)
         
         noButton.rx.tap
