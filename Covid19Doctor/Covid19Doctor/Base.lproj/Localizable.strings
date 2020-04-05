@@ -63,7 +63,20 @@ log their health status and invite other doctors on the app.";
 
 
 
+"alert_patientid_desc" = "This is the patient id.\nTap it to copy.";
+"ask_for_diagnosis" = "Do you already know the diagnosis?";
+
+"view_pending_text1" = "The ID of this patient is";
+"view_pending_tap_to_copy" = "Tap to copy";
+"view_pending_text2" = "Take note of the code if needed.";
+"view_pending_text3" = "This ID has been saved as %@ and the health status of the patient can be updated later.";
+"view_pending_question" = "Do you already have the result?";
+
+"suspect" = "SUSPECT";
+
+"ok" = "OK";
 "yes" = "Yes";
 "no" = "No";
 "cancel" = "Cancel";
 "confirm" = "Confirm";
+"continue" = "Continue";

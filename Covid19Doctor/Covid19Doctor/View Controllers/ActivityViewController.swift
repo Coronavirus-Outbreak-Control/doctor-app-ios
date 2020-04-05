@@ -79,33 +79,9 @@ class ActivityViewController: UIViewController {
     
     // MARK: - Scanner
     
-    private func extractPatientData(string: String) -> Single<String> {
-        if let id = string.deletingPrefix("covid-outbreak-control:") {
-            return .just(id)
-        } else {
-            return .error(Errors.patientNotRecognized)
-        }
-    }
-    
+    let scanner = Scanner()
     private func launchScanner() {
-        let scanner = UIStoryboard.getViewController(id: "ScannerViewController") as! ScannerViewController
-        let scannerNC = UINavigationController(rootViewController: scanner)
-        present(scannerNC, animated: true, completion: nil)
-        
-        scanner.output
-        .flatMap({ self.extractPatientData(string: $0) })
-        .subscribe(onNext: { [weak self] string in
-            self?.launchPatientScreen(patientId: string)
-        }, onError: { error in
-            // TODO: show error to user
-        })
-        .disposed(by: bag)
-    }
-    
-    private func launchPatientScreen(patientId: String) {
-        let vc = UIStoryboard.getViewController(id: "PatientViewController") as! PatientViewController
-        vc.patientId = patientId
-        navigationController?.pushViewController(vc, animated: true)
+        scanner.present(from: self)
     }
     
     // MARK: - Invite
@@ -124,7 +100,7 @@ class ActivityViewController: UIViewController {
         view.makeToastActivity(.center)
         
         guard let reAuthToken: String = Database.shared.getAccountValue(key: .reAuthToken) else {
-            //TODO: handle error
+            //TODO: handle error Errors.userNotActivated
             return
         }
         

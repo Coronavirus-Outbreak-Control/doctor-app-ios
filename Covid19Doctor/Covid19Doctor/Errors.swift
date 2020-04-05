@@ -9,9 +9,9 @@
 enum Errors: Error {
     case unknown
     case phoneNotTrusted
-    case patientNotRecognized
-    case missingActivationToken
-    case userNotLoggedIn
+    case invalidPatientId
+    case userNotActivated       // missing reAuthToken
+    case userNotAuthenticated   // missing jwt
     case invalidPhoneNumber
     case verificationCodeExpired
     case tokenAlreadyRequested

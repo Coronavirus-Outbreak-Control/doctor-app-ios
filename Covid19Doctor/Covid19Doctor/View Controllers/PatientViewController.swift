@@ -70,7 +70,7 @@ class PatientViewController: UIViewController {
         
         suspectedButton.rx.tap
         .subscribe(onNext: { [weak self] _ in
-            self?.askConfirmation(forStatus: .suspected)
+            self?.askConfirmation(forStatus: .pending)
         })
         .disposed(by: bag)
         

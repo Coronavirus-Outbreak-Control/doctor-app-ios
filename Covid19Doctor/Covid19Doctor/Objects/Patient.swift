@@ -9,7 +9,7 @@
 enum PatientStatus: Int {
     case normal =       0
     case infected =     1
-    case suspected =    2
+    case pending =      2
     case healed =       3
     case quarantineLight =      4
     case quarantineWarning =    5

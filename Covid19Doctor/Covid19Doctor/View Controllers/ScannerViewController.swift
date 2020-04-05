@@ -22,7 +22,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         #if targetEnvironment(simulator)
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
             self.dismiss(animated: true)
-            self.found(code: "covid-outbreak-control:1234")
+            self.found(code: "covid-outbreak-control:16-24-72-88-11-32")
         }
         return
         #endif

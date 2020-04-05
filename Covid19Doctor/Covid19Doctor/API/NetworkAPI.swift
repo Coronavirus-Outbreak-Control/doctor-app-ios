@@ -36,7 +36,7 @@ class NetworkAPI: API {
     
     func setPatientStatus(patientId: String, status: PatientStatus) -> Single<Empty> {
         guard let jwt: String = Database.shared.getAccountValue(key: .jwt) else {
-            return .error(Errors.userNotLoggedIn)
+            return .error(Errors.userNotAuthenticated)
         }
         let req = SetPatientStatusRequest(authToken: jwt, patientId: patientId, newStatus: status)
         return client.send(apiRequest: req)
@@ -44,7 +44,7 @@ class NetworkAPI: API {
     
     func inviteDoctor(number: String) -> Single<Empty> {
         guard let jwt: String = Database.shared.getAccountValue(key: .jwt) else {
-            return .error(Errors.userNotLoggedIn)
+            return .error(Errors.userNotAuthenticated)
         }
         let req = InviteDoctorRequest(authToken: jwt, phoneNumber: number)
         return client.send(apiRequest: req)

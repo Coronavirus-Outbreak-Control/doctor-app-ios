@@ -60,7 +60,20 @@ e invitare altri dottori.";
 
 
 
+"alert_patientid_desc" = "Questo è l'ID del paziente.\nToccalo per copiarlo.";
+"ask_for_diagnosis" = "Conosci già la diagnosi?";
+
+"view_pending_text1" = "Il codice del paziente è";
+"view_pending_tap_to_copy" = "Tocca per copiare";
+"view_pending_text2" = "Prendi nota del codice se necessario.";
+"view_pending_text3" = "Questo codice è stato salvato come %@ e lo stato di salute del paziente può essere aggiornato in seguito.";
+"view_pending_question" = "Hai già i risultati del test?";
+
+"suspect" = "SOSPETTO";
+
+"ok" = "OK";
 "yes" = "Sì";
 "no" = "No";
 "cancel" = "Annulla";
 "confirm" = "Conferma";
+"continue" = "Continua";
