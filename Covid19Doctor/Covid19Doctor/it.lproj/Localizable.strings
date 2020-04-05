@@ -58,6 +58,7 @@ e invitare altri dottori.";
 "diagnosis_title" = "Diagnosi 🔬";
 "toast_status_changed" = "Stato di salute registrato";
 "toast_status_error" = "Errore, lo stato di salute non è stato registrato";
+"alert_sure_title" = "Stai cambiando lo stato a %@";
 "alert_sure_text" = "Sei sicuro?";
 
 
@@ -71,7 +72,6 @@ e invitare altri dottori.";
 "view_pending_text3" = "Lo stato del paziente è cambiato a %@ in attesa dei risultati del tampone.\nSe clicchi sul bottone PASSO SUCCESSIVO puoi scegliere di cambiare lo stato se conosci già i risultati del tampone, oppure tornare alla pagina principale e modificarlo successivamente.";
 "view_pending_question" = "Hai già i risultati del tampone di questo paziente?";
 "view_pending_copied" = "Codice copiato";
-"suspect" = "SOSPETTO";
 "bt_next_step" = "PASSO SUCCESSIVO";
 
 
@@ -89,3 +89,10 @@ e invitare altri dottori.";
 "cancel" = "Annulla";
 "confirm" = "Conferma";
 "continue" = "Continua";
+
+
+
+"negative" = "NEGATIVO";
+"positive" = "POSITIVO";
+"suspect" = "SOSPETTO";
+"healed" = "GUARITO";

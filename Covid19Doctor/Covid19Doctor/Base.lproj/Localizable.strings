@@ -61,6 +61,7 @@ log their health status and invite other doctors on the app.";
 "diagnosis_title" = "Diagnosis 🔬";
 "toast_status_changed" = "Health status changed";
 "toast_status_error" = "Error, health status not registered";
+"alert_sure_title" = "You are changing the status to %@";
 "alert_sure_text" = "Are you sure?";
 
 
@@ -74,7 +75,6 @@ log their health status and invite other doctors on the app.";
 "view_pending_text3" = "The status of the patient has been changed to %@ waiting for swab results.\nIf you click on NEXT STEP button you can either change the status if you already know the swab results, or go back to main page and change it at a later time.";
 "view_pending_question" = "Do you know the results of the swab for this patient?";
 "view_pending_copied" = "ID copied";
-"suspect" = "SUSPECT";
 "bt_next_step" = "NEXT STEP";
 
 
@@ -92,3 +92,10 @@ log their health status and invite other doctors on the app.";
 "cancel" = "Cancel";
 "confirm" = "Confirm";
 "continue" = "Continue";
+
+
+
+"negative" = "NEGATIVE";
+"positive" = "POSITIVE";
+"suspect" = "SUSPECT";
+"healed" = "HEALED";

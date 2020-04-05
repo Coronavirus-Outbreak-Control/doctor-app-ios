@@ -7,14 +7,13 @@
 //
 
 enum PatientStatus: Int {
-    case normal =       0
+    case negative =     0
     case infected =     1
     case pending =      2
     case healed =       3
     case quarantineLight =      4
     case quarantineWarning =    5
     case quarantineAlert =      6
-    
 }
 
 struct Patient {

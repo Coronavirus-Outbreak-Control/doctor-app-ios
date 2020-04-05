@@ -78,7 +78,7 @@ class PatientViewController: UIViewController {
         
         negativeButton.rx.tap
         .subscribe(onNext: { [weak self] _ in
-            self?.askConfirmation(forStatus: .pending)
+            self?.askConfirmation(forStatus: .negative)
         })
         .disposed(by: bag)
         
@@ -102,17 +102,45 @@ class PatientViewController: UIViewController {
     // MARK: - Set status
 
     func setStatus(_ status: PatientStatus) {
+        view.makeToastActivity(.center)
+        
         APIManager.api.setPatientStatus(patientId: patientId, status: status)
         .subscribe(onSuccess: { [weak self] _ in
-            self?.view.makeToast(NSLocalizedString("toast_status_changed", comment: ""))
+            self?.showResponse(error: nil)
         }, onError: { [weak self] error in
-            self?.view.makeToast(NSLocalizedString("toast_status_error", comment: ""))
+            self?.showResponse(error: error)
         })
         .disposed(by: bag)
     }
     
+    private func showResponse(error: Error?) {
+        view.hideToastActivity()
+        
+        if error == nil {
+            view.makeToast(NSLocalizedString("toast_status_changed", comment: ""), duration: 6)
+        } else {
+            view.makeToast(NSLocalizedString("toast_status_error", comment: ""), duration: 6)
+        }
+    }
+    
     func askConfirmation(forStatus status: PatientStatus) {
-        let alertController = UIAlertController(title: nil, message: NSLocalizedString("alert_sure_text", comment: ""), preferredStyle: .alert)
+        let statusString: String?
+        switch status {
+        case .negative:
+            statusString = "negative"
+        case .infected:
+            statusString = "positive";
+        case .healed:
+            statusString = "healed";
+        default:
+            statusString = nil
+        }
+        
+        guard let s = statusString else { return }
+        
+        let title = String(format: NSLocalizedString("alert_sure_title", comment: ""), NSLocalizedString(s, comment: "").uppercased())
+        
+        let alertController = UIAlertController(title: title, message: NSLocalizedString("alert_sure_text", comment: ""), preferredStyle: .alert)
 
         let cancelAction = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel) { _ in
             // nothing

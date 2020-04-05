@@ -47,7 +47,7 @@ class MockAPI: API {
     func getPatient(id: String) -> Single<Patient> {
         .create { observer in
             DispatchQueue.main.delay(1) {
-                let patient = Patient(id: "1", status: .normal)
+                let patient = Patient(id: "1", status: .negative)
                 observer(.success(patient))
             }
             return Disposables.create()
