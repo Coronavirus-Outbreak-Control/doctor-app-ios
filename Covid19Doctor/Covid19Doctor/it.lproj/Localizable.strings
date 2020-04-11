@@ -69,10 +69,12 @@ e invitare altri dottori.";
 "view_pending_text1" = "Il codice del paziente è";
 "view_pending_tap_to_copy" = "Tocca per copiare";
 "view_pending_text2" = "Prendi nota del codice se necessario.";
-"view_pending_text3" = "Lo stato del paziente è cambiato a %@ in attesa dei risultati del tampone.\nSe clicchi sul bottone PASSO SUCCESSIVO puoi scegliere di cambiare lo stato se conosci già i risultati del tampone, oppure tornare alla pagina principale e modificarlo successivamente.";
+"view_pending_text3" = "Se clicchi sul bottone PASSO SUCCESSIVO puoi scegliere di cambiare lo stato se conosci già i risultati del tampone, oppure tornare alla pagina principale e modificarlo successivamente.";
 "view_pending_question" = "Hai già i risultati del tampone di questo paziente?";
 "view_pending_copied" = "Codice copiato";
 "bt_next_step" = "PASSO SUCCESSIVO";
+"view_pending_alert_ok" = "Lo stato del paziente è cambiato a %@ in attesa dei risultati del tampone. Puoi modificarlo successivamente dalla pagina principale.";
+"view_pending_alert_ko" = "Non è stato possibile aggiornare lo stato del paziente.";
 
 
 
@@ -89,6 +91,7 @@ e invitare altri dottori.";
 "cancel" = "Annulla";
 "confirm" = "Conferma";
 "continue" = "Continua";
+"retry" = "Riprova";
 
 
 

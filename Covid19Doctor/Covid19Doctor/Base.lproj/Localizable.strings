@@ -72,10 +72,12 @@ log their health status and invite other doctors on the app.";
 "view_pending_text1" = "The ID of this patient is";
 "view_pending_tap_to_copy" = "Tap to copy";
 "view_pending_text2" = "Take note of the code if needed.";
-"view_pending_text3" = "The status of the patient has been changed to %@ waiting for swab results.\nIf you click on NEXT STEP button you can either change the status if you already know the swab results, or go back to main page and change it at a later time.";
+"view_pending_text3" = "If you click on NEXT STEP button you can either change the status if you already know the swab results, or go back to main page and change it at a later time.";
 "view_pending_question" = "Do you know the results of the swab for this patient?";
 "view_pending_copied" = "ID copied";
 "bt_next_step" = "NEXT STEP";
+"view_pending_alert_ok" = "The status of the patient has been changed to %@ waiting for swab results. You can update it at later time from the home page.";
+"view_pending_alert_ko" = "An error occurred while changing the status of the patient.";
 
 
 
@@ -92,6 +94,7 @@ log their health status and invite other doctors on the app.";
 "cancel" = "Cancel";
 "confirm" = "Confirm";
 "continue" = "Continue";
+"retry" = "Retry";
 
 
 

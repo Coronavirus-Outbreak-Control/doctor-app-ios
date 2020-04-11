@@ -21,7 +21,7 @@ class Scanner {
         
         scannerVC.output
         .flatMap({ Self.extractPatientId(string: $0) })
-        .flatMapLatest({ [weak from] patientId -> Single<String> in
+        /*.flatMapLatest({ [weak from] patientId -> Single<String> in
             from?.view.makeToastActivity(.center)
             
             guard let reAuthToken: String =
@@ -33,18 +33,16 @@ class Scanner {
             return APIManager.api.runAuthenticated(reAuthToken: reAuthToken, apiBuilder: {
                 APIManager.api.setPatientStatus(patientId: patientId, status: .pending)
             }).flatMap({ _ in .just(patientId) })
-        })
+        })*/
         .subscribe({ [weak self, weak from] event in
-            from?.view.hideToastActivity()
-            
             guard let from = from else { return }
             
             switch event {
             case .next(let patientId):
                 // 'pending' state has been set on server
                 self?.launchPendingViewController(patientId: patientId, from: from)
-            case .error(let error):
-                // TODO: show error
+            case .error(_):
+                // TODO: show error (no error actually)
                 break
             default:
                 break

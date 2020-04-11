@@ -11,12 +11,15 @@ import Foundation
 struct SetPatientStatusRequest: NetworkRequest {
     let method = RequestType.POST
     let path: String
-    let parameters = [String : String]()
+    var parameters = [String : String]()
     let body: Data? = nil
     let authToken: String?
     
-    init(authToken: String, patientId: String, newStatus: PatientStatus) {
+    init(authToken: String, patientId: String,
+         newStatus: PatientStatus,
+         ignoreStatusCheck: Bool = false) {
         self.authToken = authToken
         self.path = "mark/\(patientId)/\(newStatus)"
+        self.parameters["ignore_status_check"] = "\(ignoreStatusCheck)"
     }
 }

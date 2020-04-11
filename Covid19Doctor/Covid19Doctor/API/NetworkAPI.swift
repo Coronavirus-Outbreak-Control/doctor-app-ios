@@ -34,7 +34,8 @@ class NetworkAPI: API {
         fatalError("not implemented")
     }
     
-    func setPatientStatus(patientId: String, status: PatientStatus) -> Single<Empty> {
+    func setPatientStatus(patientId: String, status: PatientStatus,
+                          ignoreStatusCheck: Bool = false) -> Single<Empty> {
         guard let jwt: String = Database.shared.getAccountValue(key: .jwt) else {
             return .error(Errors.userNotAuthenticated)
         }

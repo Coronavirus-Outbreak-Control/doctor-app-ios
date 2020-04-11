@@ -54,7 +54,8 @@ class MockAPI: API {
         }
     }
     
-    func setPatientStatus(patientId: String, status: PatientStatus) -> Single<Empty> {
+    func setPatientStatus(patientId: String, status: PatientStatus,
+                          ignoreStatusCheck: Bool = false) -> Single<Empty> {
         .create { observer in
             DispatchQueue.main.delay(1) {
                 observer(.success(Empty()))

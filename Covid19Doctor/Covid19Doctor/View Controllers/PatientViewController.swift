@@ -24,6 +24,7 @@ class PatientViewController: UIViewController {
     @IBOutlet weak var backButton: PMSuperButton!
     
     var patientId: String!
+    var ignoreStatusCheck = false
     
     private let bag = DisposeBag()
     
@@ -104,7 +105,8 @@ class PatientViewController: UIViewController {
     func setStatus(_ status: PatientStatus) {
         view.makeToastActivity(.center)
         
-        APIManager.api.setPatientStatus(patientId: patientId, status: status)
+        APIManager.api.setPatientStatus(patientId: patientId, status: status,
+                                        ignoreStatusCheck: ignoreStatusCheck)
         .subscribe(onSuccess: { [weak self] _ in
             self?.showResponse(error: nil)
         }, onError: { [weak self] error in

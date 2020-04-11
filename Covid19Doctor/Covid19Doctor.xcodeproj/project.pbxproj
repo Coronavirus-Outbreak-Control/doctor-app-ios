@@ -58,6 +58,7 @@
 		FDFB26092435553C000E9C07 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB26082435553C000E9C07 /* HelpViewController.swift */; };
 		FDFB260F24355807000E9C07 /* HowItWorksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB260E24355807000E9C07 /* HowItWorksView.swift */; };
 		FDFB261124355AEF000E9C07 /* HowItWorksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDFB261024355AEF000E9C07 /* HowItWorksView.xib */; };
+		FDFB4CF0244249B1006383A2 /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB4CEF244249B1006383A2 /* UIAlertController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +119,7 @@
 		FDFB26082435553C000E9C07 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		FDFB260E24355807000E9C07 /* HowItWorksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorksView.swift; sourceTree = "<group>"; };
 		FDFB261024355AEF000E9C07 /* HowItWorksView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HowItWorksView.xib; sourceTree = "<group>"; };
+		FDFB4CEF244249B1006383A2 /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
 		FF258396ACD6B5EFBD76D693 /* Pods-Covid19Doctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19Doctor.debug.xcconfig"; path = "Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				FD1720602419B33E003EEBD5 /* Utils.swift */,
+				FDFB4CEF244249B1006383A2 /* UIAlertController+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				FDF8527824394B0E00BCB7B9 /* PendingViewController.swift in Sources */,
 				FDEEFD4D2426719F00D1DF15 /* InvitationObject.swift in Sources */,
 				FDFA1A7524203FBF00FB5B9F /* NetworkClient.swift in Sources */,
+				FDFB4CF0244249B1006383A2 /* UIAlertController+Extensions.swift in Sources */,
 				FDEEF19B241C42F30010E368 /* API.swift in Sources */,
 				FD1720612419B33E003EEBD5 /* Utils.swift in Sources */,
 				FDEB442E241984B9000B5320 /* ActivationViewController.swift in Sources */,
@@ -635,6 +639,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 652YXNAPUW;
 				INFOPLIST_FILE = Covid19Doctor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -656,6 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 652YXNAPUW;
 				INFOPLIST_FILE = Covid19Doctor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

@@ -128,7 +128,7 @@ class PendingViewController: UIViewController {
         
         noButton.rx.tap
             .subscribe(onNext: { [weak self] _ in
-                self?.navigationController?.popViewController(animated: false)
+                self?.setPending()
             })
             .disposed(by: bag)
         
@@ -156,9 +156,63 @@ class PendingViewController: UIViewController {
         view.makeToast(NSLocalizedString("view_pending_copied", comment: ""))
     }
     
+    // MARK: - Go to update status
+    
     private func launchStatusScreen() {
         let vc = UIStoryboard.getViewController(id: "PatientViewController") as! PatientViewController
         vc.patientId = patientId
+        vc.ignoreStatusCheck = true
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    // MARK: - Set pending
+    
+    private func setPending() {
+        view.makeToastActivity(.center)
+        
+        APIManager.api.setPatientStatus(patientId: patientId, status: .pending)
+            .asObservable()
+            .observeOn(MainScheduler.instance)
+            .subscribe({ [weak self] event in
+                self?.view.hideToastActivity()
+                
+                switch event {
+                case .completed:
+                    self?.displayPendingConfirmation()
+                case .error(_):
+                    self?.displayPendingError()
+                default:
+                    break
+                }
+            })
+            .disposed(by: bag)
+    }
+    
+    private func displayPendingConfirmation() {
+        let text = String(format: NSLocalizedString("view_pending_alert_ok", comment: ""),
+                          NSLocalizedString("suspect", comment: ""))
+        UIAlertController.alert(title: text, message: nil)
+            .addAction(title: NSLocalizedString("ok", comment: ""),
+                       style: .default,
+                       handler: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: false)
+            })
+            .present(in: self)
+    }
+    
+    private func displayPendingError() {
+        let text = NSLocalizedString("view_pending_alert_ko", comment: "")
+        UIAlertController.alert(title: text, message: nil)
+            .addAction(title: NSLocalizedString("retry", comment: ""),
+                       style: .default,
+                       handler: { [weak self] _ in
+                self?.setPending()
+            })
+            .addAction(title: NSLocalizedString("cancel", comment: ""),
+                       style: .cancel,
+                       handler: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: false)
+            })
+            .present(in: self)
     }
 }

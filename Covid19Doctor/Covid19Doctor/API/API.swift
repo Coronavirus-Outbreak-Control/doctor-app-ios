@@ -30,7 +30,8 @@ protocol API {
     /// Change patient's status
     /// - Parameter patientId: the id of the patient
     /// - Parameter status: the status to set
-    func setPatientStatus(patientId: String, status: PatientStatus) -> Single<Empty>
+    func setPatientStatus(patientId: String, status: PatientStatus,
+                          ignoreStatusCheck: Bool) -> Single<Empty>
     
     /// Invite a doctor to the app via phone number
     /// - Parameter number: the phone number 
