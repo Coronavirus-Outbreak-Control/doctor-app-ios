@@ -103,10 +103,20 @@ class PatientViewController: UIViewController {
     // MARK: - Set status
 
     func setStatus(_ status: PatientStatus) {
+        guard let reAuthToken: String = Database.shared.getAccountValue(key: .reAuthToken) else {
+            //TODO: handle error Errors.userNotActivated
+            return
+        }
+        
         view.makeToastActivity(.center)
         
-        APIManager.api.setPatientStatus(patientId: patientId, status: status,
-                                        ignoreStatusCheck: ignoreStatusCheck)
+        let patientId = self.patientId!
+        let ignoreStatusCheck = self.ignoreStatusCheck
+        
+        APIManager.api.runAuthenticated(reAuthToken: reAuthToken, apiBuilder: {
+            APIManager.api.setPatientStatus(patientId: patientId, status: status,
+                                            ignoreStatusCheck: ignoreStatusCheck)
+        })
             .observeOn(MainScheduler.instance)
             .subscribe(onSuccess: { [weak self] _ in
                 self?.showResponse(error: nil)

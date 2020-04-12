@@ -168,9 +168,18 @@ class PendingViewController: UIViewController {
     // MARK: - Set pending
     
     private func setPending() {
+        guard let reAuthToken: String = Database.shared.getAccountValue(key: .reAuthToken) else {
+            //TODO: handle error Errors.userNotActivated
+            return
+        }
+        
         view.makeToastActivity(.center)
         
-        APIManager.api.setPatientStatus(patientId: patientId, status: .pending)
+        let patientId = self.patientId!
+        
+        APIManager.api.runAuthenticated(reAuthToken: reAuthToken, apiBuilder: {
+            APIManager.api.setPatientStatus(patientId: patientId, status: .pending)
+        })
             .asObservable()
             .observeOn(MainScheduler.instance)
             .subscribe({ [weak self] event in
