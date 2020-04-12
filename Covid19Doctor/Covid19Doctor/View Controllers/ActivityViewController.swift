@@ -111,6 +111,7 @@ class ActivityViewController: UIViewController {
     let scanner = Scanner()
     private func launchScanner() {
         CameraPermission.check(from: self)
+            .observeOn(MainScheduler.instance)
             .subscribe(onSuccess: { [weak self] permissionGranted in
                 if permissionGranted, let `self` = self {
                     self.scanner.present(from: self)
