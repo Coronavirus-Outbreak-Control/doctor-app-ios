@@ -39,7 +39,8 @@ class NetworkAPI: API {
         guard let jwt: String = Database.shared.getAccountValue(key: .jwt) else {
             return .error(Errors.userNotAuthenticated)
         }
-        let req = SetPatientStatusRequest(authToken: jwt, patientId: patientId, newStatus: status)
+        let req = SetPatientStatusRequest(authToken: jwt, patientId: patientId, newStatus: status,
+                                          ignoreStatusCheck: ignoreStatusCheck)
         return client.send(apiRequest: req)
     }
     

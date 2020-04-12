@@ -19,7 +19,7 @@ struct SetPatientStatusRequest: NetworkRequest {
          newStatus: PatientStatus,
          ignoreStatusCheck: Bool = false) {
         self.authToken = authToken
-        self.path = "mark/\(patientId)/\(newStatus)"
+        self.path = "mark/\(patientId)/\(newStatus.rawValue)"
         self.parameters["ignore_status_check"] = "\(ignoreStatusCheck)"
     }
 }

@@ -107,12 +107,13 @@ class PatientViewController: UIViewController {
         
         APIManager.api.setPatientStatus(patientId: patientId, status: status,
                                         ignoreStatusCheck: ignoreStatusCheck)
-        .subscribe(onSuccess: { [weak self] _ in
-            self?.showResponse(error: nil)
-        }, onError: { [weak self] error in
-            self?.showResponse(error: error)
-        })
-        .disposed(by: bag)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onSuccess: { [weak self] _ in
+                self?.showResponse(error: nil)
+            }, onError: { [weak self] error in
+                self?.showResponse(error: error)
+            })
+            .disposed(by: bag)
     }
     
     private func showResponse(error: Error?) {
