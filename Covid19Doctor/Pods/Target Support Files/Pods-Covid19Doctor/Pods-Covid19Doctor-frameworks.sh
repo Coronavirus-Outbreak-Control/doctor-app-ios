@@ -197,6 +197,7 @@ if [ -r "${ARTIFACT_LIST_FILE}" ]; then
 fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FittableFontLabel/FittableFontLabel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KWVerificationCodeView/KWVerificationCodeView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PMSuperButton/PMSuperButton.framework"
@@ -213,6 +214,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FittableFontLabel/FittableFontLabel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KWVerificationCodeView/KWVerificationCodeView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PMSuperButton/PMSuperButton.framework"

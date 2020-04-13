@@ -1,4 +1,5 @@
 PODS:
+  - DropDown (2.3.13)
   - FittableFontLabel (3.0.0)
   - KWVerificationCodeView (0.4.0)
   - PhoneNumberKit (3.2.0):
@@ -39,6 +40,7 @@ PODS:
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
+  - DropDown
   - FittableFontLabel
   - KWVerificationCodeView
   - PhoneNumberKit
@@ -55,6 +57,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - DropDown
     - FittableFontLabel
     - KWVerificationCodeView
     - PhoneNumberKit
@@ -71,6 +74,7 @@ SPEC REPOS:
     - Toast-Swift
 
 SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   FittableFontLabel: 34581be026d89c02eb7be992c163e705b586b86f
   KWVerificationCodeView: 92cca6ad028546d3232fa75cda3a40d00109a1a2
   PhoneNumberKit: df411d46177d1492da84e10b6c093846dd861452
@@ -86,6 +90,6 @@ SPEC CHECKSUMS:
   Sentry: ab6c209f23700d1460691dbc90e19ed0a05d496b
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 3e1e42da5504ea0c38a86cc898178b5653244e5f
+PODFILE CHECKSUM: f91808394082f6f93fe68a201a5702a93389302f
 
 COCOAPODS: 1.9.1

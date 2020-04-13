@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import PMSuperButton
+import DropDown
 
 class EnterPatientViewController: UIViewController {
 
@@ -18,6 +19,7 @@ class EnterPatientViewController: UIViewController {
     @IBOutlet weak var lineView: UIView!
     @IBOutlet weak var continueButton: PMSuperButton!
     @IBOutlet weak var backButton: PMSuperButton!
+    let dropDown = DropDown()
     
     private let bag = DisposeBag()
     
@@ -49,12 +51,23 @@ class EnterPatientViewController: UIViewController {
         }
         
         lineView.backgroundColor = .mainTheme
+        
+        dropDown.anchorView = idField
+        dropDown.direction = .bottom
+        dropDown.bottomOffset = CGPoint(x: 0, y: (dropDown.anchorView?.plainView.bounds.height)! * 2.3)
+        dropDown.cellHeight = 56
+        dropDown.textFont = UIFont(name: "SFCompactDisplay-Regular", size: 20)!
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUI()
+        
+        dropDown.selectionAction = { [weak self] (index: Int, item: String) in
+            self?.idField.text = item
+            self?.dropDown.hide()
+        }
         
         continueButton.rx.tap
             .subscribe(onNext: { [weak self] _ in
@@ -73,6 +86,12 @@ class EnterPatientViewController: UIViewController {
                 self?.idField.resignFirstResponder()
             })
             .disposed(by: bag)
+        
+        idField.rx.controlEvent(.editingDidBegin)
+            .subscribe(onNext: { [weak self] _ in
+                self?.dropDown.show()
+            })
+            .disposed(by: bag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,31 +99,39 @@ class EnterPatientViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    //TEMP
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        // request suspect patients
         getPendingPatients()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] ids in
+                if let `self` = self {
+                    self.dropDown.dataSource = ids
+                    if self.idField.isFirstResponder {
+                        self.dropDown.show()
+                    }
+                }
+            })
+            .disposed(by: bag)
     }
     
     // MARK: - Get pending patients
     
-    private func getPendingPatients() {
+    private func getPendingPatients() -> Observable<[String]> {
         guard let reAuthToken: String = Database.shared.getAccountValue(key: .reAuthToken),
             let doctorId: String = Database.shared.getAccountValue(key: .userId)
         else {
             //TODO: handle error Errors.userNotActivated
-            return
+            return .just([])
         }
         
-        APIManager.api.runAuthenticated(reAuthToken: reAuthToken, apiBuilder: {
+        return APIManager.api.runAuthenticated(reAuthToken: reAuthToken, apiBuilder: {
             APIManager.api.getSuspects(doctorId: doctorId)
-        })
-            .subscribe(onSuccess: { res in
-                
-            }, onError: { error in
-                print(error)
+        }).asObservable()
+            .map({
+                $0.data.map({ Scanner.computePublicPatientId(patientId: "\($0.patient_id)") })
             })
-            .disposed(by: bag)
     }
     
     // MARK: -

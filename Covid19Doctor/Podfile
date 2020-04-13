@@ -24,6 +24,7 @@ target 'Covid19Doctor' do
   pod 'PhoneNumberKit'
   pod 'Toast-Swift'
   pod 'FittableFontLabel'
+  pod 'DropDown'
   
   # crash reporting
   pod 'Sentry', '4.5.0'
