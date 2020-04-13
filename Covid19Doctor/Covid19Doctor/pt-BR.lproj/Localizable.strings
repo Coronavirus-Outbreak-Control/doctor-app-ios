@@ -1,0 +1,110 @@
+/* 
+  Localizable.strings
+  Covid19Doctor
+
+  Created by Francesco Cosentino on 30/03/2020.
+  Copyright © 2020 Francesco Cosentino. All rights reserved.
+*/
+
+"welcome" = "Hey Doctor,\n\nWelcome to\nanonymous\nCovidCommunity\nAlert 👋";
+"together_we" = "Together we can save lives!";
+"let_s_get_s" = "LET'S GET STARTED";
+"bt_how_it_works" = "HOW IT WORKS 🤔";
+
+
+"how_it_works" = "How it works 🤔";
+"how_it_works_p0" = "We will use the camera and contacts in
+order to scan the patient’s QR code and invite other doctors.";
+"how_it_works_q1" = "How can I help?";
+"how_it_works_p1" = "You can log the patient’s health
+status in order to notify others that have been interacting
+with the patient.";
+"how_it_works_q2" = "How can I promote this application?";
+"how_it_works_p2" = "You can invite other trusted doctors
+by sending us their phone number.";
+
+
+
+"phone_number" = "Phone number";
+"verify_number" = "Verify phone number";
+"tv_code" = "Enter the 6 digits code you received by SMS";
+"bt_send_number" = "SEND";
+"insert_num" = "Enter number";
+"err_code" = "Error";
+"retry_time" = "You can retry in %d seconds";
+
+
+
+"all_set" = "All set!";
+"what_to_do" = "You will now be able to scan a patient\'s QR code,
+log their health status and invite other doctors on the app.";
+"go" = "GO TO APPLICATION";
+
+
+
+"main_title" = "Welcome to\nCoviDoc";
+"bt_scan_qrcode" = "TAP HERE TO SCAN\nQR CODE";
+"bt_update_status" = "UPDATE HEALTH STATUS";
+"bt_invite_doc" = "INVITE OTHER DOCTORS";
+"toast_num_doc_invited" = "Doctor invited";
+"toast_err_doc_invited" = "Error while inviting";
+"alert_inviting_title" = "You are inviting";
+"alert_inviting_text" = "Do you confirm the invitation?";
+"toast_invalid_number" = "Invalid number";
+
+
+
+"bt_confirm_covid" = "🤒  Positive to COVID-19";
+"bt_negative_covid" = "😅  Negative to COVID-19";
+"bt_suspect_covid" = "😷  Suspected of COVID-19";
+"bt_recover_covid" = "😊  Healed";
+"diagnosis_title" = "Diagnosis 🔬";
+"toast_status_changed" = "Health status changed";
+"toast_status_error" = "Error, health status not registered";
+"alert_sure_title" = "You are changing the status to %@";
+"alert_sure_text" = "Are you sure?";
+
+
+
+"alert_patientid_desc" = "This is the patient id.\nTap it to copy.";
+"ask_for_diagnosis" = "Do you already know the diagnosis?";
+
+"view_pending_text1" = "The ID of this patient is";
+"view_pending_tap_to_copy" = "Tap to copy";
+"view_pending_text2" = "Take note of the code if needed.";
+"view_pending_text3" = "If you click on NEXT STEP button you can either change the status if you already know the swab results, or go back to main page and change it at a later time.";
+"view_pending_question" = "Do you know the results of the swab for this patient?";
+"view_pending_copied" = "ID copied";
+"bt_next_step" = "NEXT STEP";
+"view_pending_alert_ok" = "The status of the patient has been changed to %@ waiting for swab results. You can update it at later time from the home page.";
+"view_pending_alert_ko" = "An error occurred while changing the status of the patient.";
+
+
+
+"enter_patient_title" = "Enter patient ID";
+"enter_patient_invalid_title" = "The patient ID is invalid";
+"enter_patient_invalid_text" = "Please check it or contact the patient to ask it again.";
+"patient_id" = "Patient ID";
+
+
+
+"ok" = "OK";
+"yes" = "Yes";
+"no" = "No";
+"cancel" = "Cancel";
+"confirm" = "Confirm";
+"continue" = "Continue";
+"retry" = "Retry";
+
+
+
+"negative" = "NEGATIVE";
+"positive" = "POSITIVE";
+"suspect" = "SUSPECT";
+"healed" = "HEALED";
+
+
+
+"camera_permission_title" = "Camera access is required";
+"camera_permission_text" = "Please allow CoviDoc to access the camera in Settings.";
+"camera_permission_bt_settings" = "Go to Settings";

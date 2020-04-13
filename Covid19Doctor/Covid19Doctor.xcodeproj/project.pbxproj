@@ -122,6 +122,9 @@
 		FDFB261024355AEF000E9C07 /* HowItWorksView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HowItWorksView.xib; sourceTree = "<group>"; };
 		FDFB4CEF244249B1006383A2 /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
 		FDFF82992444716500910ADB /* GetSuspectsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSuspectsRequest.swift; sourceTree = "<group>"; };
+		FDFF829B2444CBE100910ADB /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		FDFF829C2444CBE100910ADB /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		FDFF829D2444CBE100910ADB /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		FF258396ACD6B5EFBD76D693 /* Pods-Covid19Doctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19Doctor.debug.xcconfig"; path = "Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -365,6 +368,7 @@
 				en,
 				Base,
 				it,
+				"pt-BR",
 			);
 			mainGroup = FDEB440A24197D67000B5320;
 			productRefGroup = FDEB441424197D67000B5320 /* Products */;
@@ -496,6 +500,7 @@
 			children = (
 				FDE5894B243163C800BF60A7 /* Base */,
 				FDE5894D2431642700BF60A7 /* it */,
+				FDFF829D2444CBE100910ADB /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 			children = (
 				FDEB441D24197D67000B5320 /* Base */,
 				FDE589482431631100BF60A7 /* it */,
+				FDFF829B2444CBE100910ADB /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -514,6 +520,7 @@
 			children = (
 				FDEB442224197D69000B5320 /* Base */,
 				FDE589492431631100BF60A7 /* it */,
+				FDFF829C2444CBE100910ADB /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
