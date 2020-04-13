@@ -6,105 +6,106 @@
   Copyright © 2020 Francesco Cosentino. All rights reserved.
 */
 
-"welcome" = "Hey Doctor,\n\nWelcome to\nanonymous\nCovidCommunity\nAlert 👋";
-"together_we" = "Together we can save lives!";
-"let_s_get_s" = "LET'S GET STARTED";
-"bt_how_it_works" = "HOW IT WORKS 🤔";
+"welcome" = "Olá Doutor,\n\nBem-vindo(a) ao\nCovid\nAlerta Comunitário 👋";
+"together_we" = "Juntos podemos salvar vidas!";
+"let_s_get_s" = "VAMOS COMEÇAR";
+"bt_how_it_works" = "COMO FUNCIONA 🤔";
 
 
-"how_it_works" = "How it works 🤔";
-"how_it_works_p0" = "We will use the camera and contacts in
-order to scan the patient’s QR code and invite other doctors.";
-"how_it_works_q1" = "How can I help?";
-"how_it_works_p1" = "You can log the patient’s health
-status in order to notify others that have been interacting
-with the patient.";
-"how_it_works_q2" = "How can I promote this application?";
-"how_it_works_p2" = "You can invite other trusted doctors
-by sending us their phone number.";
-
-
-
-"phone_number" = "Phone number";
-"verify_number" = "Verify phone number";
-"tv_code" = "Enter the 6 digits code you received by SMS";
-"bt_send_number" = "SEND";
-"insert_num" = "Enter number";
-"err_code" = "Error";
-"retry_time" = "You can retry in %d seconds";
+"how_it_works" = "Como funciona 🤔";
+"how_it_works_p0" = "Nós vamos usar a câmera do seu celular para escanear o
+QR code dos pacientes, e os seus contatos para convidar outros médicos.";
+"how_it_works_q1" = "Como eu posso ajudar?";
+"how_it_works_p1" = "Você pode registrar o diagnóstico dos pacientes para
+que possamos notificar pessoas que entraram em contato com eles nas últimas
+duas semanas. Isso acontece de forma anônima.";
+"how_it_works_q2" = "Como eu posso promover o uso desse aplicativo?";
+"how_it_works_p2" = "Você pode convidar médicos nos quais confia através
+dos seus números de telefone.";
 
 
 
-"all_set" = "All set!";
-"what_to_do" = "You will now be able to scan a patient\'s QR code,
-log their health status and invite other doctors on the app.";
-"go" = "GO TO APPLICATION";
+"phone_number" = "Número de telefone";
+"verify_number" = "Verificar telefone";
+"tv_code" = "Informe o código de 6 dígitos recebido por SMS";
+"bt_send_number" = "ENVIAR";
+"insert_num" = "Digite o número";
+"err_code" = "Erro";
+"retry_time" = "Tente novamente em %d segundos";
 
 
 
-"main_title" = "Welcome to\nCoviDoc";
-"bt_scan_qrcode" = "TAP HERE TO SCAN\nQR CODE";
-"bt_update_status" = "UPDATE HEALTH STATUS";
-"bt_invite_doc" = "INVITE OTHER DOCTORS";
-"toast_num_doc_invited" = "Doctor invited";
-"toast_err_doc_invited" = "Error while inviting";
-"alert_inviting_title" = "You are inviting";
-"alert_inviting_text" = "Do you confirm the invitation?";
-"toast_invalid_number" = "Invalid number";
+"all_set" = "Tudo pronto!";
+"what_to_do" = "Agora você será capaz de escanear o QR code de um paciente
+e registrar o diagnóstico, além de poder convidar outros médicos a usar o
+aplicativo.";
+"go" = "IR PARA O APLICATIVO";
 
 
 
-"bt_confirm_covid" = "🤒  Positive to COVID-19";
-"bt_negative_covid" = "😅  Negative to COVID-19";
-"bt_suspect_covid" = "😷  Suspected of COVID-19";
-"bt_recover_covid" = "😊  Healed";
-"diagnosis_title" = "Diagnosis 🔬";
-"toast_status_changed" = "Health status changed";
-"toast_status_error" = "Error, health status not registered";
-"alert_sure_title" = "You are changing the status to %@";
-"alert_sure_text" = "Are you sure?";
+"main_title" = "Bem-vindo ao\nCoviDoc";
+"bt_scan_qrcode" = "TOQUE AQUI PARA ESCANEAR\n UM QR CODE";
+"bt_update_status" = "ALTERAR STATUS DE PACIENTE";
+"bt_invite_doc" = "CONVIDAR OUTROS MÉDICOS";
+"toast_num_doc_invited" = "Médico convidado";
+"toast_err_doc_invited" = "Erro ao convidar médico";
+"alert_inviting_title" = "Você está convidando";
+"alert_inviting_text" = "Você tem certeza que deseja enviar o convite?";
+"toast_invalid_number" = "Número inválido";
 
 
 
-"alert_patientid_desc" = "This is the patient id.\nTap it to copy.";
-"ask_for_diagnosis" = "Do you already know the diagnosis?";
-
-"view_pending_text1" = "The ID of this patient is";
-"view_pending_tap_to_copy" = "Tap to copy";
-"view_pending_text2" = "Take note of the code if needed.";
-"view_pending_text3" = "If you click on NEXT STEP button you can either change the status if you already know the swab results, or go back to main page and change it at a later time.";
-"view_pending_question" = "Do you know the results of the swab for this patient?";
-"view_pending_copied" = "ID copied";
-"bt_next_step" = "NEXT STEP";
-"view_pending_alert_ok" = "The status of the patient has been changed to %@ waiting for swab results. You can update it at later time from the home page.";
-"view_pending_alert_ko" = "An error occurred while changing the status of the patient.";
+"bt_confirm_covid" = "🤒  Positivo para COVID-19";
+"bt_negative_covid" = "😅  Negativo para COVID-19";
+"bt_suspect_covid" = "😷  Supeito de COVID-19";
+"bt_recover_covid" = "😊  Curado";
+"diagnosis_title" = "Diagnóstico 🔬";
+"toast_status_changed" = "Status de saúde do paciente alterado";
+"toast_status_error" = "Erro, status de saúde não registrado";
+"alert_sure_title" = "Você está alterando o status do paciente para %@";
+"alert_sure_text" = "Você tem certeza?";
 
 
 
-"enter_patient_title" = "Enter patient ID";
-"enter_patient_invalid_title" = "The patient ID is invalid";
-"enter_patient_invalid_text" = "Please check it or contact the patient to ask it again.";
-"patient_id" = "Patient ID";
+"alert_patientid_desc" = "Este é o ID do paciente.\nToque para copiar.";
+"ask_for_diagnosis" = "Você já sabe o diagnóstico?";
+
+"view_pending_text1" = "O ID do paciente é";
+"view_pending_tap_to_copy" = "Toque para copiar";
+"view_pending_text2" = "Copie-o nos registros médicos.";
+"view_pending_text3" = "O status do paciente foi alterado para SUSPEITO. Se você já obteve os resultados do teste do paciente, clique em PRÓXIMO PASSO para alterar o status de saúde dele. Caso contrário, você pode retornar à tela inicial e alterar o status mais tarde.";
+"view_pending_question" = "Você sabe os resultados do teste desse paciente?";
+"view_pending_copied" = "ID copiado";
+"bt_next_step" = "PRÓXIMO PASSO";
+"view_pending_alert_ok" = "Status de saúde alterado para %@ aguardando resultados do teste. Você pode alterá-lo mais tarde a partir da tela inicial.";
+"view_pending_alert_ko" = "Ocorreu um erro ao alterar o status do paciente.";
+
+
+
+"enter_patient_title" = "Digite o ID do paciente";
+"enter_patient_invalid_title" = "O ID do paciente está errado";
+"enter_patient_invalid_text" = "Por favor, verifique-o ou contate o paciente para confirmá-lo.";
+"patient_id" = "ID do paciente";
 
 
 
 "ok" = "OK";
-"yes" = "Yes";
-"no" = "No";
-"cancel" = "Cancel";
-"confirm" = "Confirm";
-"continue" = "Continue";
-"retry" = "Retry";
+"yes" = "Sim";
+"no" = "Não";
+"cancel" = "Cancelar";
+"confirm" = "Confirmar";
+"continue" = "Continuar";
+"retry" = "Tentar novamente";
 
 
 
-"negative" = "NEGATIVE";
-"positive" = "POSITIVE";
-"suspect" = "SUSPECT";
-"healed" = "HEALED";
+"negative" = "NEGATIVO";
+"positive" = "POSITIVO";
+"suspect" = "SUSPEITO";
+"healed" = "CURADO";
 
 
 
-"camera_permission_title" = "Camera access is required";
-"camera_permission_text" = "Please allow CoviDoc to access the camera in Settings.";
-"camera_permission_bt_settings" = "Go to Settings";
+"camera_permission_title" = "Permissão de acesso a câmera é necessário";
+"camera_permission_text" = "Por favor, dê permissão ao CoviDoc para acessar a câmera do dispositivo em Configurações.";
+"camera_permission_bt_settings" = "Ir para Configurações";
