@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxRelay
 import RxGesture
+import RxKeyboard
 import PhoneNumberKit
 import PMSuperButton
 import KWVerificationCodeView
@@ -30,6 +31,7 @@ class ActivationViewController: UIViewController {
     private let bag = DisposeBag()
     private let viewVisibleCommand = PublishRelay<Bool>()
     private let verificationCode = PublishRelay<String>()
+    private let keyboardTop = BehaviorRelay<CGFloat>(value: 100000)
     
     private func configureUI() {
         phoneField.placeholder = NSLocalizedString("phone_number", comment: "")
@@ -73,7 +75,7 @@ class ActivationViewController: UIViewController {
         // dismiss keyboard on tap
         view.rx.tapGesture().subscribe(onNext: { [weak self] _ in
             self?.view.endEditing(true)
-            self?.view.frame.origin.y = 0
+            self?.resetViewPosition()
         }).disposed(by: bag)
         
         // bind panel visibility
@@ -85,9 +87,18 @@ class ActivationViewController: UIViewController {
             .subscribe(onNext: { [weak self] _ in
                 guard let `self` = self else { return }
                 if !self.digitsField.isFirstResponder {
-                    self.view.frame.origin.y = -140
+                    // move after because we have to wait the change of keyboard frame
+                    DispatchQueue.main.async {
+                        self.handleKeyboardForView(self.digitsField, keyboardTop: self.keyboardTop.value)
+                    }
                 }
             }).disposed(by: bag)
+        
+        RxKeyboard.instance.frame
+            .asObservable()
+            .map({ $0.origin.y })
+            .bind(to: keyboardTop)
+            .disposed(by: bag)
         
         // action when send verification code button is tapped
         handleSendVerificationCode()
@@ -99,6 +110,24 @@ class ActivationViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    // MARK: - Handle text fields with keyboard
+    
+    private func handleKeyboardForView(_ target: UIView, keyboardTop: CGFloat) {
+        let targetBottom = target.convert(CGPoint(x: 0, y: target.bounds.size.height), to: view).y
+        let diff = targetBottom - keyboardTop
+        if diff > 0 {
+            UIView.animate(withDuration: 0.2) {
+                self.view.frame.origin.y = -diff
+            }
+        }
+    }
+    
+    private func resetViewPosition() {
+        UIView.animate(withDuration: 0.2) {
+            self.view.frame.origin.y = 0
+        }
     }
     
     // MARK: -

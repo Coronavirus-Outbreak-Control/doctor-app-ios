@@ -14,7 +14,7 @@ class MockAPI: API {
         // ok if italian number
         .create { observer in
             DispatchQueue.main.delay(1) {
-                if !(number.hasPrefix("+39") || number.hasPrefix("0039")) {
+                if number.hasPrefix("+44") {
                     observer(.error(Errors.phoneNotTrusted))
                 } else {
                     observer(.success(Empty()))
