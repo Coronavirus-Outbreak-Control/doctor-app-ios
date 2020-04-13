@@ -51,6 +51,14 @@ class NetworkAPI: API {
         let req = InviteDoctorRequest(authToken: jwt, phoneNumber: number)
         return client.send(apiRequest: req)
     }
+    
+    func getSuspects(doctorId: String) -> Single<GetSuspectsResponse> {
+        guard let jwt: String = Database.shared.getAccountValue(key: .jwt) else {
+            return .error(Errors.userNotAuthenticated)
+        }
+        let req = GetSuspectsRequest(authToken: jwt, doctorId: doctorId)
+        return client.send(apiRequest: req)
+    }
 }
 
 extension NetworkAPI {

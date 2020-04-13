@@ -59,6 +59,7 @@
 		FDFB260F24355807000E9C07 /* HowItWorksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB260E24355807000E9C07 /* HowItWorksView.swift */; };
 		FDFB261124355AEF000E9C07 /* HowItWorksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDFB261024355AEF000E9C07 /* HowItWorksView.xib */; };
 		FDFB4CF0244249B1006383A2 /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB4CEF244249B1006383A2 /* UIAlertController+Extensions.swift */; };
+		FDFF829A2444716500910ADB /* GetSuspectsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFF82992444716500910ADB /* GetSuspectsRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,7 @@
 		FDFB260E24355807000E9C07 /* HowItWorksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorksView.swift; sourceTree = "<group>"; };
 		FDFB261024355AEF000E9C07 /* HowItWorksView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HowItWorksView.xib; sourceTree = "<group>"; };
 		FDFB4CEF244249B1006383A2 /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
+		FDFF82992444716500910ADB /* GetSuspectsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSuspectsRequest.swift; sourceTree = "<group>"; };
 		FF258396ACD6B5EFBD76D693 /* Pods-Covid19Doctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19Doctor.debug.xcconfig"; path = "Target Support Files/Pods-Covid19Doctor/Pods-Covid19Doctor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -295,6 +297,7 @@
 				FD086D8524295F6A00368BDF /* AuthenticateRequest.swift */,
 				FDEE4CFB2423F86A0022E32C /* InviteDoctorRequest.swift */,
 				FDEEFD4A24266B3200D1DF15 /* SetPatientStatusRequest.swift */,
+				FDFF82992444716500910ADB /* GetSuspectsRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				FDEB442E241984B9000B5320 /* ActivationViewController.swift in Sources */,
 				FDFB26092435553C000E9C07 /* HelpViewController.swift in Sources */,
 				FDFA1A7324203F8F00FB5B9F /* NetworkRequest.swift in Sources */,
+				FDFF829A2444716500910ADB /* GetSuspectsRequest.swift in Sources */,
 				FDEDB1242426D0AD0042B8D0 /* InvitationCell.swift in Sources */,
 				FDFB15682438F1760073F4FA /* Scanner.swift in Sources */,
 				FDEE4CFC2423F86A0022E32C /* InviteDoctorRequest.swift in Sources */,

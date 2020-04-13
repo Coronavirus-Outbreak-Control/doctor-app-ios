@@ -21,6 +21,8 @@ protocol API {
     ///   - code: the code received via SMS
     func verifyPhoneCode(_ code: String) -> Single<VerifyPhoneCodeResponse>
     
+    /// Get the jwt used to make all authenticated requests
+    /// - Parameter reAuthToken: the token returned from the verification
     func authenticate(reAuthToken: String) -> Single<AuthenticateResponse>
     
     /// Get patient data from server
@@ -37,6 +39,9 @@ protocol API {
     /// - Parameter number: the phone number 
     func inviteDoctor(number: String) -> Single<Empty>
     
+    /// Get list of pending patient id
+    /// - Parameter doctorId: the doctor the patients belong to
+    func getSuspects(doctorId: String) -> Single<GetSuspectsResponse>
     
     
     func runAuthenticated<T>(reAuthToken: String, apiBuilder: @escaping () -> Single<T>) -> Single<T>

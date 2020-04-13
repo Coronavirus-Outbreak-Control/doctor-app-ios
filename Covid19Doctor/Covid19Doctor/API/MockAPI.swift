@@ -73,6 +73,17 @@ class MockAPI: API {
         }
     }
     
+    func getSuspects(doctorId: String) -> Single<GetSuspectsResponse> {
+        .create { observer in
+            DispatchQueue.main.delay(1) {
+                let res = GetSuspectsResponse(data: [])
+                observer(.success(res))
+            }
+            return Disposables.create()
+        }
+    }
+    
+    
     
     func runAuthenticated<T>(reAuthToken: String, apiBuilder: @escaping () -> Single<T>) -> Single<T> {
         authenticate(reAuthToken: reAuthToken)

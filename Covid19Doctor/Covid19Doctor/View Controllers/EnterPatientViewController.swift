@@ -80,6 +80,33 @@ class EnterPatientViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
+    //TEMP
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getPendingPatients()
+    }
+    
+    // MARK: - Get pending patients
+    
+    private func getPendingPatients() {
+        guard let reAuthToken: String = Database.shared.getAccountValue(key: .reAuthToken),
+            let doctorId: String = Database.shared.getAccountValue(key: .userId)
+        else {
+            //TODO: handle error Errors.userNotActivated
+            return
+        }
+        
+        APIManager.api.runAuthenticated(reAuthToken: reAuthToken, apiBuilder: {
+            APIManager.api.getSuspects(doctorId: doctorId)
+        })
+            .subscribe(onSuccess: { res in
+                
+            }, onError: { error in
+                print(error)
+            })
+            .disposed(by: bag)
+    }
+    
     // MARK: -
     
     private func proceed() {
