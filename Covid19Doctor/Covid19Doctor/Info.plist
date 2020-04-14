@@ -21,7 +21,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>This app requires to access the camera to scan patient's QR codes</string>
+	<string>This app requires to access the camera to scan patient&apos;s QR codes</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>SF-Compact-Display-Heavy.otf</string>
@@ -54,5 +54,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 </dict>
 </plist>
